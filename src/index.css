@@ -26,10 +26,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  /* min-width: 320px;
-  min-height: 100vh; */
-  height: 2000px;
-  background-color: #646cff;
+  min-width: 320px;
+  min-height: 100vh; 
 }
 
 h1 {
