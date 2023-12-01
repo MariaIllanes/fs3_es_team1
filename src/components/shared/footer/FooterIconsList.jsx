@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import DropdownFooter from './DropdownFooter';
 
 const FooterIconList = () => {
   const icons = [
@@ -160,15 +161,33 @@ const FooterIconList = () => {
     
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(true);
+  };
+
+  const handleLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <div className="footer-socialmedia-container">
+    <div className='container'>
+      <div className="footer-socialmedia-container">
         <div className="footer-icons community-icons">
-        {icons.map((icon, index) => (
-            <a href={icon.href} target="_blank" rel="noopener noreferrer">
-            {icon.svg}
-            </a>
-        ))}
+          {icons.map((icon, index) => (
+            <div key={index} onMouseEnter={index === 1 ? handleHover : undefined} onMouseLeave={index === 1 ? handleLeave : undefined}>
+              {index === 1 && isHovered ? (
+                <DropdownFooter /> // Render your dropdown menu component when hovered over the second icon
+              ) : (
+                <a href={icon.href} target="_blank" rel="noopener noreferrer">
+                  {icon.svg}
+                </a>
+              )}
+            </div>
+          ))}
         </div>
+      </div>
     </div>
   );
 };

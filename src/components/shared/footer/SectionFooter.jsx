@@ -8,7 +8,8 @@ const SectionFooter = () => {
         <div className="footer-container" >
             <FooterList />
             <FooterIconList />
-
+            <hr />
+            
         </div>    
     )
 }

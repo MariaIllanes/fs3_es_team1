@@ -54,13 +54,13 @@ ul{
     margin-top: 19px;
 }
 
-.footer-icons{
-    width: 30px;
-    height: 30px;    
+svg{
+    width: 20px;
+    height: auto;    
+    padding: 10px 10px 10px 0;
 }
 
-.footer-socialmedia-container {
-    background-color: blue;
+.container{
     display: flex;
     flex-direction: column;
 }
