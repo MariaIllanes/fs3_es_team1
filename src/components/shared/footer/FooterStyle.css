@@ -1,0 +1,148 @@
+:root{
+    --footer-dark-bg: #27262c;
+    --footer-text: #f4eeff;
+}
+
+.footer-container{
+    height: 400px;
+    background: black;
+    padding: 20px 40px;
+}
+
+.footer-title {
+    color: purple;
+    text-align: left;
+}
+
+.footer-list-elements{
+    list-style: none;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.footer-list-elements a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-list-elements:visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+.footer-list-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    /* margin:  */
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+#footer-reduced-logo{
+    display: none;
+}
+
+#footer-logo {
+    width: 180px;
+    height: 50px;
+    margin-top: 19px;
+}
+
+.footer-icons{
+    width: 30px;
+    height: 30px;    
+}
+
+.footer-socialmedia-container {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1078px){
+    #footer-logo-reduced { 
+        display: none;
+    }    
+}
+
+@media (max-width: 1078px) and (min-width: 967px){
+    #footer-logo {
+        display: none;
+    }   
+}
+
+@media (max-width: 968px){
+    /* .footer-links-container {
+        display: block;
+    }
+
+    .footer-links-container div {
+        padding-top: 15px
+    }
+
+    #footer-pancakeswap-logo-reduced {
+        display: none;
+    }
+
+    #footer-pancakeswap-logo {
+        display: inline;
+    }
+
+    .telegram-language-options {
+        display: none;
+        background: var(--footer-dark-bg);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: var(--footer-text);
+        position: absolute;
+        bottom: 50px;
+    } */
+}
+
+
+
+@media (max-width: 584px){
+    /* .footer-buttons{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0 0 0 15px;
+        margin: 0;
+    }
+
+    .footer-rigth{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+
+    #footer-separator{
+        margin-bottom: 50px;
+    }
+
+    .main-footer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #footer-separator2{
+        display: block;
+        border-color: #69686a;
+        display: block;
+        margin: 5% 0 0 3%;
+        width: 95%;
+    } */
+}
