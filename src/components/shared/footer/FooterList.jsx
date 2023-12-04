@@ -1,7 +1,9 @@
+import './FooterStyle.css'
+
 const FooterList = () => {
     const sections = [
         { 
-        footerTitle: 'Ecosystem',
+        footerTitle: 'ECOSYSTEM',
         footerListLinks: [
             {label: 'Trade', url: 'https://pancakeswap.finance/swap'},
             {label: 'Earn', url: 'https://pancakeswap.finance/farms'},
@@ -15,7 +17,7 @@ const FooterList = () => {
         },
 
         { 
-            footerTitle: 'Business',
+            footerTitle: 'BUSINESS',
             footerListLinks: [
                 {label: 'Farms And Syrup Pools', url: 'https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/syrup-pools-and-farms'},
                 {label: 'IFO', url: 'https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifoshttps://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos'},
@@ -24,7 +26,7 @@ const FooterList = () => {
         },
 
         { 
-            footerTitle: 'Developers',
+            footerTitle: 'DEVELOPERS',
             footerListLinks: [
                 {label: 'Contributing', url: 'https://docs.pancakeswap.finance/developers/contributing'},
                 {label: 'Github', url: 'https://github.com/pancakeswap'},
@@ -33,7 +35,7 @@ const FooterList = () => {
         },
 
         { 
-            footerTitle: 'Support',
+            footerTitle: 'SUPPORT',
             footerListLinks: [
                 {label: 'Contact', url: 'https://docs.pancakeswap.finance/contact-us/customer-support'},
                 {label: 'Troubleshooting', url: 'https://docs.pancakeswap.finance/readme/help/troubleshooting'},
@@ -42,7 +44,7 @@ const FooterList = () => {
         },
 
         { 
-            footerTitle: 'About',
+            footerTitle: 'ABOUT',
             footerListLinks: [
                 {label: 'Terms', url: 'https://pancakeswap.finance/terms-of-service'},
                 {label: 'Blog', url: 'https://blog.pancakeswap.finance/'},
@@ -53,13 +55,13 @@ const FooterList = () => {
     ]
 
     return (
-        <div className="footer-list-links" >
+        <div className="footer-links-container" >
             {sections.map((section, index) => (
                 <div key={index} className="footer-list-section">
                     <h2 className="footer-title" >{section.footerTitle}</h2>
                     <ul>
                         {section.footerListLinks.map((link, linkIndex) => (
-                        <li key={linkIndex} className="footer-list-elements" >
+                        <li key={linkIndex} className="footer-linked" >
                             <a href={link.url} target="_blank" rel="noopener noreferrer">
                             {link.label}
                             </a>

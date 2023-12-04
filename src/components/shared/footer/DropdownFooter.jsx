@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import './FooterStyle.css'
+
 
 const DropdownFooter = ({ children }) => {
     const [shownMenu, setShownMenu] = useState(false);
 
-    const hiddenMenu = () => {
+    const toggleMenu = () => {
         setShownMenu(!shownMenu);
-    }
+    };
 
     const footerMenu = [
         {
@@ -88,22 +90,26 @@ const DropdownFooter = ({ children }) => {
             href: 'https://t.me/PancakeSwapAnn',
             language: ' Announcements',
         },
-        ]
+    ];
 
-return (
-    <div className='footer-menu'>
-        <div onClick={hiddenMenu} className='footer-hidden-menu'>
-            {children}
-        </div>
-        {shownMenu && (
-            <div className='footer-dropdown-content'>
-                <ul>
-                    <li><a href='{menu.href}'>{menu.language}</a></li>
-                </ul>
+    return (
+        <div className='footer-menu'>
+            <div onMouseOver={toggleMenu} onMouseOut={toggleMenu} className='footer-hidden-menu'>
+                {children}
             </div>
-        )}
-    </div>
-)
-}
+            {shownMenu && (
+                <div className='footer-dropdown-content'>
+                    <ul>
+                        {footerMenu.map((menu, index) => (
+                            <li key={index}>
+                                <a href={menu.href}>{menu.language}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+    );
+};
 
 export default DropdownFooter;
