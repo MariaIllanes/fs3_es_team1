@@ -6,7 +6,7 @@ const News = () => {
 
     const cardData = [
         {
-            imageSrc: "../../../../../public/img/sec10-news-img-1.jpg",
+            imageSrc: "../../../../../img/sec10-news-img-1.jpg",
             title: "From [Cointelegraph]",
             date: "Oct 30, 2023",
             description:
@@ -15,7 +15,7 @@ const News = () => {
                 "Decentralized crypto exchange PancakeSwap now has portfolio manager functionality, according to an Oct. 30 announcement. The feature has been added in partnership with decentralized finance (DeFi) protocol Bril Finance.",
         },
         {
-            imageSrc: "../../../../../public/img/sec10-news-img-2.jpg",
+            imageSrc: "../../../../../img/sec10-news-img-2.jpg",
             title: "From [Decrypt]",
             date: "Aug 31, 2023",
             description:
@@ -24,7 +24,7 @@ const News = () => {
                 "PancakeSwap joins DeFi heavyweights like Uniswap, SushiSwap, and 1inch launching on the buzzy layer-2 network Base.",
         },
         {
-            imageSrc: "../../../../../public/img/sec10-news-img-3.jpg",
+            imageSrc: "../../../../../img/sec10-news-img-3.jpg",
             title: "From [CoinDesk]",
             date: "Aug 10, 2023",
             description:
@@ -33,7 +33,7 @@ const News = () => {
                 "The decentralized exchange has joined several networks this year in the search for new users and revenue streams.",
         },
         {
-            imageSrc: "../../../../../public/img/sec10-news-img-4.jpg",
+            imageSrc: "../../../../../img/sec10-news-img-4.jpg",
             title: "From [Blockwords]",
             date: "Jul 28, 2023",
             description: "zkSync Era welcomes PancakeSwap to the ecosystem",
@@ -41,7 +41,7 @@ const News = () => {
                 "ZkSync Era will be the third zero-knowledge platform on which PancakeSwap will launch.",
         },
         {
-            imageSrc: "../../../../../public/img/sec10-news-img-5.png",
+            imageSrc: "../../../../../img/sec10-news-img-5.png",
             title: "From [Google Cloud]",
             date: "Jul 11, 2023",
             description:
@@ -50,7 +50,7 @@ const News = () => {
                 "PancakeSwap implements Google Cloud to maintain platform availability at all times so that users can trade seamlessly around the clock.",
         },
         {
-            imageSrc: "../../../../../public/img/sec10-news-img-6.jpg",
+            imageSrc: "../../../../../img/sec10-news-img-6.jpg",
             title: "From [CoinTelegraph]",
             date: "May 30, 2023",
             description: "Decentralized exchange PancakeSwap moves into GameFi",
