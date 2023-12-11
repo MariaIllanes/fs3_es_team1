@@ -13,7 +13,6 @@ const ArrowButton = () => {
         );
         const scrollThreshold = 0.25;
 
-        // Función para llevar al usuario al inicio de la página
         const handleButtonClick = () => {
             window.scrollTo({
                 top: 0,
@@ -29,7 +28,6 @@ const ArrowButton = () => {
 
         arrowButton.addEventListener("click", handleButtonClick);
 
-        // Función para controlar la visibilidad de la sección en función del desplazamiento
         const toggleSectionVisibility = () => {
             const scrollPosition = window.scrollY;
             const pageHeight = document.body.clientHeight;
@@ -43,15 +41,13 @@ const ArrowButton = () => {
 
         window.addEventListener("scroll", toggleSectionVisibility);
 
-        // Asegúrate de verificar la visibilidad de la sección al cargar la página
         toggleSectionVisibility();
 
-        // Limpia el evento al desmontar el componente
         return () => {
             arrowButton.removeEventListener("click", handleButtonClick);
             window.removeEventListener("scroll", toggleSectionVisibility);
         };
-    }, []); // El array vacío asegura que este efecto se ejecute solo una vez al montar el componente.
+    }, []);
 
     return (
         <div className="arrow-div-container">
