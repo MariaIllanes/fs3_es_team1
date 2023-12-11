@@ -160,17 +160,16 @@ const FooterIconList = () => {
         ),
       },
   ];
+  const [isTelegramHovered, setIsTelegramHovered] = useState(false);
 
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = (index) => {
-    setIsHovered(index);
+  const handleTelegramHover = () => {
+    setIsTelegramHovered(true);
   };
 
-  const handleLeave = () => {
+  const handleTelegramLeave = () => {
     const timeout = setTimeout(() => {
-      setIsHovered(false);
-    }, 5000);
+      setIsTelegramHovered(false);
+    }, 3000);
   };
 
   return (
@@ -178,11 +177,19 @@ const FooterIconList = () => {
       <div className="footer-socialmedia-container">
         <div className="footer-icons community-icons">
           {icons.map((icon, index) => (
-            <div key={index} onMouseEnter={() => handleHover(index)} onMouseLeave={handleLeave}>
-              {(index === isHovered && isHovered !== 1) || isHovered === 1 ? (
-                <DropdownFooter>
-                  {icon.svg}
-                </DropdownFooter>
+            <div key={index}>
+              {index === 1 ? (
+                <div onMouseEnter={handleTelegramHover} onMouseLeave={handleTelegramLeave}>
+                  {isTelegramHovered ? (
+                    <DropdownFooter>
+                      {icon.svg}
+                    </DropdownFooter>
+                  ) : (
+                    <a href={icon.href} target="_blank" rel="noopener noreferrer">
+                      {icon.svg}
+                    </a>
+                  )}
+                </div>
               ) : (
                 <a href={icon.href} target="_blank" rel="noopener noreferrer">
                   {icon.svg}

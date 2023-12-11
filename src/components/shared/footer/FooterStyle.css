@@ -127,7 +127,7 @@ hr {
     border-radius: 5px;
     position: absolute;
     left:  70px;
-    bottom: 60px;
+    bottom: 90px;
     background-color: var(--footer-dark-bg);
      overflow-y: scroll;
      height: 300px;
@@ -235,9 +235,9 @@ hr {
         display: none;
     }
 
-    .main-footer{
-        width: 100vw;
-    }
+    /* .main-footer{
+        width: 90vw;
+    } */
 }
 
 
@@ -260,9 +260,9 @@ hr {
         display: inline;
     }
 
-    .main-footer{
+    /* .main-footer{
         width: 100vw;
-    }
+    } */
 
 }
 
@@ -331,6 +331,6 @@ hr {
     } 
 
     .main-footer{
-        width: 100vw;
+        width: 90vw;
     }
 }
