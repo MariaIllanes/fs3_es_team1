@@ -580,3 +580,5 @@ export const mainNavDocComponent = () => {
 
     document.getElementById('main-navbar').appendChild(newElement)
 }
+
+
