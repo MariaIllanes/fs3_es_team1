@@ -85,6 +85,7 @@
     scroll-behavior: smooth;
     border-radius: 24px;
     padding-bottom: 5px;
+    overflow-y: hidden;
 }
 
 .card.light-theme {
