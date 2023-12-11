@@ -1,107 +1,15 @@
 :root{
-    --mustardyellow: #ffb237;
-    --greyBorder: #383241;
-    --backgroundDarkGrey: #27262c;
-    --purpleTweet: #b8add2;
-    --communityInactiveButton: rgba(122, 110, 170, 0.7);
-    --communityActiveButton: #7745d8;
-    --bg-light-blue: #72b8f2;
-    --bg-lightest-blue: #99b8c8;
+  --mustardyellow: #ffb237;
+  --greyBorder: #383241;
+  --backgroundDarkGrey: #27262c;
+  --purpleTweet: #b8add2;
+  --communityInactiveButton: rgba(122, 110, 170, 0.7);
+  --communityActiveButton: #7745d8;
+  --bg-light-blue: #72b8f2;
+  --bg-lightest-blue: #99b8c8;
 }
 
 #root {
   margin: 0;
   width: 100vw;
-}
-
-.exchangeStatsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0 100px;
-  background-color: black;
-  gap: 10px;
-}
-
-.exsElement{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.exsContainer{
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-
-p,
-h3{
-  text-align: center;
-}
-
-h2,
-h3{
-  color: white;
-}
-
-
-h3{
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
-
-h2,
-p {
-  font-size: 2rem;
-}
-
-h2{
-  margin-bottom: 30px;
-}
-
-p,
-span{
-  color: purple;
-}
-
-p{
-  margin: 20px 0;
-}
-
-@media (max-width: 1220px) {
-  
-h3{
-  font-size: 1.3rem;
-  margin-bottom: 0;
-}
-
-h2,
-p {
-  font-size: 1.7rem;
-}
-
-h2{
-  margin-bottom: 30px;
-}
-
-.exsContainer{
-  gap: 30px;
-}
-
-.exsElement{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-}
-
-@media (min-width: 1100px) {
-  .exsContainer{
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  
 }

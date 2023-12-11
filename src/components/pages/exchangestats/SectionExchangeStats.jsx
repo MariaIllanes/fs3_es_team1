@@ -1,13 +1,18 @@
-import React from 'react'
-import ExchangeStats from './ExchangeStats'
-import './SectionExchangeStats.module.scss'
-
+import React from "react";
+import ExchangeStats from "./ExchangeStats";
+import "./SectionExchangeStats.css";
 
 export default function SectionExchangeStats() {
     return (
-      <div className="exchangeStatsContainer change-theme ligth-theme">
-        <h2 className='es-title change-theme ligth-theme'>CAKE <span>Figures</span></h2>
-        <ExchangeStats />
-      </div>
+        <>
+            <div className="exchange-stats2-title">
+                <h2>
+                    CAKE <span id="exchange-figures">Figures</span>
+                </h2>
+            </div>
+            <div className="exchange-container light-theme theme-change">
+                <ExchangeStats />
+            </div>
+        </>
     );
-  }
+}
