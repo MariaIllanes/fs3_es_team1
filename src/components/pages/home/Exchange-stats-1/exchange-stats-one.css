@@ -11,9 +11,9 @@
     -webkit-font-smoothing: antialiased;
 }
 
-*, ::before, ::after {
+/* *, ::before, ::after {
     box-sizing: border-box;
-}
+} */
 
 body {
     margin: 0;
@@ -270,8 +270,8 @@ span {
 
 .hdRJqv {
     display: flex;
-    padding: 8px 12px;
-    height: 38px;
+    padding: 12px 24px;
+    height: 21px;
     justify-content: start;
     align-items: center;
     border-radius: 25px;
@@ -281,7 +281,7 @@ span {
 @media screen and (min-width: 576px) {
     .hdRJqv {
         padding: 12px 24px;
-        height: 46px;
+        height: 21px;
         border-radius: 25px;
         margin-right: 12px;
     }
