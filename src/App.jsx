@@ -1,6 +1,6 @@
 import "./App.css";
 import ArrowButton from "./components/pages/home/arrowbutton/arrow-button.jsx";
-import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner"
+import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner.jsx"
 
 function App() {
     return (

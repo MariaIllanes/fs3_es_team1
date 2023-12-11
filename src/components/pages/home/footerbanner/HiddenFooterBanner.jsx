@@ -57,91 +57,12 @@ const HiddenFooterBanner = () => {
                               keys or seed phrase securely. Never share them with anyone.</p>
                           </div>
                           <div id="cw-left-grid">
-                            <div class="cw-cards">
-                              
-                              <div class="cw-card theme-change light-theme">
-                                <img src="https://assets.pancakeswap.finance/web/wallets/metamask.png" width="50" height="50">
-                                <p>Metamask</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/binance.png" width="50" height="50">
-                                  <p>Binance Wallet</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/coinbase.png" width="50" height="50">
-                                  <p>Coinbase Wallet</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/trust.png" width="50" height="50">
-                                  <p>Trust Wallet</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                <img src="https://assets.pancakeswap.finance/web/wallets/walletconnect.png" width="50" height="50">
-                                <p>WalletConnect</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/opera.png" width="50" height="50">
-                                  <p>Opera Wallet</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/brave.png" width="50" height="50">
-                                  <p>Brave Wallet</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/mathwallet.png" width="50" height="50">
-                                  <p>MathWallet</p>
-                              </div>
-      
-                              <div class="cw-card theme-change light-theme" id="see-more-cards-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-dots" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                  <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                  <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                                </svg>
-                                <p>More</p>
-                              </div>
-      
-                              <span class="cw-more-cards">
-                                <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/tokenpocket.png"width="50" height="50">
-                                  <p>TokenPocket</p>
-                                </div>
-                                <div class="cw-card theme-change light-theme">
-                                  <img src="https://assets.pancakeswap.finance/web/wallets/safepal.png" width="50" height="50">
-                                  <p>SafePal</p>
-                                </div>
-        
-                                <div class="cw-card theme-change light-theme">
-                                    <img src="https://assets.pancakeswap.finance/web/wallets/coin98.png" width="50" height="50">
-                                    <p>Coin98</p>
-                                </div>
-        
-                                <div class="cw-card theme-change light-theme">
-                                    <img src="https://assets.pancakeswap.finance/web/wallets/blocto.png" width="50" height="50">
-                                    <p>Blocto</p>
-                                </div>
-        
-                                <div class="cw-card theme-change light-theme">
-                                    <img src="https://assets.pancakeswap.finance/web/wallets/ledger.png"width="50" height="50">
-                                    <p>Ledger</p>
-                                </div>
-                              </span>
-      
-                              
-                            </div>
+                            
                           </div>
                         </div>
                         <div class="fb-button theme-change light-theme" id="cw-right"> 
                           <h4>Haven't got a wallet yet?</h4>
-                          <img id="fb-cw-img" src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width="180" height="160">
+                          <img id="fb-cw-img" src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width="180" height="160"/>
                           <p>
                             <a href="https://docs.pancakeswap.finance/get-started/wallet-guide">Learn How to Connect
                                 <svg xmlns="http://www.w3.org/2000/svg" id="fb-icon-link" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#eee" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -159,7 +80,6 @@ const HiddenFooterBanner = () => {
             </div>
     
         </div>
-    
     )
 }
 

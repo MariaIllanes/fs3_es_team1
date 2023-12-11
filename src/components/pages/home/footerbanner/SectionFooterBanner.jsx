@@ -47,7 +47,7 @@ const SectionFooterBanner = () => {
                 <img src={bfRock2} width="120" height="120" alt="animation" class="footer-banner-img" id="footer-banner3" />
                 <div class="footer-banner-text">
                     <h2>Join Everyone's Favorite DEX Now!</h2>
-                    <StandardButton />
+                    <StandardButton id="button-s11"  />
                 </div>
                 <img src={bfRock3} width="120" height="94" alt="animation" class="footer-banner-img" id="footer-banner2" />
                 <img src={bfRock4} width="160" height="160" alt="animation" class="foote r-banner-img" id="footer-banner4" />
