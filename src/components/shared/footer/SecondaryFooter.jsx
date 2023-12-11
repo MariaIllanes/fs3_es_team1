@@ -1,7 +1,10 @@
 import BunnyButton from "../sharedComponents/BunnyButton"
 import StandardButton from "../sharedComponents/StandarButton"
+import ToggleSwitch from "../sharedComponents/ToggleSwitch";
 import './FooterStyle.css'
+import '../sharedComponents/sharedStyles/style.css';
 import LanguageMenu from "./LanguageMenu";
+
 
 const SecondaryFooter = () => {
     
@@ -11,6 +14,7 @@ const SecondaryFooter = () => {
             <div className="footer-buttons">
                 <div className="footer-left">
                     <LanguageMenu />
+                    <ToggleSwitch/>
                 </div>
                 <div className="footer-rigth">
                     <BunnyButton />

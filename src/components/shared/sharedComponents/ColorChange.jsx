@@ -1,6 +1,6 @@
 import React from 'react';
 import '../buycake/BuyCakeStyle.css';
-import '../sharedComponents/style.css';
+import '../sharedComponents/sharedStyles/style.css';
 
 const ColorChange = ({text})=> {
 return (

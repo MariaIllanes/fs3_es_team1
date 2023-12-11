@@ -94,3 +94,11 @@ body .buy-cake .color-change{
     flex-direction: row;
     gap: 1rem;
 }
+
+.general-button.dark-theme a{
+    color:white !important;
+}
+
+.general-button.light-theme a{
+    color:#27262c !important;
+}

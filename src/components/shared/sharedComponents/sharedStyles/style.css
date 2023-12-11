@@ -75,7 +75,6 @@ body {
 
 .btn-sec {
     border: 0;
-   
     font-weight: bold;
     font-size: 1rem;
     background: none;
@@ -101,4 +100,31 @@ body {
 
 .btn-main-blue.light-theme {
     color: var(--btn-light-text);
+}
+
+.general-button.dark-theme{
+    color:white !important;
+}
+
+.general-button.light-theme{
+    color:#27262c !important;
+}
+
+.general-button{
+    background-color: #1FC7D4;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: 2px 2px #1B99AA;
+    align-content: center;
+    font-size: 1rem;
+}
+
+.general-button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.general-button p{
+    margin: 0;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import BuyCakeSubtitle from './BuyCakeSubtitle.jsx';
 import '../buycake/BuyCakeStyle.css';
-import '../sharedComponents/style.css';
+import '../sharedComponents/sharedStyles/style.css';
 import BuyCakeTitle from './BuyCakeTitle.jsx';
 import BuyCakeBTNs from './BuyCakeBTNs.jsx';
 

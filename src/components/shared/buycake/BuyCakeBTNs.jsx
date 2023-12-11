@@ -1,8 +1,8 @@
 import React from 'react';
 import LearnBTN from './LearnBTN';
 import StandardButton from '../sharedComponents/StandarButton';
-import '../buycake/BuyCakeStyle.css';
-import '../sharedComponents/style.css';
+import '../sharedComponents/sharedStyles/style.css';
+import './BuyCakeStyle.css'
 
 const BuyCakeBTNs = () => {
   return (

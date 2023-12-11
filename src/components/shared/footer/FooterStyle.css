@@ -183,25 +183,6 @@ hr {
     background: var(--greypurple);
   }
 
-.general-button{
-    color:#27262c;
-    background-color: #1FC7D4;
-    border-radius: 20px;
-    padding: 10px 15px;
-    box-shadow: 2px 2px #1B99AA;
-    align-content: center;
-    font-size: 1rem;
-}
-
-.general-button a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.general-button p{
-    margin: 0;
-}
 
 .footer-rigth{
     display: flex;

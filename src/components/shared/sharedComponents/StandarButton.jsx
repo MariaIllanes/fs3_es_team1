@@ -1,6 +1,6 @@
 import React from 'react';
 import '../buycake/BuyCakeStyle.css';
-import '../sharedComponents/style.css';
+import '../sharedComponents/sharedStyles/style.css';
 
 const StandardButton = ({ href, text }) => {
   return (
