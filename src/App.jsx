@@ -2,8 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import ArrowButton from "./components/pages/home/arrowbutton/arrow-button.jsx";
-import PartnersAnimation from "./components/pages/home/partners-animation/PartnersAnimation.jsx";
+import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 
 function App() {
     return (
@@ -13,9 +12,6 @@ function App() {
                 className="other-element-container"
             >
                 <ArrowButton />
-            </section>
-            <section id="partners-animation" style={{ zIndex: 5 }}>
-                <PartnersAnimation />
             </section>
         </>
     );
