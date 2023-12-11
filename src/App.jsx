@@ -1,5 +1,5 @@
 import "./App.css";
-import ArrowButton from "./components/pages/home/arrowbutton/arrow-button.jsx";
+import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
 import SectionFooter from "./components/shared/footer/SectionFooter.jsx";
 import ExchangeStatsOne from "./components/pages/home/Exchange-stats-1/ExchangeStatsOne.jsx";
