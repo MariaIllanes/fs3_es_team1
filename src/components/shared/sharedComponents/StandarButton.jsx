@@ -1,8 +1,10 @@
 import React from 'react';
+import '../buycake/BuyCakeStyle.css';
+import '../sharedComponents/style.css';
 
 const StandardButton = ({ href, text }) => {
   return (
-    <div className='general-button'>
+    <div className='general-button theme-change light-theme'>
         <a href={href}>
             <p>{text}</p>
         </a>
