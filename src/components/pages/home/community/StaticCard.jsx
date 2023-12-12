@@ -1,7 +1,7 @@
 const StaticCard = () => {
     return (
         <div className="community-card theme-change light-theme" id="community-card1">
-            <div class="theme-change light-theme" id="community-card1-content">
+            <div className="theme-change light-theme" id="community-card1-content">
                 <p>Community Members</p>
                 <p>1.7M +</p>
                 <p>Multilingual Communities</p>

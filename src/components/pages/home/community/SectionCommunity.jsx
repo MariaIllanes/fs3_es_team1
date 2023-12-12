@@ -1,15 +1,19 @@
 import './CommunityStyle.css'
-import communityX from "./CommunityAssets/community-x.png"
-import communityTelegram from "./CommunityAssets/community-telegram.png"
-import communityInstagram from "./CommunityAssets/community-instagram.png"
-import communityDiscord from "./CommunityAssets/community-discord.png"
-import communityHeart from "./CommunityAssets/community-heart.png"
-import communityBell from "./CommunityAssets/community-bell.png"
-import communityComment from "./CommunityAssets/community-comment.png"
-import communitySpeaker from "./CommunityAssets/community-speaker.png"
-import communityDots from "./CommunityAssets/community-dots.png"
-import StaticCard from './StaticCard'
-import CarouselCard from './CarouselCard'
+import communityX from "./CommunityAssets/community-x.png";
+import communityTelegram from "./CommunityAssets/community-telegram.png";
+import communityInstagram from "./CommunityAssets/community-instagram.png";
+import communityDiscord from "./CommunityAssets/community-discord.png";
+import communityHeart from "./CommunityAssets/community-heart.png";
+import communityBell from "./CommunityAssets/community-bell.png";
+import communityComment from "./CommunityAssets/community-comment.png";
+import communitySpeaker from "./CommunityAssets/community-speaker.png";
+import communityDots from "./CommunityAssets/community-dots.png";
+import StaticCard from './StaticCard';
+import Carousel from "../../../shared/sharedComponents/Carousel";
+import CarouselCard1 from './CarouselCard1';
+import CarouselCard2 from './CarouselCard2';
+import CommunityIconList from './CommunityIconsList';
+
 
 const SectionCommunity = () => {
     return (
@@ -25,12 +29,14 @@ const SectionCommunity = () => {
             <img src={communityDots} alt="" width="150" height="150" className="community-bg-img right" id="community-bg-dots"/>
 
             <div className='community-container theme-change light-theme'>
-                <div><h2>Join our <span className="color-change">Community</span></h2></div>
-                <div><h3>Together we can make the PancakeSwap community even stronger</h3></div>
+                <h2 className='community-title theme-change light-theme'>Join our <span className="color-change">Community</span></h2>
+                <h3>Together we can make the PancakeSwap community even stronger</h3>
                 <div className="community-cards theme-change light-theme"> 
                     <StaticCard />
-                    <CarouselCard />
+                    <Carousel Card1={<CarouselCard1 />} Card2={<CarouselCard2 />} />
+                    
                 </div>
+                <CommunityIconList/>
             </div>
         </div>
     );

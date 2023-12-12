@@ -1,6 +1,6 @@
 :root{
     --mustardyellow: #ffb237;
-    --greyBorder: #383241;
+    --greyBorder: #403b47;
     --backgroundDarkGrey: #27262c;
     --purpleTweet: #b8add2;
     --communityInactiveButton: rgba(122, 110, 170, 0.7);
@@ -14,24 +14,33 @@
 }
 
 
+
+
 .community.dark-theme{
     background: linear-gradient(#0b4574, #081116);
+    width: 100vw;
     height: 880px;
     position: relative;
     display: flex;
     justify-content: center;
+    z-index: 1;
+
 }
 
 .community.light-theme{
     background: linear-gradient(var(--bg-light-blue), var(--bg-lightest-blue));
     height: 880px;
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: center;
+    z-index: 1;
+
 }
 
 body{
-    margin: 0
+    margin: 0;
+    padding: 0;
 }
 
 .community-container.dark-theme{
@@ -44,7 +53,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
     border-radius: 45px;
     position: absolute;
     top: 100px;
@@ -61,18 +70,26 @@ body{
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
     border-radius: 45px;
     position: absolute;
     top: 100px;
     opacity: 0.9;
 }
 
-.community-container h2{
+.community-title {
     margin-bottom: 0;
     font-size: 3rem;
     font-weight: bold;
 }
+
+/* .community-title .light-theme h2{
+    color: #081116;
+}
+
+.community-title .dark-theme h2{
+    color: #b31818;
+} */
 
 .community-container h3{
     margin: 0;
@@ -103,11 +120,21 @@ body{
 #community-card2.dark-theme{
     background-color: var(--backgroundDarkGrey);
     border: 1px solid var(--greyBorder);
+    border-radius: 32px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 340px;
 }
 
 #community-card2.light-theme{
     background-color: var(--bg-light);
     border: 1px solid var(--purpleTweet);
+    border-radius: 32px;
+    background-color: white;
+    box-shadow: lightgray 0px 4px 0px 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 340px;
 }
 
 
@@ -125,6 +152,7 @@ body{
     color:white;
     margin: 0;
     font-weight: bold;
+    padding-top: 20px;
 }
 
 #community-card1{
@@ -133,6 +161,12 @@ body{
     gap: 0;
     text-align: left;
     justify-content: center;
+    border-radius: 32px;
+    border: 2px solid rgb(60, 23, 134);
+    background: var(--linear, linear-gradient(180deg, #7645d9 0%, #5121b1 100%));
+    box-shadow: rgb(60, 23, 134) 0px 4px 0px 0px;
+    padding: 24px;
+    box-sizing: border-box;
 }
 
 #community-card1-content{
@@ -174,10 +208,25 @@ body{
     text-decoration: underline;
 }
 
+#community-tweet-icons p{
+   margin: 8px 0;
+}
+
+
+#community-tweet-icons svg{
+    width: 15px;
+    height: 15px;
+}
+
 #community-tweet-likes,
 #community-tweet-charts{
     display: inline-flex;
     align-items: center;
+}
+
+#fb-icon-link{
+    width: 20px;
+    height: 30px;
 }
 
 #community-tweet-icons p{
@@ -189,12 +238,9 @@ body{
     height: 15px;
     color: var(--purpleTweet);
     font-weight: lighter;
+    width: 1px;
 }
 
-#community-card-slide1 p{
-    padding: 5px 0;
-    margin: 0;
-}
 
 
 #community-user-img{
@@ -202,7 +248,6 @@ body{
     height: 50px;
     border-radius: 10px;
 }
-
 
 
 #community-card-img{
@@ -238,8 +283,12 @@ body{
 }
 
   
+/* .community-slideshow-buttons button .active{
+    background-color: red;
+} */
+
 .community-slideshow-buttons button.active{
-    background-color: var(--communityActiveButton);
+  background-color: var(--communityActiveButton); /* Set the active background color */
 }
 
 .community-card-slide h5{
@@ -269,11 +318,6 @@ a:-webkit-any-link{
     color: initial;
     /*eliminar en caso de interferir con otras secciones  */
 }
-
-
-
-
-
 
 #community-bg-x{
     position: absolute;
@@ -329,6 +373,17 @@ a:-webkit-any-link{
     top: -60px;
 }
 
+.community-container .footer-socialmedia-container{
+    display: flex;
+    justify-content: center;
+}
+
+.community-icons svg{
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px;
+}
+
 
 @media (max-width: 1300px){
     #community-bg-x{
@@ -361,7 +416,7 @@ a:-webkit-any-link{
 @media (max-width: 1200px){
     .community-container.dark-theme,
     .community-container.light-theme{
-        width: 92%;
+        width: 90%;
     }
     
 
@@ -414,7 +469,9 @@ a:-webkit-any-link{
    .community.light-theme,
    .community.dark-theme{
     width: auto;
-    height: 1150px;
+    height: 1250px;
+    width: 100vw;
+
    }
 
     .community-cards{
@@ -434,6 +491,28 @@ a:-webkit-any-link{
     }
 }
 
+@media (max-width: 500px){
+    #community-bg-comment{
+        width: 150px;
+        height: 150px;
+        left: 280px;
+    }
+
+    .community.light-theme,
+    .community.dark-theme{
+        width: 100%;
+        height: 1300px;
+    }
+
+    .community{
+        padding: 0;
+    }
+
+    .comunity-container{
+        width: 90%;
+    }
+}
+
 
 @media (max-width: 430px){
     .community-sm{
@@ -442,8 +521,31 @@ a:-webkit-any-link{
     }
 
     .community-container h3{
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: lighter;
     }
+
+    .community.light-theme,
+    .community.dark-theme{
+        height: 1280px;
+    }
+
+    #community-bg-bell{
+        top: 1080px;
+    }
+
+    .community{
+        padding: 0;
+    }
+
+    .community-icons svg{
+        background-color: white;
+        border-radius: 40px;
+        padding: 8px;
+        margin: 3px;
+    }
+
+
+    
 }
 
