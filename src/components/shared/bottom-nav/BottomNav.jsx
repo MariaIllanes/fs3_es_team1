@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./bottom-nav.css";
 
 const BottomNav = () => {
@@ -17,7 +17,7 @@ const BottomNav = () => {
     };
 
     const handleMouseOut = () => {
-        timeoutId.current = setTimeout(() => hideAllMenus(), 1500);
+        timeoutId.current = setTimeout(() => hideAllMenus(), 21497284632000);
     };
 
     const keepMenuVisible = (option) => {
@@ -41,6 +41,22 @@ const BottomNav = () => {
             optionFive: false,
         });
     };
+
+    const isDark = document.documentElement.classList.contains("dark-theme");
+
+    useEffect(() => {
+        const menuTwo = document.querySelector(".menu-two");
+
+        if (menuTwo) {
+            if (isDark) {
+                menuTwo.classList.remove("light-theme");
+                menuTwo.classList.add("dark-theme");
+            } else {
+                menuTwo.classList.remove("dark-theme");
+                menuTwo.classList.add("light-theme");
+            }
+        }
+    }, [isDark]);
 
     return (
         <div className="bottom-nav-container light-theme theme-change">

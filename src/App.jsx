@@ -10,6 +10,7 @@ function App() {
     return (
         <div>
             <section
+                style={{ boxSizing: "border-box" }}
                 id="reactive-nav-bottom"
                 class="reactive-nav-bottom light-theme theme-change"
             >
@@ -25,7 +26,11 @@ function App() {
             <section id="sec4-container" className="sec4-container">
                 <ExchangeStatsOne />
             </section>
-            <section id="news">
+            <section
+                id="news"
+                className="news-first-container theme-change light-theme"
+                style={{ boxSizing: "border-box" }}
+            >
                 <News />
             </section>
             <SectionFooter />

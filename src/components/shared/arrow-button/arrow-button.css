@@ -4,7 +4,7 @@ body {
 }
 
 .other-element-container {
-    z-index: 99999;
+    z-index: 19;
     display: inline;
     position: fixed;
     right: 18px;

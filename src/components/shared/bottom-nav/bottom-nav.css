@@ -3,40 +3,31 @@
     box-sizing: border-box;
 } */
 
-body {
-    line-height: 1;
-    font-size: 16px;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    font-size: 100%;
-    vertical-align: baseline;
-}
+.bottom-nav-container {
+    body {
+        line-height: 1;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
 
-span {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    font-size: 100%;
-    vertical-align: baseline;
-}
+    span,
+    div,
+    a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
 
-div {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    font-size: 100%;
-    vertical-align: baseline;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .bottom-nav-container.light-theme {
@@ -101,13 +92,13 @@ a {
 
 @media (min-width: 852px) {
     .reactive-nav-bottom.light-theme {
-      display: none; 
+        display: none;
     }
 }
 
 @media (min-width: 852px) {
     .reactive-nav-bottom.dark-theme {
-        display: none; 
+        display: none;
     }
 }
 
@@ -148,8 +139,8 @@ a {
     border: 0px;
     background: transparent;
     cursor: pointer;
-    height: 44px;
-    padding: 4px 12px; 
+    height: 36px;
+    padding: 4px 12px;
 }
 
 .option-link.light-theme:hover,
@@ -246,7 +237,6 @@ a {
     background: #27262c;
 }
 
-
 .option-link-icon-two svg {
     position: absolute;
     left: 0px;
@@ -290,7 +280,7 @@ a {
     background: transparent;
     cursor: pointer;
     height: 44px;
-    padding: 4px 12px; 
+    padding: 4px 12px;
 }
 
 .option-button.light-theme:hover,
@@ -318,7 +308,7 @@ a {
 .option-button-icon-container {
     position: relative;
     height: 22px;
-    width: 21px
+    width: 21px;
 }
 
 .option-button-icon.light-theme {
@@ -534,10 +524,11 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
+    margin-left: 15px;
 }
 
 .menu-two.dark-theme {
@@ -547,24 +538,24 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
+    margin-left: 15px;
 }
 
 .menu-two.light-theme.visible,
 .menu-two.dark-theme.visible {
-  visibility: visible;
-  pointer-events: auto;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-two.light-theme.hidden,
 .menu-two.dark-theme.hidden {
-  visibility: hidden;
-  pointer-events: none;
+    visibility: hidden;
+    pointer-events: none;
 }
-
 
 .option-two-in {
     pointer-events: inherit;
@@ -607,7 +598,7 @@ a {
     outline: 0px;
     padding-left: 16px;
     padding-right: 16px;
-    width: 100%;
+    /* width: 100%; */
     pointer-events: inherit;
 }
 
@@ -625,7 +616,7 @@ a {
     outline: 0px;
     padding-left: 16px;
     padding-right: 16px;
-    width: 100%;
+    /* width: 100%; */
     pointer-events: inherit;
 }
 
@@ -658,7 +649,7 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
@@ -671,7 +662,7 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
@@ -679,14 +670,14 @@ a {
 
 .menu-three.light-theme.visible,
 .menu-three.dark-theme.visible {
-  visibility: visible;
-  pointer-events: auto;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-three.light-theme.hidden,
 .menu-three.dark-theme.hidden {
-  visibility: hidden;
-  pointer-events: none;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .option-three-in {
@@ -729,7 +720,7 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
@@ -742,7 +733,7 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
@@ -750,14 +741,14 @@ a {
 
 .menu-four.light-theme.visible,
 .menu-four.dark-theme.visible {
-  visibility: visible;
-  pointer-events: auto;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-four.light-theme.hidden,
 .menu-four.dark-theme.hidden {
-  visibility: hidden;
-  pointer-events: none;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .option-four-in {
@@ -779,7 +770,7 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
@@ -792,7 +783,7 @@ a {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-bottom: 0px;
-    width: calc(100% - 32px);
+    width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
@@ -800,14 +791,14 @@ a {
 
 .menu-five.light-theme.visible,
 .menu-five.dark-theme.visible {
-  visibility: visible;
-  pointer-events: auto;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-five.light-theme.hidden,
 .menu-five.dark-theme.hidden {
-  visibility: hidden;
-  pointer-events: none;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .option-five-in {

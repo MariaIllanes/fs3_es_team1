@@ -1,3 +1,11 @@
+.news-first-container.light-theme {
+    background-color: #faf9fa;
+}
+
+.news-first-container.dark-theme {
+    background-color: #08060b;
+}
+
 .news img {
     height: auto;
     max-width: 100%;
