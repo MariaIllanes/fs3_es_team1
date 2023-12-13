@@ -1,23 +1,20 @@
 import React from 'react'
-import FooterList from './FooterList'
 import './MainNavbarStyle.css'
-import FooterIconList from './FooterIconsList'
-import SecondaryFooter from './SecondaryFooter.jsx'
+import PancakeLogo from '../sharedComponents/PancakeLogo'
+import MenuList from './MenuList'
+import MenuIconList from './MenuIconList'
 
 
-const SectionFooter = () => {
+const MainNav = () => {
     return (
-        <div className='main-footer'>
-            <div>
-                <FooterList className='footer-links-container' />
-                <FooterIconList />
-                <hr /> 
-            </div>
-                <SecondaryFooter />
-        </div>  
+        <section className='main-navbar'>
+            <PancakeLogo/>
+            <MenuList/>
+            <MenuIconList />
+        </section>  
     
     )
 }
 
 
-export default SectionFooter;
+export default MainNav;

@@ -1,0 +1,20 @@
+import Exchange from "./MenuIconList/Exchange";
+import Language from "./MenuIconList/Language";
+import Settings from "./MenuIconList/Modal/Settings";
+import Wallet from "./MenuIconList/Wallet";
+
+const MenuIconList = () => {
+  return (
+    <>
+      <div class="menu-icon-list">
+        <Exchange />
+        <Language />
+        <Settings />
+        <Chain />
+        <Wallet />
+      </div>
+    </>
+  );
+};
+
+export default MenuIconList;

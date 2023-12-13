@@ -1,0 +1,18 @@
+import Earn from "./MenuList/Earn";
+import Game from "./MenuList/Game";
+import More from "./MenuList/More";
+import Trade from "./MenuList/Trade";
+
+const MenuList = () => {
+  return (
+    <div class="menu-list">
+      <Trade title="Trade" />
+      <Earn title="Earn" />
+      <Game title="Game" />
+      <NFT title="NFT" />
+      <More />
+    </div>
+  );
+};
+
+export default MenuList;
