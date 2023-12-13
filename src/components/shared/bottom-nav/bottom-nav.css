@@ -517,7 +517,7 @@
     width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
-    visibility: hidden;
+    display: none;
     margin-left: 15px;
 }
 
@@ -531,20 +531,15 @@
     width: calc(100% - 45px);
     z-index: 1001;
     pointer-events: none;
-    visibility: hidden;
+    display: none;
     margin-left: 15px;
 }
 
 .menu-two.light-theme.visible,
 .menu-two.dark-theme.visible {
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.menu-two.light-theme.hidden,
-.menu-two.dark-theme.hidden {
-    visibility: hidden;
-    pointer-events: none;
+  
+  display: block;
+  pointer-events: auto;
 }
 
 .option-two-in {

@@ -42,22 +42,6 @@ const BottomNav = () => {
         });
     };
 
-    const isDark = document.documentElement.classList.contains("dark-theme");
-
-    useEffect(() => {
-        const menuTwo = document.querySelector(".menu-two");
-
-        if (menuTwo) {
-            if (isDark) {
-                menuTwo.classList.remove("light-theme");
-                menuTwo.classList.add("dark-theme");
-            } else {
-                menuTwo.classList.remove("dark-theme");
-                menuTwo.classList.add("light-theme");
-            }
-        }
-    }, [isDark]);
-
     return (
         <div className="bottom-nav-container light-theme theme-change">
             <div className="option-container">
@@ -162,13 +146,16 @@ const BottomNav = () => {
 
                 {menuVisible.optionTwo && (
                     <div
-                        className="menu-two dropdown-menu-two theme-change light-theme visible"
+                        className={`menu-two dropdown-menu-two theme-change light-theme ${
+                            menuVisible.optionTwo ? "visible" : ""
+                        }`}
                         onMouseOver={() => keepMenuVisible("optionTwo")}
                         onMouseOut={() => hideMenu("optionTwo")}
                         style={{
                             position: "absolute",
                             inset: "auto auto 0px 0px",
                             transform: "translate(0px, -50px)",
+                            display: menuVisible.optionTwo ? "block" : "none",
                         }}
                     >
                         <div className="option-two-in radius-one theme-change light-theme">
