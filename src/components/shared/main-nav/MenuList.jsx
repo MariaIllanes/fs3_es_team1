@@ -2,6 +2,7 @@ import Earn from "./MenuList/Earn";
 import Game from "./MenuList/Game";
 import More from "./MenuList/More";
 import Trade from "./MenuList/Trade";
+import NFT from "./MenuList/NFT";
 
 const MenuList = () => {
   return (
