@@ -1,9 +1,9 @@
 const Wallet = ({}) => {
   return (
     <>
-      <div class="wallet">
-        <button class="btn-main-blue theme-change light-theme" id="">
-          Connect <span class="text-hidden">Wallet</span>
+      <div className="wallet">
+        <button className="btn-main-blue theme-change light-theme" id="">
+          Connect <span className="text-hidden">Wallet</span>
         </button>
       </div>
     </>

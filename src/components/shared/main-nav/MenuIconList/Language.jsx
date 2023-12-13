@@ -1,9 +1,9 @@
 const Language = () => {
     return (
         <>
-       <div class="language theme-change light-theme">
+       <div className="language theme-change light-theme">
           <h2>
-            <i class="fa-solid fa-globe icon-list"></i>
+            <i className="fa-solid fa-globe icon-list"></i>
           </h2>
         </div>
       </>

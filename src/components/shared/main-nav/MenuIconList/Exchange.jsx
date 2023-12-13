@@ -3,7 +3,7 @@ import BunnyButton from "../../sharedComponents/BunnyButton";
 const Exchange = ({}) => {
     return (
         <>
-       <div class="exchange theme-change light-theme">
+       <div className="exchange theme-change light-theme">
           <BunnyButton />
         </div>
       </>

@@ -7,7 +7,7 @@ import Chain from "./MenuIconList/Chain";
 const MenuIconList = () => {
   return (
     <>
-      <div class="menu-icon-list">
+      <div className="menu-icon-list">
         <Exchange />
         <Language />
         {/* <Settings /> */}
