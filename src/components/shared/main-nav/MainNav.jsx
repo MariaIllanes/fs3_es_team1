@@ -10,7 +10,7 @@ const MainNav = () => {
         <section className='main-navbar light-theme theme-change'>
             <PancakeLogo/>
             <MenuList/>
-            {/* <MenuIconList />  */}
+            <MenuIconList />
         </section>  
     
     )

@@ -11,7 +11,7 @@ const Chain = () => {
               id="chain-btn"
             >
               <img
-                src="/assets/Navbar/bnb.png"
+                src="src/assets/bnb.png"
                 class="dropdown-img-btn"
                 id="chain-img-btn"
               />
@@ -34,7 +34,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/bnb.png" class="dropdown-img" /> BNB
+                  <img src="src/assets/bnb.png" class="dropdown-img" /> BNB
                   Smart Chain
                 </a>
               </li>
@@ -43,7 +43,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/eth.png" class="dropdown-img" />
+                  <img src="src/assets/eth.png" class="dropdown-img" />
                   Ethereum
                 </a>
               </li>
@@ -52,7 +52,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/pol.png" class="dropdown-img" />
+                  <img src="src/assets/pol.png" class="dropdown-img" />
                   Polygon
                 </a>
               </li>
@@ -61,7 +61,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/zKsync.png" class="dropdown-img" />
+                  <img src="src/assets/zKsync.png" class="dropdown-img" />
                   zKsync
                 </a>
               </li>
@@ -70,7 +70,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/Arbitrum.png" class="dropdown-img" />
+                  <img src="src/assets/Arbitrum.png" class="dropdown-img" />
                   Arbitrum
                 </a>
               </li>
@@ -79,7 +79,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/Linea.png" class="dropdown-img" />
+                  <img src="src/assets/Linea.png" class="dropdown-img" />
                   Linea Mainnet
                 </a>
               </li>
@@ -88,7 +88,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/Base.png" class="dropdown-img" />
+                  <img src="src/assets/Base.png" class="dropdown-img" />
                   Base
                 </a>
               </li>
@@ -97,7 +97,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/bnb.png" class="dropdown-img" />
+                  <img src="src/assets/bnb.png" class="dropdown-img" />
                   opBNB Mainnet
                 </a>
               </li>
@@ -106,7 +106,7 @@ const Chain = () => {
                   class="chain-item dropdown-item theme-change light-theme"
                   href="#"
                 >
-                  <img src="/assets/Navbar/aptos.png" class="dropdown-img" />
+                  <img src="src/assets/aptos.png" class="dropdown-img" />
                   Aptos
                 </a>
               </li>

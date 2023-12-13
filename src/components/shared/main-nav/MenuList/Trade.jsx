@@ -1,5 +1,3 @@
-import Dropdown from "react-bootstrap/Dropdown";
-
 const Trade = ({ title }) => {
   return (
     <>
