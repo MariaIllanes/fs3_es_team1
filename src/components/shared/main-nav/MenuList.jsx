@@ -5,7 +5,7 @@ import Trade from "./MenuList/Trade";
 
 const MenuList = () => {
   return (
-    <div class="menu-list">
+    <div className="menu-list">
       <Trade title="Trade" />
       <Earn title="Earn" />
       <Game title="Game" />

@@ -1,11 +1,11 @@
 const Game = ({title}) => {
     return (
         <>
-       <div class="game theme-change light-theme">
+       <div className="game theme-change light-theme">
         <h2>
-          <div class="dropdown">
+          <div className="dropdown">
             <a
-              class="game-dropdown btn btn-secondary theme-change light-theme"
+              className="game-dropdown btn btn-secondary theme-change light-theme"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -14,10 +14,10 @@ const Game = ({title}) => {
             >
               {title}
             </a>
-            <ul class="dropdown-menu theme-change light-theme" id="game-menu">
+            <ul className="dropdown-menu theme-change light-theme" id="game-menu">
               <li>
                 <a
-                  class=" game-item dropdown-item theme-change light-theme"
+                  className=" game-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Prediction (BETA)</h2>
@@ -25,7 +25,7 @@ const Game = ({title}) => {
               </li>
               <li>
                 <a
-                  class=" game-item dropdown-item theme-change light-theme"
+                  className=" game-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Lottery</h2>
@@ -33,7 +33,7 @@ const Game = ({title}) => {
               </li>
               <li>
                 <a
-                  class=" game-item dropdown-item theme-change light-theme extra-svg"
+                  className=" game-item dropdown-item theme-change light-theme extra-svg"
                   href="#"
                 >
                   <h2>Pottery (BETA)</h2>
@@ -41,7 +41,7 @@ const Game = ({title}) => {
               </li>
               <li>
                 <a
-                  class=" game-item dropdown-item theme-change light-theme extra-svg"
+                  className=" game-item dropdown-item theme-change light-theme extra-svg"
                   href="#"
                 >
                   <h2>Pancake Protectors</h2>

@@ -8,7 +8,7 @@ import MainNav from "./components/shared/main-nav/MainNav";
 function App() {
     return (
         <div>
-            <MainNav />
+            <MainNav /> 
             <section
                 id="other-element-container"
                 className="other-element-container"
