@@ -10,7 +10,7 @@ const MenuIconList = () => {
       <div class="menu-icon-list">
         <Exchange />
         <Language />
-        <Settings />
+        {/* <Settings /> */}
         <Chain />
         <Wallet />
       </div>

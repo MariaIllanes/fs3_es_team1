@@ -15,7 +15,7 @@
     color:  var(--footer-text);
     margin: 0px;
     padding: 56px 5% 32px;    
-    width: 90vw;
+    width: 100vw;
     font-size: 1rem;
     display: flex;
     flex-direction: column;

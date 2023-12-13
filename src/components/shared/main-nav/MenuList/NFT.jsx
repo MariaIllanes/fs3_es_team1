@@ -1,11 +1,11 @@
 const NFT = ({ title }) => {
   return (
     <>
-      <div class="nft theme-change light-theme">
+      <div className="nft theme-change light-theme">
         <h2>
-          <div class="dropdown">
+          <div className="dropdown">
             <a
-              class="nft-dropdown btn btn-secondary theme-change light-theme"
+              className="nft-dropdown btn btn-secondary theme-change light-theme"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -14,10 +14,10 @@ const NFT = ({ title }) => {
             >
               {title}
             </a>
-            <ul class="dropdown-menu theme-change light-theme" id="nft-menu">
+            <ul className="dropdown-menu theme-change light-theme" id="nft-menu">
               <li>
                 <a
-                  class=" nft-item dropdown-item theme-change light-theme"
+                  className=" nft-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Overview</h2>
@@ -25,7 +25,7 @@ const NFT = ({ title }) => {
               </li>
               <li>
                 <a
-                  class=" nft-item dropdown-item theme-change light-theme"
+                  className=" nft-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Collections</h2>
@@ -33,7 +33,7 @@ const NFT = ({ title }) => {
               </li>
               <li>
                 <a
-                  class=" nft-item dropdown-item theme-change light-theme extra-svg"
+                  className=" nft-item dropdown-item theme-change light-theme extra-svg"
                   href="#"
                 >
                   <h2>Activity</h2>

@@ -1,11 +1,11 @@
 const Earn = ({ title }) => {
   return (
     <>
-      <div class="earn theme-change light-theme">
+      <div className="earn theme-change light-theme">
         <h2>
-          <div class="dropdown">
+          <div className="dropdown">
             <a
-              class="earn-dropdown btn btn-secondary theme-change light-theme"
+              className="earn-dropdown btn btn-secondary theme-change light-theme"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -14,10 +14,10 @@ const Earn = ({ title }) => {
             >
               {title}
             </a>
-            <ul class="dropdown-menu theme-change light-theme" id="earn-menu">
+            <ul className="dropdown-menu theme-change light-theme" id="earn-menu">
               <li>
                 <a
-                  class=" earn-item dropdown-item theme-change light-theme"
+                  className=" earn-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Farms</h2>
@@ -25,7 +25,7 @@ const Earn = ({ title }) => {
               </li>
               <li>
                 <a
-                  class=" earn-item dropdown-item theme-change light-theme"
+                  className=" earn-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Pools</h2>
@@ -33,7 +33,7 @@ const Earn = ({ title }) => {
               </li>
               <li>
                 <a
-                  class=" earn-item dropdown-item theme-change light-theme extra-svg"
+                  className=" earn-item dropdown-item theme-change light-theme extra-svg"
                   href="#"
                 >
                   <h2>Position Manager</h2>
@@ -41,7 +41,7 @@ const Earn = ({ title }) => {
               </li>
               <li>
                 <a
-                  class=" earn-item dropdown-item theme-change light-theme extra-svg"
+                  className=" earn-item dropdown-item theme-change light-theme extra-svg"
                   href="#"
                 >
                   <h2>Liquid Staking</h2>
@@ -49,7 +49,7 @@ const Earn = ({ title }) => {
               </li>
               <li>
                 <a
-                  class="earn-item dropdown-item theme-change light-theme"
+                  className="earn-item dropdown-item theme-change light-theme"
                   href="#"
                 >
                   <h2>Simple Staking</h2>
