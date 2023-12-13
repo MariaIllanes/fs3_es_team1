@@ -3,23 +3,17 @@ import "./partners-animation.css";
 
 const PartnersAnimation = () => {
     useEffect(() => {
-        // Parte 1: Configuración del canvas
         const canvas = document.getElementById("miCanvas");
         const ctx = canvas.getContext("2d");
 
-        // Crea una nueva imagen
         const img = new Image();
 
-        // Asigna la ruta de la imagen
-        img.src = "/img/sec7-canvas.png"; // Reemplaza esto con la ruta correcta de tu imagen
+        img.src = "/img/sec7-canvas.png";
 
-        // Espera a que la imagen se cargue antes de dibujarla en el canvas
         img.onload = function () {
-            // Dibuja la imagen en el canvas
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         };
 
-        // Parte 2: Aplicación de estilos responsivos
         const applyStyles = () => {
             const screenWidth = window.innerWidth;
 
@@ -33,7 +27,6 @@ const PartnersAnimation = () => {
             const marquees = document.querySelectorAll(".marquee");
 
             if (screenWidth <= 968) {
-                // Apply styles for small screens
                 contentSubcontainerOnes.forEach((element) => {
                     element.style.setProperty("--transform", "none");
                 });
@@ -50,7 +43,6 @@ const PartnersAnimation = () => {
                     element.style.setProperty("--duration", "16.88s");
                 });
             } else {
-                // Apply styles for larger screens
                 contentSubcontainerOnes.forEach((element) => {
                     element.style.setProperty("--transform", "rotate(-90deg)");
                 });
@@ -69,17 +61,14 @@ const PartnersAnimation = () => {
             }
         };
 
-        // Llamada inicial para aplicar estilos
         applyStyles();
 
-        // Agrega un event listener para detectar cambios en el tamaño de la ventana
         window.addEventListener("resize", applyStyles);
 
-        // Elimina el event listener en la limpieza del componente
         return () => {
             window.removeEventListener("resize", applyStyles);
         };
-    }, []); // El array vacío [] como segundo argumento asegura que useEffect se ejecute solo una vez, equivalente a componentDidMount en clases
+    }, []);
 
     return (
         <section className="partners-animation-container theme-change light-theme">

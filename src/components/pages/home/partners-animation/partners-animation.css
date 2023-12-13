@@ -1,4 +1,3 @@
-
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -16,7 +15,7 @@
         100% {
             transform: translateX(-100%);
         }
-    } 
+    }
 }
 
 * {
@@ -24,7 +23,9 @@
     -webkit-font-smoothing: antialiased;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
@@ -34,6 +35,14 @@ div {
     border: 0px;
     font-size: 100%;
     vertical-align: baseline;
+}
+
+.first-container-partners.light-theme {
+    background-color: #faf9fa;
+}
+
+.first-container-partners.dark-theme {
+    background-color: #08060b;
 }
 
 .partners-animation-container.light-theme {
@@ -77,7 +86,7 @@ div {
     transform: scaleY(1);
 }
 
-.line-one.show.dark-theme{
+.line-one.show.dark-theme {
     transform: scaleY(1);
 }
 
@@ -158,7 +167,7 @@ div {
     height: 5px;
     border-radius: 3px;
 }
-  
+
 @media screen and (min-width: 968px) {
     .line-one.light-theme::before {
         inset: -2px 0px auto auto;
@@ -180,7 +189,7 @@ div {
     padding: 16px 24px;
 }
 
-@media screen and (min-width: 968px){
+@media screen and (min-width: 968px) {
     .part-one-container {
         max-width: 33%;
         overflow: visible;
@@ -220,7 +229,11 @@ div {
     width: 60%;
     height: 110%;
     transition: transform 0.45s ease-in-out 0.35s;
-    background: linear-gradient(90deg, rgb(250, 249, 250) 85%, rgba(250, 249, 250, 0) 100%);
+    background: linear-gradient(
+        90deg,
+        rgb(250, 249, 250) 85%,
+        rgba(250, 249, 250, 0) 100%
+    );
 }
 
 .part-one.dark-theme::before {
@@ -233,9 +246,12 @@ div {
     width: 60%;
     height: 110%;
     transition: transform 0.45s ease-in-out 0.35s;
-    background: linear-gradient(90deg, rgb(8, 6, 11) 85%, rgba(8, 6, 11, 0) 100%);
+    background: linear-gradient(
+        90deg,
+        rgb(8, 6, 11) 85%,
+        rgba(8, 6, 11, 0) 100%
+    );
 }
-
 
 @media screen and (min-width: 968px) {
     .part-one.light-theme::before {
@@ -244,7 +260,10 @@ div {
         left: 0px;
         width: 100%;
         height: 70%;
-        background: linear-gradient(rgb(250, 249, 250) 85%, rgba(250, 249, 250, 0) 100%);
+        background: linear-gradient(
+            rgb(250, 249, 250) 85%,
+            rgba(250, 249, 250, 0) 100%
+        );
     }
 
     .part-one.dark-theme::before {
@@ -272,7 +291,6 @@ div {
     background: #9a6aff;
     bottom: 0px;
 }
-
 
 @media screen and (min-width: 968px) {
     .line-two.light-theme {
@@ -324,7 +342,13 @@ div {
     position: relative;
     width: 210px;
     border-radius: 12px;
-    -webkit-mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
+    -webkit-mask-image: linear-gradient(
+        to left,
+        transparent,
+        black 80px,
+        black calc(100% - 80px),
+        transparent
+    );
     overflow: hidden;
 }
 
@@ -340,8 +364,7 @@ div {
     display: flex;
     flex-direction: row;
     position: relative;
-    width: 100%; 
-    /* He cambiado esto de 100vh a 100% para que se ajustara como en la original porque sino no salía, aunque en la original está como 100vh */
+    width: 100%;
     transform: var(--transform);
 }
 
@@ -366,10 +389,8 @@ div {
     align-items: center;
 }
 
-
 .child {
     transform: var(--transform);
-    
 }
 
 .bYcBXK.light-theme {
@@ -537,7 +558,7 @@ div {
         background: #fff;
         box-shadow: 0px 2px 0px 0px #e7e3eb;
     }
-    
+
     .cFQsTH.dark-theme::before {
         z-index: -1;
         content: attr(data-content);
@@ -550,7 +571,6 @@ div {
         background: #27262c;
         box-shadow: 0px 2px 0px 0px #383241;
     }
-
 }
 
 .UzbBi.light-theme {
@@ -768,7 +788,6 @@ div {
     margin-bottom: 21px;
     margin-right: 16px;
 }
-  
 
 @media screen and (min-width: 968px) {
     .VpIwQ.light-theme {
@@ -1108,7 +1127,8 @@ div {
     flex-shrink: 0;
 }
 
-@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and (not (-moz-appearance: none)) {
+@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and
+    (not (-moz-appearance: none)) {
     .child-svg-container.light-theme svg {
         filter: none !important;
     }
@@ -1131,7 +1151,6 @@ div {
     font-weight: 400;
     font-size: 16px;
 }
-
 
 .child-svg-text-two.light-theme {
     color: #280d5f;
@@ -1174,7 +1193,11 @@ div {
     right: 0px;
     width: 60%;
     height: 110%;
-    background: linear-gradient(90deg, rgba(250, 249, 250, 0) 0%, rgb(250, 249, 250) 15%);
+    background: linear-gradient(
+        90deg,
+        rgba(250, 249, 250, 0) 0%,
+        rgb(250, 249, 250) 15%
+    );
     transition: transform 0.45s ease-in-out 0.35s;
 }
 
@@ -1198,7 +1221,10 @@ div {
         top: auto;
         left: 0px;
         bottom: 0px;
-        background: linear-gradient(rgba(250, 249, 250, 0) 0%, rgb(250, 249, 250) 15%);
+        background: linear-gradient(
+            rgba(250, 249, 250, 0) 0%,
+            rgb(250, 249, 250) 15%
+        );
     }
 
     .part-one.dark-theme::after {
@@ -1239,7 +1265,11 @@ div {
     transform: translateX(-50%) translateY(-50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(151, 71, 255, 0.4) 0%, rgba(151, 71, 255, 0) 100%);
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(151, 71, 255, 0.4) 0%,
+        rgba(151, 71, 255, 0) 100%
+    );
 }
 
 .gvX {
@@ -1293,7 +1323,6 @@ div {
     position: relative;
 }
 
-
 .cFP.light-theme.show::before {
     transform: translateX(-95%);
 }
@@ -1301,7 +1330,6 @@ div {
 .cFP.dark-theme.show::before {
     transform: translateX(-95%);
 }
-
 
 @media screen and (min-width: 968px) {
     .cFP.light-theme.show::before {
@@ -1323,7 +1351,11 @@ div {
     width: 60%;
     height: 110%;
     transition: transform 0.45s ease-in-out 0.35s;
-    background: linear-gradient(90deg, rgb(250, 249, 250) 85%, rgba(250, 249, 250, 0) 100%);
+    background: linear-gradient(
+        90deg,
+        rgb(250, 249, 250) 85%,
+        rgba(250, 249, 250, 0) 100%
+    );
 }
 
 .cFP.dark-theme::before {
@@ -1336,7 +1368,11 @@ div {
     width: 60%;
     height: 110%;
     transition: transform 0.45s ease-in-out 0.35s;
-    background: linear-gradient(90deg, rgb(8, 6, 11) 85%, rgba(8, 6, 11, 0) 100%);
+    background: linear-gradient(
+        90deg,
+        rgb(8, 6, 11) 85%,
+        rgba(8, 6, 11, 0) 100%
+    );
 }
 
 @media screen and (min-width: 968px) {
@@ -1346,7 +1382,10 @@ div {
         left: 0px;
         width: 100%;
         height: 70%;
-        background: linear-gradient(rgb(250, 249, 250) 85%, rgba(250, 249, 250, 0) 100%);
+        background: linear-gradient(
+            rgb(250, 249, 250) 85%,
+            rgba(250, 249, 250, 0) 100%
+        );
     }
 
     .cFP.dark-theme::before {
@@ -1358,7 +1397,6 @@ div {
         background: linear-gradient(rgb(8, 6, 11) 85%, rgba(8, 6, 11, 0) 100%);
     }
 }
-
 
 .jtD.light-theme {
     position: absolute;
@@ -1399,9 +1437,9 @@ div {
 }
 
 @media screen and (min-width: 968px) {
-.cFP.show .sc-hc {
-    transform: scaleX(1);
-}
+    .cFP.show .sc-hc {
+        transform: scaleX(1);
+    }
 }
 
 .eaF.light-theme {
@@ -1456,8 +1494,8 @@ div {
     margin-bottom: 20px;
     text-align: center;
     font-size: 40px;
-    font-weight: 600; 
-} 
+    font-weight: 600;
+}
 
 .lbG.dark-theme {
     color: #f4eeff;
@@ -1465,8 +1503,8 @@ div {
     margin-bottom: 20px;
     text-align: center;
     font-size: 40px;
-    font-weight: 600; 
-} 
+    font-weight: 600;
+}
 
 .eRZ {
     position: relative;
@@ -1497,7 +1535,11 @@ div {
     right: 0px;
     width: 60%;
     height: 110%;
-    background: linear-gradient(90deg, rgba(250, 249, 250, 0) 0%, rgb(250, 249, 250) 15%);
+    background: linear-gradient(
+        90deg,
+        rgba(250, 249, 250, 0) 0%,
+        rgb(250, 249, 250) 15%
+    );
     transition: transform 0.45s ease-in-out 0.35s;
 }
 
@@ -1521,7 +1563,10 @@ div {
         top: auto;
         left: 0px;
         bottom: 0px;
-        background: linear-gradient(rgba(250, 249, 250, 0) 0%, rgb(250, 249, 250) 15%);
+        background: linear-gradient(
+            rgba(250, 249, 250, 0) 0%,
+            rgb(250, 249, 250) 15%
+        );
     }
 
     .cFP.dark-theme::after {
@@ -1538,7 +1583,13 @@ div {
     position: relative;
     width: 210px;
     border-radius: 12px;
-    -webkit-mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
+    -webkit-mask-image: linear-gradient(
+        to left,
+        transparent,
+        black 80px,
+        black calc(100% - 80px),
+        transparent
+    );
     padding-bottom: 3px;
     overflow: hidden;
 }
@@ -1641,7 +1692,6 @@ div {
         box-shadow: none;
     }
 }
-
 
 @media screen and (min-width: 968px) {
     .hRpYnQ.light-theme::before {

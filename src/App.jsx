@@ -14,7 +14,11 @@ function App() {
             >
                 <ArrowButton />
             </section>
-            <section id="partners-animation" style={{ zIndex: 5 }}>
+            <section
+                id="partners-animation"
+                className="first-container-partners theme-change light-theme"
+                style={{ zIndex: 5 }}
+            >
                 <PartnersAnimation />
             </section>
         </>
