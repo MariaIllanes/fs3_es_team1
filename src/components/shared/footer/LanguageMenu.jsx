@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const LanguageMenu = () => {
     const [shownMenu, setShownMenu] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('EN'); // Default selected language is 'English'
+    const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
     const toggleMenu = () => {
         setShownMenu(!shownMenu);
@@ -93,8 +93,7 @@ const LanguageMenu = () => {
 
     const handleLanguageSelect = (language) => {
         setSelectedLanguage(language.value);
-        setShownMenu(false); // Close the menu after selecting a language, if desired
-        // You can perform actions here based on the selected language value
+        setShownMenu(false); // to close the menu when selecting an option
     };
 
     return (
