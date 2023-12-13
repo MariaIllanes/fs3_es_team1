@@ -41,6 +41,8 @@ div {
     justify-content: center;
     width: 100%;
     background-color: #faf9fa;
+    padding-bottom: 70px;
+    padding-top: 105px;
 }
 
 .partners-animation-container.dark-theme {
@@ -48,6 +50,8 @@ div {
     justify-content: center;
     width: 100%;
     background-color: #08060b;
+    padding-bottom: 70px;
+    padding-top: 105px;
 }
 
 .partners-animation {
