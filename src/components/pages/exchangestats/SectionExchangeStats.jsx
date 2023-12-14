@@ -5,7 +5,7 @@ import "./SectionExchangeStats.css";
 export default function SectionExchangeStats() {
     return (
         <>
-            <div className="exchange-stats2-title">
+            <div className="exchange-stats2-title light-theme theme-change">
                 <h2>
                     CAKE <span id="exchange-figures">Figures</span>
                 </h2>

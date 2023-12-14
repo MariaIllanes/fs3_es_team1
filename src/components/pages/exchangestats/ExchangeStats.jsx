@@ -43,7 +43,7 @@ export default function ExchangeStats() {
                 {list.map((item, index) => (
                     <div className="exchange-info-container" key={index}>
                         <div className="exsElementText">
-                            <h3 className="exchange-titles light-theme">
+                            <h3 className="exchange-titles light-theme theme-change">
                                 {item.h3}
                             </h3>
                             <p className="exchange-counters" id={item.id}>
