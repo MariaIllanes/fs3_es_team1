@@ -161,7 +161,7 @@ const CommunityIconList = () => {
   ];
 
   return (
-    <div className="community-container">
+    <div>
       <div className="community-icons">
         {icons.map((icon, index) => (
           <a href={icon.href} target="_blank" rel="noopener noreferrer" key={index}>
