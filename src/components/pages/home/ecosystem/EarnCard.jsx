@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import Farm from './EcosystemAssets/earn-farm.png'
 import FarmPurple from './EcosystemAssets/earn-farm-purple.png'
 import Pools from './EcosystemAssets/earn-pools.png'
@@ -48,41 +48,64 @@ const EarnCard = () => {
           },
         ];
 
-  const handleMouseOver = (event, hoverImage) => {
+       
+  const [linkColor, setLinkColor] = useState('initial'); // avoids cards links to change color after being hovered or clicked
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900); // shows "hovered" images in small screens
+  const normalImageRef = useRef(null); // avoids normal picture to be shown when hovering over the image set by useState
+
+  const handleMouseOver = (event, hoverImage, theme) => {
     event.currentTarget.querySelector('img').src = hoverImage;
-    event.currentTarget.querySelector('.ecosystem-link').style.color = '#1fc7d4';
+    setLinkColor(theme === 'light-theme' ? '#000' : '#fff');
   };
 
-  const handleMouseOut = (event, normalImage) => {
-    event.currentTarget.querySelector('img').src = normalImage;
-    event.currentTarget.querySelector('.ecosystem-link').style.color = 'initial';
+  const handleMouseOut = (event, hoverImage) => {
+    if (!isSmallScreen) {
+      event.currentTarget.querySelector('img').src = hoverImage;
+    }
+    setLinkColor('initial');
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 900);
+      if (normalImageRef.current && isSmallScreen) {
+        normalImageRef.current.src = normalImageRef.current.dataset.hoverImage;
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isSmallScreen]);
 
   return (
-    <div class="ecosystem-container">
-        <div class="ecosystem-card-container theme-change light-theme" id="earn-container">
-            <img src={BigEarnImg} alt="" class="ecosystem-big-img" id="earn-img" />
-            <div class="earn-card-container-all theme-change light-theme">
-                <h3> Earn </h3>
-                <div class="earn-cards-container theme-change light-theme">
-                {EarnData.map((data, index) => (
-                    <a key={index} href={data.earnURL}
-                    onMouseOver={(e) => handleMouseOver(e, data.earnHoveredImage)}
-                    onMouseOut={(e) => handleMouseOut(e, data.earnimageSrc)}
-                    >
-                    <div className="earn-card">
-                        <div className="earn-img">
-                        <img src={data.earnimageSrc} data-hover-image={data.earnHoveredImage} alt="Trade" />
-                        </div>
-                        <h4>{data.earnTitle}</h4>
-                        <p className="ecosystem-description">{data.earnDescription}</p>
-                        <p className="ecosystem-link theme-change light-theme">{data.earnLink}</p>
-                    </div>
-                    </a>
-                ))}
+    <div className="ecosystem-container">
+      <div className="ecosystem-card-container theme-change light-theme" id="earn-container">
+        <img src={BigEarnImg} alt="" className="ecosystem-big-img" id="earn-img" />
+        <div className="earn-card-container-all theme-change light-theme">
+          <h3>Earn</h3>
+          <div className="earn-cards-container theme-change light-theme">
+            {EarnData.map((data, index) => (
+              <a key={index} href={data.earnURL} className="earn"
+                onMouseOver={(e) => handleMouseOver(e, data.earnHoveredImage, 'light-theme')}
+                onMouseOut={(e) => handleMouseOut(e, data.earnimageSrc)}
+              >
+                <div className="earn-card">
+                  <div className="earn-img">
+                    <img src={isSmallScreen ? data.earnHoveredImage : data.earnimageSrc} data-hover-image={data.earnHoveredImage} alt="" ref={isSmallScreen ? normalImageRef : null}
+                    />
+                  </div>
+                  <h4>{data.earnTitle}</h4>
+                  <p className="ecosystem-description">{data.earnDescription}</p>
+                  <p className="ecosystem-link theme-change light-theme">{data.earnLink}</p>
                 </div>
-            </div>
+              </a>
+            ))}
+          </div>
         </div>
+      </div>
     </div>
   );
 };

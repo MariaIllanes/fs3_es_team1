@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Swap from './EcosystemAssets/trade-swap.png'
 import SwapPurple from './EcosystemAssets/trade-swap-purple.png'
 import Liquidity from './EcosystemAssets/trade-liquidity.png'
@@ -60,43 +60,62 @@ const TradeCard = () => {
       },
   ];
 
-  const handleMouseOver = (event, hoverImage) => {
-    event.currentTarget.querySelector('img').src = hoverImage;
-    event.currentTarget.querySelector('.ecosystem-link').style.color = '#1fc7d4';
-  };
-
-  const handleMouseOut = (event, normalImage) => {
-    event.currentTarget.querySelector('img').src = normalImage;
-    event.currentTarget.querySelector('.ecosystem-link').style.color = 'initial';
-  };
+  const [linkColor, setLinkColor] = useState('initial'); // avoids cards links to change color after being hovered or clicked
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900); // shows "hovered" images in small screens
+    const normalImageRef = useRef(null); // avoids normal picture to be shown when hovering over the image set by useState
+  
+    const handleMouseOver = (event, hoverImage, theme) => {
+      event.currentTarget.querySelector('img').src = hoverImage;
+      setLinkColor(theme === 'light-theme' ? '#000' : '#fff');
+    };
+  
+    const handleMouseOut = (event, hoverImage) => {
+      if (!isSmallScreen) {
+        event.currentTarget.querySelector('img').src = hoverImage;
+      }
+      setLinkColor('initial');
+    };
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsSmallScreen(window.innerWidth < 900);
+        if (normalImageRef.current && isSmallScreen) {
+          normalImageRef.current.src = normalImageRef.current.dataset.hoverImage;
+        }
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, [isSmallScreen]);
 
   return (
-
-
-    <div class="ecosystem-container">
-        <div class="ecosystem-card-container theme-change light-theme">
-            <img src={BigTradeImg} alt="" class="ecosystem-big-img" id="trade-img" />
-            <div class="trade-card-container-all theme-change light-theme">
-                <h3 >Trade</h3>
-                <div class="trade-cards-container theme-change light-theme">
-                {tradeCardData.map((data, index) => (
-                    <a key={index} href={data.tradeURL} className="trade"
-                    onMouseOver={(e) => handleMouseOver(e, data.tradeHoveredImage)}
-                    onMouseOut={(e) => handleMouseOut(e, data.tradeimageSrc)}
-                    >
-                    <div className="trade-card">
-                        <div className="trade-img">
-                        <img src={data.tradeimageSrc} data-hover-image={data.tradeHoveredImage} alt="Trade" />
-                        </div>
-                        <h4>{data.tradeTitle}</h4>
-                        <p className="ecosystem-description">{data.tradeDescription}</p>
-                        <p className="ecosystem-link theme-change light-theme">{data.tradeLink}</p>
-                    </div>
-                    </a>
-                ))}
+    <div className="ecosystem-container">
+      <div className="ecosystem-card-container theme-change light-theme">
+        <img src={BigTradeImg} alt="" className="ecosystem-big-img" id="trade-img" />
+        <div className="trade-card-container-all theme-change light-theme">
+          <h3>Trade</h3>
+          <div className="trade-cards-container theme-change light-theme">
+            {tradeCardData.map((data, index) => (
+              <a key={index} href={data.tradeURL} className="trade"
+                onMouseOver={(e) => handleMouseOver(e, data.tradeHoveredImage, 'light-theme')}
+                onMouseOut={(e) => handleMouseOut(e, data.tradeimageSrc)}
+              >
+                <div className="trade-card">
+                  <div className="trade-img">
+                    <img src={isSmallScreen ? data.tradeHoveredImage : data.tradeimageSrc} data-hover-image={data.tradeHoveredImage} alt="Trade" ref={isSmallScreen ? normalImageRef : null} />
+                  </div>
+                  <h4>{data.tradeTitle}</h4>
+                  <p className="ecosystem-description">{data.tradeDescription}</p>
+                  <p className="ecosystem-link theme-change light-theme">{data.tradeLink}</p>
                 </div>
-            </div>
+              </a>
+            ))}
+          </div>
         </div>
+      </div>
     </div>
   );
 };
