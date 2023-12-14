@@ -46,7 +46,10 @@ export default function ExchangeStats() {
                             <h3 className="exchange-titles light-theme theme-change">
                                 {item.h3}
                             </h3>
-                            <p className="exchange-counters" id={item.id}>
+                            <p
+                                className="exchange-counters light-theme theme-change"
+                                id={item.id}
+                            >
                                 {item.number}
                             </p>
                         </div>

@@ -105,8 +105,15 @@
 
 #exchange-figures,
 .exchange-counters {
-    color: var(--communityActiveButton);
     font-weight: bold;
+}
+
+.exchange-figures.light-theme {
+    color: #7745d8;
+}
+
+.exchange-figures.dark-theme {
+    color: #9779e3;
 }
 
 .exchange-info-container::after {
@@ -127,16 +134,32 @@
     white-space: nowrap;
 }
 
-.exchange-counters {
+.exchange-counters.light-theme {
     font-size: 1.7rem;
     margin: 0;
     white-space: nowrap;
+    color: #7745d8;
 }
 
-h2 {
+.exchange-counters.dark-theme {
+    font-size: 1.7rem;
+    margin: 0;
+    white-space: nowrap;
+    color: #9779e3;
+}
+
+.exchange-cake.light-theme {
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #250f5b;
+}
+
+.exchange-cake.dark-theme {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .exchange-stats2.dark-theme h2 {
