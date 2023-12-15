@@ -109,22 +109,21 @@
     --greypurple: #b6b3c3;
     --tabs-width: 120px;
     --tabs-height: 13px;
-    --communityInactiveButton: rgba(169, 163, 191, 0.7);
-    --communityActiveButton: rgb(118, 69, 217);
+    --inactiveButton: rgba(179, 176, 187, 0.7);
+    --activeButton: rgb(118, 69, 217);
   }
   
-  /* aspecto básico */
-  body {
+  .footer-banner body {
     font-family: sans-serif;
     line-height: 1.2;
   }
   
-  h2,
-  p {
+  .footer-banner h2,
+  .footer-banner p {
     margin: 0;
   }
   
-  a {
+  .footer-banner a {
     color: inherit;
     text-decoration: none;
   }
@@ -135,17 +134,19 @@
     align-content: center;
   }
   
-  /* esto es para posicionar las pestañas correctamente ------------------ */
+  /* position tabs ------------------ */
   .footer-tab-container {
-    position: absolute;
+    position: relative;
     padding-top: 35px; 
   }
   
   #footer-tab1 > a {
     --tabs-position: 0;
+    z-index: 100;
   }
   #footer-tab2 > a {
     --tabs-position: 1.1;
+    z-index: 100;
   }
   .footer-tab > a {
     text-align: center;
@@ -155,13 +156,14 @@
     top: 0;
     left: calc(
       var(--tabs-width) * var(--tabs-position)
-    ); /* posición de cada pestaña */
+    ); /* tab position */
   }
   
   .footer-tabs {
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
   }
+  
   .footer-tab-content.light-theme {
     background-color: var(--lightPurple);
     padding: 20px;
@@ -175,7 +177,8 @@
   }
   
   .footer-tab-content.dark-theme {
-    background-color: #3b4155;
+    background-color: #3d2a54;
+    background-image: linear-gradient(139.73deg, #3d2a54, #313d5c);
     padding: 20px;
     position: relative;
     z-index: 100;
@@ -195,11 +198,14 @@
   }
   
   .footer-tab.dark-theme > a {
-    color: var(--cardwhite);
-    background-color: var(--purple);
+    color: black;
+    background-color: #b8add2;
+    font-weight: bold;
     padding: 10px;
     border-radius: 10px 10px 0 0;
     border-bottom: 0;
+    z-index: 200;
+
   }
   
   .footer-tab.light-theme:target > a,
@@ -211,14 +217,14 @@
   
   .footer-tab.dark-theme:target > a,
   .footer-tab.dark-theme:last-of-type > a {
-    color: #b8add2;
+    color: var(--greypurple);
     background-color: #372f47;
     z-index: 200;
   }
   /*  */
   .footer-tab:target ~ .footer-tab:last-of-type > a {
     background-color: var(--purple);
-    color: var(--lightPurple);
+    color: var(--greypurple);
     z-index: 0;
   }
   
@@ -257,7 +263,7 @@
   #cw-left-text.light-theme h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
-    color: var(--btn-dark-text);
+    color: var(--purple);
   }
   
   #cw-left-text.dark-theme h3 {
@@ -275,7 +281,7 @@
   #cw-left-text.dark-theme p {
     text-align: justify;
     font-size: 1rem;
-    color: var(--cardwhite);
+    color: #b8add2;
   }
   
   .cw-cards {
@@ -351,6 +357,13 @@
     height: 50px;
     width: 50px;
   }
+
+  .icon-dots.dark-theme {
+    background-color: var(--gre);
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+  }
   
   /* connect wallet - rigth section ----------------------------------------------------------------*/
   .footer-tab-content-cw {
@@ -369,7 +382,19 @@
     right: -15px;
   }
   
-  .fb-button p {
+  .fb-button.light-theme p {
+    background-color: var(--purple);
+    color: var(--cardwhite);
+    stroke: var(--cardwhite);
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    box-shadow: 1px 1px 0 0 rgb(128, 0, 128);
+  }
+
+  .fb-button.dark-theme p {
     background-color: var(--purple);
     color: var(--cardwhite);
     font-weight: bold;
@@ -379,6 +404,7 @@
     width: fit-content;
     box-shadow: 1px 1px 0 0 rgb(128, 0, 128);
   }
+
 
   .fb-button a{
     display: flex;
@@ -423,13 +449,11 @@
     text-align: center;
   }
 
-  
-
-
   .cw-card.footer-card-slide{
     max-width: 300px;
   }
-  
+
+
   .footer-slideshow-container.light-theme {
     color: var(--purple);
   }
@@ -448,13 +472,12 @@
     text-align: center;
     align-content: center;
     max-width: 500px;
-    background-color: yellow;
   }
   
   .w3-content h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
-    color: var(--title-purple);
+    color: var(--purple);
   }
   
   #cw-right p {
@@ -477,8 +500,7 @@
     margin: 0 0 10px;
   } */
 
-
-  
+   
   .w3-content {
     display: inline-flex;
     gap: 10px;
@@ -514,7 +536,7 @@
   .footer-slideshow-buttons button {
     display: inline-flex;
     border: none;
-    background-color: var(--communityInactiveButton);
+    background-color: var(--inactiveButton);
     width: 35px;
     height: 8px;
     bottom: 10px;
@@ -536,7 +558,7 @@
 
   #w3-slide-button1.active, 
   #w3-slide-button2.active {
-    background-color: var(--communityActiveButton);
+    background-color: var(--activeButton);
   }
 
 
@@ -629,11 +651,16 @@
     .footer-tab:target .footer-tab-content,
     .footer-tab:last-of-type .footer-tab-content {
       display: flex;
-      width: auto;
+      width: 100vw;
+      box-sizing: border-box;
     }
   
     #cw-right {
       padding: 0 30px;
+    }
+
+    .footer-tab-content{
+      width: 100vw;
     }
   }
   
@@ -692,3 +719,50 @@
       width: 100vw;
     }
   }
+
+  .fb-button.dark-theme p,
+  #cw-right.dark-theme p,
+  .fb-button.dark-theme svg{
+   color: black;
+   stroke: black;
+  }
+
+
+
+
+
+
+
+
+
+
+  
+
+  .footer-banner-wrapper {
+    position: relative;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 7, 64, 0.5); 
+    z-index: 2; 
+  }
+  
+  html{
+    background-color: yellow;
+  }
+
+  #w3-container{
+    width: 100%;
+  }
+
+  /* falta: 
+  centrar HiddenFooterBanner, 
+  fijar botón open wallet, 
+  bloquear fondo cuando HiddenFooterBanner visible; 
+  comprobar y arreglar responssive, 
+  checar dark theme (a veces hay q darle dos veces para q cambie) */

@@ -38,7 +38,7 @@ const ConnectWalletList = () => {
       src: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="icon-dots"
+          className="icon-dots theme-change light-theme"
           width="30"
           height="30"
           viewBox="0 0 24 24"

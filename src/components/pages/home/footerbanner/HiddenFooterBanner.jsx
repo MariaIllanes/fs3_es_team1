@@ -7,12 +7,12 @@ import Carousel from './Carousel';
 const HiddenFooterBanner = () => {
     return (
         <div className="footer-tabs theme-change light-theme">
-                <div className="footer-tab-container">
+                <div className="footer-tab-container theme-change light-theme">
                     <div id="footer-tab2" className="footer-tab theme-change light-theme">
                     <a href="#footer-tab2">What's a Web3 Wallet?</a>
                         <div id="w3-container">
                           <div className="footer-tab-content theme-change light-theme" id="footer-tab-content2">
-                            <div className="w3-content">
+                            <div className="w3-content theme-change light-theme">
                             <Carousel />
                             </div>
                           </div>
@@ -36,7 +36,7 @@ const HiddenFooterBanner = () => {
                         <div className="fb-button theme-change light-theme" id="cw-right"> 
                           <h4>Haven't got a wallet yet?</h4>
                           <img id="fb-cw-img" src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width="180" height="160" />
-                          <p>
+                          <p className='theme-change light-theme'>
                             <a href="https://docs.pancakeswap.finance/get-started/wallet-guide">Learn How to Connect
                                 <svg xmlns="http://www.w3.org/2000/svg" id="fb-icon-link" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#eee" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -51,8 +51,6 @@ const HiddenFooterBanner = () => {
                     </div> 
                 </div> 
             </div>
-            
-            
         </div>
     )
 }
