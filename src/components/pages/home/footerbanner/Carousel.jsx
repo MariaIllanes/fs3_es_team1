@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import FooterBannerCard1 from './FooterBannerCard1.jsx'
+import FooterBannerCard2 from './FooterBannerCard2.jsx'
 
 const Carousel = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -19,7 +21,7 @@ const Carousel = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(AutoShow, 6000);
+    const interval = setInterval(cardAutoShow, 6000);
 
     return () => clearInterval(interval);
   });
@@ -28,25 +30,25 @@ const Carousel = () => {
     <div className="footer-tab-content theme-change light-theme" id="footer-tab-content2">
       <div className="w3-content">
         <div className="slideshow-container">
-          <div className={`community-card-slide ${slideCommunityIndex === 1 ? 'active' : ''}`}>
-            {slideCommunityIndex === 1 && <FooterBannerCard cardClass={"footer-card1"} cardTitle={"Your first step in the DeFi world"} cardImg={Card1Img} 
-                                    cardDescription={"A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more."}/>}
+          <div className={`cw-card-slide ${slideIndex === 1 ? 'active' : ''}`}>
+            {slideIndex === 1 && <FooterBannerCard1/>}
           </div>
-          <div className={`community-card-slide ${slideCommunityIndex === 2 ? 'active' : ''}`}>
-            {slideCommunityIndex === 2 && <FooterBannerCard cardClass={"footer-card2"} style={display=none} cardTitle={"Login using a wallet connection"} cardImg={Card2Img} 
-                                    cardDescription={""}/> }
+          <div className={`cw-card-slide ${slideIndex === 2 ? 'active' : ''}`}>
+            {slideIndex === 2 && <FooterBannerCard2/> }
           </div>
           <div className="footer-slideshow-buttons">
             <button
               id="w3-slide-button1"
-              className={ "footer-slideshow-buttons theme-change light-theme" + slideIndex === 1 ? 'active' : ''}
+              className={ "footer-slideshow-buttons theme-change light-theme " + (slideIndex === 1 ? 'active' : '') }
               onClick={() => showCard(1)}
             ></button>
             <button
               id="w3-slide-button2"
-              className={ "footer-slideshow-buttons theme-change light-theme" +  slideIndex === 2 ? 'active' : ''}
+              className={ "footer-slideshow-buttons theme-change light-theme " + (slideIndex === 2 ? 'active' : '') }
+
               onClick={() => showCard(2)}
             ></button>
+          </div>
 
             <div className="fb-button" id="fb-w3-button"> 
               <p>
@@ -60,7 +62,6 @@ const Carousel = () => {
                 </a>
               </p>
             </div>
-          </div>
         </div>
       </div>
     </div>

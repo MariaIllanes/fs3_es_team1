@@ -78,57 +78,53 @@ const ConnectWalletList = () => {
     },
   ];
   
-
   const initialShowMore = false;
   const [showMore, setShowMore] = useState(initialShowMore);
-  const [showMoreIcon, setShowMoreIcon] = useState(true);
+  const [showIcon, setShowIcon] = useState(true);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
-    setShowMoreIcon(false);
+    setShowIcon(!showIcon)
   };
 
+  console.log("footerBannerData.length:", footerBannerData.length);
+console.log("showMore:", showMore);
 
   return (
-
-        <div className="cw-cards">
-          {footerBannerGrid.slice(0, showMore ? footerBannerGrid.length : 8).map((item, index) => (
-            <div key={index} className="cw-card theme-change light-theme">
-              {typeof item.src === 'string' ? (
-                <img src={item.src} alt={item.description} width="50" height="50" />
-              ) : (
-                item.src
-              )}
-              <p>{item.description}</p>
-            </div>
-          ))}
-          {!showMore && (
-            <div className="cw-card theme-change light-theme" onClick={toggleShowMore}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon-dots"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="#2c3e50"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-              </svg>
-              <p>Show more</p>
-            </div>
+    <div className="cw-cards">
+      {footerBannerData.slice(0, showMore ? footerBannerData.length : 8).map((item, index) => (
+        <div key={index} className="cw-card theme-change light-theme">
+          {typeof item.src === 'string' ? (
+            <img src={item.src} alt={item.description} width="50" height="50" />
+          ) : (
+            item.src
           )}
+          <p>{item.description}</p>
         </div>
-
+      ))}
+      {!showMore && (
+        <div className="cw-card theme-change light-theme" onClick={toggleShowMore}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon-dots"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#2c3e50"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          </svg>
+          <p>Show more</p>
+        </div>
+      )}
+    </div>
   );
 };
-
-
 export default ConnectWalletList;
-

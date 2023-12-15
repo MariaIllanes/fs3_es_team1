@@ -109,7 +109,7 @@
     --greypurple: #b6b3c3;
     --tabs-width: 120px;
     --tabs-height: 13px;
-    --communityInactiveButton: rgba(122, 110, 170, 0.7);
+    --communityInactiveButton: rgba(169, 163, 191, 0.7);
     --communityActiveButton: rgb(118, 69, 217);
   }
   
@@ -283,7 +283,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: 15px;
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
     justify-content: center;
   }
   
@@ -373,11 +373,27 @@
     background-color: var(--purple);
     color: var(--cardwhite);
     font-weight: bold;
-    padding: 10px 12px;
+    padding: 15px 20px;
     border-radius: 10px;
     display: flex;
     width: fit-content;
     box-shadow: 1px 1px 0 0 rgb(128, 0, 128);
+  }
+
+  .fb-button a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  .fb-button svg{
+    width: 35px;
+  }
+
+  #fb-w3-button{
+    display: flex;
+    justify-content: center;
   }
   
   #cw-right a {
@@ -399,7 +415,19 @@
   /* web3 section */
   
   .footer-card-slide {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+
+
+  .cw-card.footer-card-slide{
+    max-width: 300px;
   }
   
   .footer-slideshow-container.light-theme {
@@ -410,15 +438,17 @@
     color: var(--cardwhite);
   }
   
-  .footer-card1 {
+  /* .footer-card1 {
     display: block;
-  }
+  } */
   
   /* Styling for the buttons */
   .footer-slideshow-container {
-    display: inline-flex;
+    display: flex;
     text-align: center;
-    max-width: 400px;
+    align-content: center;
+    max-width: 500px;
+    background-color: yellow;
   }
   
   .w3-content h3 {
@@ -438,27 +468,16 @@
     box-shadow: var(--title-purple) 1px 1px 0px 0px;
   }
   
-  .footer-slideshow-buttons button {
+  /* .footer-slideshow-buttons button {
     width: 70px;
     height: 10px;
     background-color: var(--purple);
     border: none;
     padding: 0 0 0 15px;
     margin: 0 0 10px;
-  }
-  
-  .footer-slideshow-buttons {
-    text-align: center;
-    margin: 10px 0;
-  }
-  
-  #w3-slide-button1 {
-    border-radius: 10px 0 0 10px;
-  }
-  
-  #w3-slide-button2 {
-    border-radius: 0 10px 10px 0;
-  }
+  } */
+
+
   
   .w3-content {
     display: inline-flex;
@@ -500,10 +519,28 @@
     height: 8px;
     bottom: 10px;
   }
+
+    
+  .footer-slideshow-buttons {
+    text-align: center;
+    margin: 10px 0;
+  }
+   
+  #w3-slide-button1 {
+    border-radius: 10px 0 0 10px;
+  }
   
-  .footer-slideshow-buttons button.active {
+  #w3-slide-button2 {
+    border-radius: 0 10px 10px 0;
+  }
+
+  #w3-slide-button1.active, 
+  #w3-slide-button2.active {
     background-color: var(--communityActiveButton);
   }
+
+
+
   
   /* dark/light mode */
   
