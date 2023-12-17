@@ -3,6 +3,7 @@ import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
 import SectionFooter from "./components/shared/footer/SectionFooter.jsx";
 import ExchangeStatsOne from "./components/pages/home/Exchange-stats-1/ExchangeStatsOne.jsx";
+import SectionExchangeStats from "./components/pages/exchangestats/SectionExchangeStats.jsx";
 import News from "./components/pages/home/News/News.jsx";
 import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
 import MainNav from "./components/shared/main-nav/MainNav";
@@ -28,6 +29,7 @@ function App() {
             <section id="sec4-container" className="sec4-container">
                 <ExchangeStatsOne />
             </section>
+            <SectionExchangeStats />
             <section
                 id="news"
                 className="news-first-container theme-change light-theme"
