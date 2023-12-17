@@ -3,7 +3,7 @@ import userImage from "./CommunityAssets/community-user-img.png"
 
 const CarouselCard1 = () => {
     return (
-       <div id="community-tweet-icons">
+       <div id="community-tweet">
             <div class="community-card-slide" id="community-card-slide1">
                 <h5>Top Tweet of the week</h5>
                 <img src={userImage} alt="" id="community-user-img" />

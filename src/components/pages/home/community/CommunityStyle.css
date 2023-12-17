@@ -86,9 +86,18 @@
     color: #b31818;
 } */
 
-.community-container h3 {
+.community-container.light-theme h3 {
     margin: 0;
     font-weight: bold;
+    font-size: 1.4rem;
+    color: #7a6eaa;
+}
+
+.community-container.dark-theme h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--purpleTweet);
 }
 
 .community-sm {
@@ -185,6 +194,8 @@
     padding: 15px;
     text-align: left;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
 }
 
 #community-card-slide1 a,
@@ -221,9 +232,15 @@
     height: 30px;
 }
 
+#community-tweet p {
+    color: white;
+    margin: 0;
+}
+
+
+
 #community-tweet-icons p {
     color: var(--purpleTweet);
-    font-weight: bold;
 }
 
 #community-tweet-icons hr {
@@ -245,6 +262,7 @@
 
 #community-date {
     color: var(--purpleTweet);
+    padding: 5px 0 0 0;
 }
 
 .community-card-slide p:first-child {
@@ -258,6 +276,7 @@
     width: 35px;
     height: 8px;
     bottom: 10px;
+    gap: 3px;
 }
 
 #community-slide-button1 {
@@ -364,21 +383,23 @@
 
 .community-icons {
     display: inline-flex;
-    gap: 5px;
+    gap: 8px;
 }
 
 .social-media-svg.light-theme {
     background-color: white;
     border-radius: 40px;
-    padding: 8px;
+    padding: 10px;
     width: 25px;
+    box-sizing: content-box;
 }
 
 .social-media-svg.dark-theme {
     background-color: #27262b;
     border-radius: 40px;
-    padding: 8px;
+    padding: 13px;
     width: 25px;
+    box-sizing: content-box;
 }
 
 @media (max-width: 1300px) {
@@ -517,11 +538,11 @@
 
     .community.light-theme,
     .community.dark-theme {
-        height: 1280px;
+        height: 1300px;
     }
 
     #community-bg-bell {
-        top: 1080px;
+        top: 1060px;
     }
 
     .community {
