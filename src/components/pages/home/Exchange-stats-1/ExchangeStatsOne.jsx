@@ -10,7 +10,7 @@ const ExchangeStatsOne = () => {
             >
                 <div
                     className="kHgHJL gVCLyc"
-                    style={{ margin: "0px", width: "100%" }}
+                    style={{ margin: "0px", width: "100%", padding: '0px' }}
                 >
                     <div className="fVbmfK ZuZHX">
                         <div className="cDHLip theme-change light-theme">
