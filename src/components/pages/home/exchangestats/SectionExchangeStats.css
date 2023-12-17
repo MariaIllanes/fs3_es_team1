@@ -54,9 +54,10 @@
     width: 100vw;
 }
 
-.exchange-stats2 {
-    width: 100%;
+.exchange-stats2{
+    padding-bottom: 40px;
 }
+
 
 .exchange-stats2-title.light-theme {
     background-color: #faf9fa;
@@ -110,6 +111,7 @@
 
 .exchange-figures.light-theme {
     color: #7745d8;
+    text-align: center;
 }
 
 .exchange-figures.dark-theme {
@@ -117,13 +119,10 @@
 }
 
 .exchange-info-container::after {
-    content: "|";
-    font-size: 6rem;
-    font-weight: lighter;
-    align-items: center;
-    display: flex;
+    content: '';
+    border-left: 2px solid lightgray;
+    height: 4em;
     margin: 0 20px;
-    color: lightgray;
 }
 
 .exchange-titles {
@@ -139,6 +138,7 @@
     margin: 0;
     white-space: nowrap;
     color: #7745d8;
+    text-align: center;
 }
 
 .exchange-counters.dark-theme {
@@ -146,6 +146,7 @@
     margin: 0;
     white-space: nowrap;
     color: #9779e3;
+    text-align: center;
 }
 
 .exchange-cake.light-theme {
@@ -174,12 +175,14 @@
     font-weight: bold;
     margin-bottom: 0;
     color: black;
+    text-align: center;
 }
 
 .exchange-titles.dark-theme {
     font-weight: bold;
     margin-bottom: 0;
     color: white;
+    text-align: center;
 }
 
 .exchange-statistics-container.dark-theme h3 {
@@ -210,6 +213,7 @@
     align-items: center;
     margin: 20px 0;
     min-width: 200px;
+    justify-content: center;
 }
 
 @media (max-width: 1199px) {

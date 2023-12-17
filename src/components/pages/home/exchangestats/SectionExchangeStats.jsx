@@ -4,7 +4,7 @@ import "./SectionExchangeStats.css";
 
 export default function SectionExchangeStats() {
     return (
-        <>
+        <div className="exchange-stats2 light-theme theme-change">
             <div className="exchange-stats2-title light-theme theme-change">
                 <h2 className="exchange-cake theme-change light-theme">
                     CAKE{" "}
@@ -19,6 +19,6 @@ export default function SectionExchangeStats() {
             <div className="exchange-container light-theme theme-change">
                 <ExchangeStats />
             </div>
-        </>
+        </div>
     );
 }
