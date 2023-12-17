@@ -11,9 +11,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
-/* *, ::before, ::after {
-    box-sizing: border-box;
-} */
+.sec4-container ::before,
+::after {
+    box-sizing: content-box !important;
+}
 
 body {
     margin: 0;
@@ -37,14 +38,14 @@ span {
 }
 
 #home-2.page-bg.light-theme {
-    background: -webkit-linear-gradient(top,#fff 22%,#d7caec 100%);
-    background: -moz-linear-gradient(top,#fff 22%,#d7caec 100%);
-    background: -o-linear-gradient(top,#fff 22%,#d7caec 100%);
-    background: linear-gradient(180deg,#fff 22%,#d7caec 100%);
+    background: -webkit-linear-gradient(top, #fff 22%, #d7caec 100%);
+    background: -moz-linear-gradient(top, #fff 22%, #d7caec 100%);
+    background: -o-linear-gradient(top, #fff 22%, #d7caec 100%);
+    background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
 }
 
 #home-2.page-bg.dark-theme {
-    background: linear-gradient(180deg,#09070c 22%,#201335 100%);
+    background: linear-gradient(180deg, #09070c 22%, #201335 100%);
 }
 
 .jciDMZ {
@@ -81,7 +82,7 @@ span {
 
 .kHgHJL {
     min-height: auto;
-    padding: 16px 8px;
+    padding: 16px 0px;
 }
 
 @media screen and (min-width: 576px) {
@@ -161,7 +162,6 @@ span {
     }
 }
 
-
 .jTConU {
     display: flex;
     justify-content: center;
@@ -224,14 +224,26 @@ span {
 .dbFZKb.light-theme {
     width: 100%;
     max-width: 1063px;
-    -webkit-mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
+    -webkit-mask-image: linear-gradient(
+        to left,
+        transparent,
+        black 80px,
+        black calc(100% - 80px),
+        transparent
+    );
     border-radius: 12px;
 }
 
 .dbFZKb.dark-theme {
     width: 100%;
     max-width: 1063px;
-    -webkit-mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
+    -webkit-mask-image: linear-gradient(
+        to left,
+        transparent,
+        black 80px,
+        black calc(100% - 80px),
+        transparent
+    );
     border-radius: 12px;
 }
 
@@ -302,7 +314,8 @@ span {
     flex-shrink: 0;
 }
 
-@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and (not (-moz-appearance: none)) {
+@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and
+    (not (-moz-appearance: none)) {
     .cvmRst.light-theme {
         filter: none !important;
     }
@@ -342,7 +355,8 @@ span {
     flex-shrink: 0;
 }
 
-@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and (not (-moz-appearance: none)) {
+@supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and
+    (not (-moz-appearance: none)) {
     .jIIotV.light-theme {
         filter: none !important;
     }

@@ -241,6 +241,13 @@
         display: block;
         min-width: 2rem;
     }
+
+    .logo.light {
+        display: none;
+    }
+    .logo.dark {
+        display: none;
+    }
     .text-hidden {
         display: none;
     }
