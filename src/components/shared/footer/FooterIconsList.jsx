@@ -175,7 +175,7 @@ const FooterIconList = () => {
   return (
     <>
       <div className="footer-socialmedia-container">
-        <div className="footer-icons community-icons">
+        <div className="footer-icons">
           {icons.map((icon, index) => (
             <div key={index}>
               {index === 1 ? (
