@@ -94,9 +94,10 @@
 }
 
 #footer-banner-hidden-section {
-    display: none;
     position: absolute;
-    top: 40px;
+    top: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 /* css tabs and container ----------------------------------------------------------------------------------*/
@@ -155,7 +156,7 @@
     height: calc(var(--tabs-height) + var(--tabs-border-size));
     top: 0;
     left: calc(
-      var(--tabs-width) * var(--tabs-position)
+      var(--tabs-width) * var(--tabs-position) + 20px
     ); /* tab position */
   }
   
@@ -170,10 +171,9 @@
     position: relative;
     z-index: 100;
     display: none;
-    width: 800px;
-    height: 529px;
-    left: -15px;
     border-radius: 20px 20px 20px 20px;
+    width: 850px;
+    height: 550px;
   }
   
   .footer-tab-content.dark-theme {
@@ -183,8 +183,8 @@
     position: relative;
     z-index: 100;
     display: none;
-    width: 800px;
-    height: 529px;
+    width: 850px;
+    height: 550px;
     left: -15px;
     border-radius: 20px 20px 20px 20px;
 }
@@ -249,7 +249,8 @@
     margin: -20px 0 -20px -20px;
     padding: 20px 10px 18px;
     border-radius: 20px;
-    height: 529px;
+    height: 550px;
+
 }
 
 #cw-left.dark-theme {
@@ -257,7 +258,7 @@
     margin: -20px 0 -20px -20px;
     padding: 20px 10px 18px;
     border-radius: 20px;
-    height: 529px;
+    height: 550px;
 }
 
 #cw-left-text {
@@ -269,6 +270,7 @@
     font-size: 1.3rem;
     margin: 0 0 20px 0;
     color: var(--purple);
+    font-weight: bold;
   }
   
   /* #cw-left-text.dark-theme h3 {
@@ -399,6 +401,11 @@
     position: relative;
     right: -15px;
   }
+
+  #cw-right img {
+    width: 220px !important;
+    height: auto;
+  }
   
   .fb-button.light-theme p {
     background-color: var(--purple);
@@ -449,6 +456,7 @@
 #cw-right h4 {
     color: var(--purple);
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 #fb-cw-img {
@@ -503,7 +511,8 @@
 .w3-content h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
-    color: var(--title-purple);
+    color: var(--purple);
+    font-weight: bold;
 }
 
 #cw-right p {
@@ -536,6 +545,9 @@
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    z-index: 300;
+    width: 850px;
+    height: 550px;
 }
 
 .w3-content {
@@ -656,6 +668,41 @@
     }
 }
 
+@media (max-width: 860px) {
+    .footer-tab-content,
+    #footer-tab-content2{
+        width: 100vw;
+    }
+
+    .footer-tab-content.light-theme,
+    .footer-tab-content.dark-theme{
+        width: 100vw;
+        height: 550px;
+      }
+
+      .footer-tab-content-cw {
+        grid-template-columns: 3fr 4fr;
+        height: 500px;
+    }
+
+    .cw-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #cw-right img {
+        width: 260px !important;
+        height: auto;;
+    }
+
+    #footer-banner-hidden-section{
+        position: absolute;
+        bottom: 0px;
+    }
+
+}
+
+
+
 @media (max-width: 800px) {
     .cw-cards {
         display: grid;
@@ -669,14 +716,14 @@
         width: 400px;
     }
 
-    .footer-tab:target .footer-tab-content,
+    /* .footer-tab:target .footer-tab-content,
     .footer-tab:last-of-type .footer-tab-content {
       display: flex;
       width: 100vw;
         box-sizing: border-box;
         display: flex;
         width: auto;
-    }
+    } */
 
     #cw-right {
         padding: 0 30px;
@@ -684,6 +731,28 @@
 
     .footer-tab-content{
       width: 100vw;
+    }
+
+    .footer-tab-content-cw {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        gap: 10px 10px 10px;
+        height: 500px;
+    }
+  }
+
+  @media (max-width: 740px) {
+    #cw-right img {
+        width: 200px !important;
+        height: auto;
+    }
+
+    #cw-right a {
+        font-size: 1rem;
+    }
+
+    #cw-right {
+        padding: 0 0px;
     }
   }
   
@@ -725,28 +794,57 @@
 @media (max-width: 650px) {
     #cw-left.cw-card.light-theme,
     #cw-left.cw-card.dark-theme {
-        width: 100vw;
         padding: 20px 26px 20px 0px;
-    }
-
-    #cw-right {
-        display: none;
     }
 
     .cw-cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: 269px;
+        overflow-y: scroll;
     }
 
-    /* #footer-tab-content2 {
-        width: 100vw;
-    } */
+
+    .footer-tab-content-cw {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 10px 10px;
+        height: 00px;
+    }
+
+    #cw-left {
+        width: unset;
+    }
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
     .cw-cards {
         overflow-y: hidden;
     }
+  } */
+
+  @media (max-width: 540px){
+    #cw-right{
+        display: none;
+    }
+
+    #cw-left.light-theme,
+    #cw-left.dark-theme{
+        width: 100vw;
+        height: auto;
+    }
+    .cw-cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .footer-tab-content.light-theme,
+    .footer-tab-content.dark-theme{
+       height: 0;
+    }
+    
+
   }
 
   .fb-button.dark-theme p,
@@ -755,6 +853,15 @@
    color: black;
    stroke: black;
   }
+
+
+  @media (max-width: 400px){
+    .footer-card-slide{
+        width: 300px;
+    }
+  }
+ 
+
 
 
 
@@ -767,7 +874,7 @@
 
   
 
-  .footer-banner-wrapper {
+  /* .footer-banner-wrapper {
     position: relative;
   }
   
@@ -779,19 +886,16 @@
     height: 100%;
     background-color: rgba(64, 7, 64, 0.5); 
     z-index: 2; 
-  }
+  } */
   
-  html{
-    background-color: yellow;
-  }
 
   #w3-container{
     width: 100%;
   }
 
+
   /* falta: 
-  centrar HiddenFooterBanner, 
-  fijar botón open wallet, 
   bloquear fondo cuando HiddenFooterBanner visible; 
-  comprobar y arreglar responssive, 
+  hacer desaparecer boton more
+  crear nuevas "cards" que sustituyan al conejo al clicar ciertas imgs
   checar dark theme (a veces hay q darle dos veces para q cambie) */

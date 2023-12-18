@@ -80,11 +80,9 @@ const ConnectWalletList = () => {
   
   const initialShowMore = false;
   const [showMore, setShowMore] = useState(initialShowMore);
-  const [showIcon, setShowIcon] = useState(true);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
-    setShowIcon(!showIcon)
   };
 
   console.log("footerBannerData.length:", footerBannerData.length);
@@ -103,7 +101,10 @@ console.log("showMore:", showMore);
         </div>
       ))}
       {!showMore && (
-        <div className="cw-card theme-change light-theme" onClick={toggleShowMore}>
+        <div
+          className="cw-card theme-change light-theme"
+          onClick={toggleShowMore}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon-dots"
@@ -122,6 +123,21 @@ console.log("showMore:", showMore);
             <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
           </svg>
           <p>Show more</p>
+        </div>
+      )}
+      {showMore && (
+        <div className="hidden-items">
+          {/* Display additional items here */}
+          {footerBannerData.slice(8).map((item, index) => (
+            <div key={index} className="cw-card theme-change light-theme">
+              {typeof item.src === 'string' ? (
+                <img src={item.src} alt={item.description} width="50" height="50" />
+              ) : (
+                item.src
+              )}
+              <p>{item.description}</p>
+            </div>
+          ))}
         </div>
       )}
     </div>
