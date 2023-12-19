@@ -6,29 +6,29 @@ import BaseBunny3BG2 from "../../../../../assets/Ad-caroussel/card3/liquidStakin
 
 const AdCard3 = () => {
   return (
-    <div class="carousel-item" id="carousel-item3">
-      <div class="card3AC" id="card3">
-        <div class="text-container">
-          <div class="logoCont">
+    <div className="carousel-item" id="carousel-item3">
+      <div className="card3AC" id="card3">
+        <div className="text-container">
+          <div className="logoCont">
             <img
               src="https://assets.pancakeswap.finance/web/banners/liquidStakingTitle.png"
               alt="PancakeSwap"
               id="bunny-logo3"
             />
           </div>
-          <div class="titleAC3">
+          <div className="titleAC3">
             <h3>Liquid Staking Integration for WBETH</h3>
           </div>
-          <div class="subtitleAC3">
+          <div className="subtitleAC3">
             <h4>ETH to WBETH conversion and earn ETH staking rewards</h4>
           </div>
-          <div class="CTA3">
-            <button class="btn-sec" id="">
+          <div className="CTA3">
+            <button className="btn-sec" id="">
               Get Started
             </button>
           </div>
         </div>
-        <div class="caroussel-img">
+        <div className="caroussel-img">
           <img src={BaseBunny3} id="base-bunny3" />
           <img src={BaseBunny3Alt} id="base-bunny3-alt" />
           <img src={BaseBunny3BG} id="bunny-bg3" />

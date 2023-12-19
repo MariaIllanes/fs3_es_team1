@@ -8,12 +8,12 @@ import AdCard5 from "./AdCarouselCards/AdCard5.jsx";
 
 const AdCarouselInnerCards = () => {
   return (
-    <div class="carousel-inner">
-      <AdCard1 />
-      <AdCard2 />
-      <AdCard3 />
+    <div className="carousel-inner">
+       {/* <AdCard2 /> */}
+      <AdCard1 /> 
+       <AdCard3 />
       <AdCard4 />
-      <AdCard5 />
+      <AdCard5 /> 
     </div>
   );
 };

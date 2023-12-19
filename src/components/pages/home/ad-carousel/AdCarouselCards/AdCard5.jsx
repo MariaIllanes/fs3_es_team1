@@ -5,25 +5,25 @@ import BaseBunnyBG6 from "../../../../../assets/Ad-caroussel/card6/butterbg.webp
 
 const AdCard5 = () => {
   return (
-    <div class="carousel-item" id="carousel-item6">
-      <div class="card6AC" id="card6">
-        <div class="text-container">
-          <div class="subtitleAC6">
+    <div className="carousel-item" id="carousel-item6">
+      <div className="card6AC" id="card6">
+        <div className="text-container">
+          <div className="subtitleAC6">
             <h4>Trade to earn rewards</h4>
           </div>
-          <div class="titleAC6">
+          <div className="titleAC6">
             <h3>10% trading rebates to be earned</h3>
           </div>
-          <div class="CTA6">
-            <button class="btn-main-blue theme-change light-theme" id="">
+          <div className="CTA6">
+            <button className="btn-main-blue theme-change light-theme" id="">
               Trade Now
             </button>
-            <button class="btn-main-white" id="">
+            <button className="btn-main-white" id="">
               Learn more
             </button>
           </div>
         </div>
-        <div class="caroussel-img">
+        <div className="caroussel-img">
           <img src={BaseBunny6} id="base-bunny6" />
           <img src={BaseBunnyBG6} id="bunny-bg6" />
           <img src={LVB} id="bunny-bg6-2" />

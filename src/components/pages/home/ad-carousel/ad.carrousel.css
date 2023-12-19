@@ -346,7 +346,7 @@ section.dark-theme{
         margin-left: auto;
         margin-right: auto;
         width: 80%;
-        background-image: url("/assets/Ad-caroussel/card2/opbnb-bg.webp");
+        background-image: url("../../../../assets/Ad-caroussel/card2/opbnb-bg.webp");
         padding: 1.5rem;
         padding-bottom: 0;
         border-radius: 2rem;
@@ -381,14 +381,11 @@ section.dark-theme{
     position: relative;
 }
 
-.CTA2 {
-    padding-bottom: 1rem;
-}
 
 .CTA2 button{
     background: none;
     color: white;
-    /* padding: 0rem 1rem 1.5rem 0rem; */
+    margin: 1rem 1.5rem 2.5rem 0rem;
 }
 
 .CTA2 button:hover {
@@ -443,7 +440,7 @@ section.dark-theme{
 .CTA3 button{
     background: none;
     color: white;
-    padding: 0rem 1rem 1rem 0rem;
+    padding: 2.5rem 1.5rem 2.5rem 0rem;
 }
 
 .CTA3 button:hover {
@@ -465,7 +462,7 @@ section.dark-theme{
     padding-bottom: 0;
     border-radius: 2rem;
     justify-content: space-between;
-    background-image: url(/assets/Ad-caroussel/card4/galxe-traverse-bg.png);
+    background-image: url("../../../../assets/Ad-caroussel/card4/galxe-traverse-bg.png");
 }
 
 .titleAC4{
@@ -622,5 +619,6 @@ opacity: 40%;
     margin-bottom: 2.5rem;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
+    margin-right: 1rem;
 }
 

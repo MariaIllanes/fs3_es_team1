@@ -5,8 +5,8 @@ import AdCarouselIndicators from "./AdCarouselIndicators.jsx";
 
 const AdCarouselCardContainer = () => {
   return (
-    <div class="caroussel-card">
-      <div class="carousel slide" id="carouselExampleIndicators">
+    <div className="caroussel-card">
+      <div className="carousel slide" id="carouselExampleIndicators">
         <AdCarouselIndicators />
         <AdCarouselInnerCards />
       </div>

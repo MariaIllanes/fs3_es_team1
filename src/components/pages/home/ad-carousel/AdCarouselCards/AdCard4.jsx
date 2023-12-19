@@ -4,22 +4,22 @@ import IMG5 from "../../../../../assets/Ad-caroussel/card5/perpetualimg.webp";
 
 const AdCard4 = () => {
   return (
-    <div class="carousel-item " id="carousel-item5">
-      <div class="card5AC" id="card5">
-        <div class="text-container">
-          <div class="subtitleAC5">
+    <div className="carousel-item " id="carousel-item5">
+      <div className="card5AC" id="card5">
+        <div className="text-container">
+          <div className="subtitleAC5">
             <h4>Perpetual Futures</h4>
           </div>
-          <div class="titleAC5">
+          <div className="titleAC5">
             <h3>UP TO 100X LEVERAGE</h3>
           </div>
-          <div class="CTA5">
-            <button class="btn-main-blue theme-change light-theme" id="">
+          <div className="CTA5">
+            <button className="btn-main-blue theme-change light-theme" id="">
               Trade Now
             </button>
           </div>
         </div>
-        <div class="caroussel-img">
+        <div className="caroussel-img">
           <img src={IMG5} id="base-bunny5" />
         </div>
       </div>
