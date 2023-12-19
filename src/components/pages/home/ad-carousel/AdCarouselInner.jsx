@@ -1,10 +1,10 @@
 import React from "react";
 import "./ad.carrousel.css";
-import AdCard1 from "./AdCarouselCards/AdCard1";
-import AdCard2 from "./AdCarouselCards/AdCard2";
-import AdCard3 from "./AdCarouselCards/AdCard3";
-import AdCard4 from "./AdCarouselCards/AdCard4";
-import AdCard5 from "./AdCarouselCards/AdCard5";
+import AdCard1 from "./AdCarouselCards/AdCard1.jsx";
+import AdCard2 from "./AdCarouselCards/AdCard2.jsx";
+import AdCard3 from "./AdCarouselCards/AdCard3.jsx";
+import AdCard4 from "./AdCarouselCards/AdCard4.jsx";
+import AdCard5 from "./AdCarouselCards/AdCard5.jsx";
 
 const AdCarouselInnerCards = () => {
   return (

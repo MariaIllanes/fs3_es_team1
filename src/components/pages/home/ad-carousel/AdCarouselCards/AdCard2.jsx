@@ -1,5 +1,7 @@
-import React from "react";
-import "./ad.carrousel.css";
+import "../ad.carrousel.css";
+import BunnyLogo from "../../../../../assets/Ad-caroussel/bunnylogo.png";
+import BaseBunny2 from "../../../../../assets/Ad-caroussel/card2/opbnb-bunny.webp";
+import BNBLogo from "../../../../../assets/bnb.png";
 
 const AdCard2 = () => {
   return (
@@ -7,17 +9,9 @@ const AdCard2 = () => {
       <div class="card2AC" id="card2">
         <div class="text-container">
           <div class="logoCont">
-            <img
-              src="/assets/Ad-caroussel/bunnylogo.png"
-              alt="PancakeSwap"
-              id="bunny-logo2"
-            />
+            <img src={BunnyLogo} alt="PancakeSwap" id="bunny-logo2" />
             |
-            <img
-              src="/assets/Navbar/bnb.png"
-              alt="PancakeSwap"
-              id="bnb-logo2"
-            />
+            <img src={BNBLogo} alt="PancakeSwap" id="bnb-logo2" />
           </div>
           <div class="titleAC2">
             <h3>PancakeSwap Now Live on opBNB!</h3>
@@ -32,10 +26,7 @@ const AdCard2 = () => {
           </div>
         </div>
         <div class="caroussel-img">
-          <img
-            src="/assets/Ad-caroussel/card2/opbnb-bunny.webp"
-            id="base-bunny2"
-          />
+          <img src={BaseBunny2} id="base-bunny2" />
         </div>
       </div>
     </div>

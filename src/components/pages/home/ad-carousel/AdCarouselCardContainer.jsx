@@ -1,7 +1,7 @@
 import React from "react";
 import "./ad.carrousel.css";
-import AdCarouselInnerCards from "./AdCarouselInner";
-import AdCarouselIndicators from "./AdCarouselIndicators";
+import AdCarouselInnerCards from "./AdCarouselInner.jsx";
+import AdCarouselIndicators from "./AdCarouselIndicators.jsx";
 
 const AdCarouselCardContainer = () => {
   return (

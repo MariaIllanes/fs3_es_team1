@@ -1,5 +1,10 @@
-import React from "react";
-import "./ad.carrousel.css";
+import "../ad.carrousel.css";
+import BaseBunny1 from "../../../../../assets/Ad-caroussel/blue-card-1/base-bunny.webp"
+import BaseBunnyBG1 from "../../../../../assets/Ad-caroussel/blue-card-1/bunnybgblue2.webp"
+import BaseBunnyCloud from "../../../../../assets/Ad-caroussel/blue-card-1/cloudbunny1.webp"
+import BaseBunnyBG2 from "../../../../../assets/Ad-caroussel/blue-card-1/bunny1bg2.webp"
+import BaseBunnyBGAlt from "../../../../../assets/Ad-caroussel/blue-card-1/altbgbunny1.webp"
+import BunnyLogo from "../../../../../assets/Ad-caroussel/bunnylogo.png"
 
 const AdCard1 = () => {
   return (
@@ -8,7 +13,7 @@ const AdCard1 = () => {
         <div class="text-container">
           <div class="logoCont">
             <img
-              src="/assets/Ad-caroussel/bunnylogo.png"
+              src={BunnyLogo}
               alt="PancakeSwap"
               id="bunny-logo"
             />
@@ -44,23 +49,23 @@ const AdCard1 = () => {
         </div>
         <div class="caroussel-img">
           <img
-            src="/assets/Ad-caroussel/blue-card-1/base-bunny.webp"
+            src={BaseBunny1}
             id="base-bunny1"
           />
           <img
-            src="/assets/Ad-caroussel/blue-card-1/bunnybgblue2.webp"
+            src={BaseBunnyBG1}
             id="bunny-bg1"
           />
           <img
-            src="/assets/Ad-caroussel/blue-card-1/cloudbunny1.webp"
+            src={BaseBunnyCloud}
             id="bunny-cloud1"
           />
           <img
-            src="/assets/Ad-caroussel/blue-card-1/bunny1bg2.webp"
+            src={BaseBunnyBG2}
             id="bunny-bg1-2"
           />
           <img
-            src="/assets/Ad-caroussel/blue-card-1/altbgbunny1.webp"
+            src={BaseBunnyBGAlt}
             id="bunny-altbg1"
           />
         </div>

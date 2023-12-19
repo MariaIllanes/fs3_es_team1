@@ -1,5 +1,7 @@
-import React from "react";
-import "./ad.carrousel.css";
+import "../ad.carrousel.css";
+import BaseBunny6 from "../../../../../assets/Ad-caroussel/card6/trading-reward-bunny.webp";
+import LVB from "../../../../../assets/Ad-caroussel/card6/love-butterbg.webp";
+import BaseBunnyBG6 from "../../../../../assets/Ad-caroussel/card6/butterbg.webp";
 
 const AdCard5 = () => {
   return (
@@ -22,19 +24,10 @@ const AdCard5 = () => {
           </div>
         </div>
         <div class="caroussel-img">
-          <img
-            src="/assets/Ad-caroussel/card6/trading-reward-bunny.webp"
-            id="base-bunny6"
-          />
-          <img src="/assets/Ad-caroussel/card6/butterbg.webp" id="bunny-bg6" />
-          <img
-            src="/assets/Ad-caroussel/card6/love-butterbg.webp"
-            id="bunny-bg6-2"
-          />
-          <img
-            src="/assets/Ad-caroussel/card6/butterbg.webp"
-            id="bunny-bg6-3"
-          />
+          <img src={BaseBunny6} id="base-bunny6" />
+          <img src={BaseBunnyBG6} id="bunny-bg6" />
+          <img src={LVB} id="bunny-bg6-2" />
+          <img src={BaseBunnyBG6} id="bunny-bg6-3" />
         </div>
       </div>
     </div>

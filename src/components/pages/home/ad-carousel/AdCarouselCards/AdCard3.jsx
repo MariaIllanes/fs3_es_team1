@@ -1,5 +1,8 @@
-import React from "react";
-import "./ad.carrousel.css";
+import "../ad.carrousel.css";
+import BaseBunny3 from "../../../../../assets/Ad-caroussel/card3/liquidStakingBunnyimg.png";
+import BaseBunny3Alt from "../../../../../assets/Ad-caroussel/card3/alt-bunny.png";
+import BaseBunny3BG from "../../../../../assets/Ad-caroussel/card3/liquidStakingBunnyBg1.png";
+import BaseBunny3BG2 from "../../../../../assets/Ad-caroussel/card3/liquidStakingBunnyBg2.png";
 
 const AdCard3 = () => {
   return (
@@ -26,22 +29,10 @@ const AdCard3 = () => {
           </div>
         </div>
         <div class="caroussel-img">
-          <img
-            src="/assets/Ad-caroussel/card3/liquidStakingBunnyimg.png"
-            id="base-bunny3"
-          />
-          <img
-            src="/assets/Ad-caroussel/card3/alt-bunny.png"
-            id="base-bunny3-alt"
-          />
-          <img
-            src="/assets/Ad-caroussel/card3/liquidStakingBunnyBg1.png"
-            id="bunny-bg3"
-          />
-          <img
-            src="/assets/Ad-caroussel/card3/liquidStakingBunnyBg2.png"
-            id="bunny-bg3-2"
-          />
+          <img src={BaseBunny3} id="base-bunny3" />
+          <img src={BaseBunny3Alt} id="base-bunny3-alt" />
+          <img src={BaseBunny3BG} id="bunny-bg3" />
+          <img src={BaseBunny3BG2} id="bunny-bg3-2" />
         </div>
       </div>
     </div>
