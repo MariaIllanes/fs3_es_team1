@@ -13,61 +13,6 @@ const PartnersAnimation = () => {
         img.onload = function () {
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         };
-
-        const applyStyles = () => {
-            const screenWidth = window.innerWidth;
-
-            const contentSubcontainerOnes = document.querySelectorAll(
-                ".content-subcontainer-one"
-            );
-            const carousels = document.querySelectorAll(".carousel");
-            const children = document.querySelectorAll(".child");
-            const marqueeContainer =
-                document.querySelectorAll(".marquee-container");
-            const marquees = document.querySelectorAll(".marquee");
-
-            if (screenWidth <= 968) {
-                contentSubcontainerOnes.forEach((element) => {
-                    element.style.setProperty("--transform", "none");
-                });
-                carousels.forEach((element) => {
-                    element.style.setProperty("--duration", "21.7425s");
-                });
-                children.forEach((element) => {
-                    element.style.setProperty("--transform", "none");
-                });
-                marqueeContainer.forEach((element) => {
-                    element.style.setProperty("--transform", "none");
-                });
-                marquees.forEach((element) => {
-                    element.style.setProperty("--duration", "16.88s");
-                });
-            } else {
-                contentSubcontainerOnes.forEach((element) => {
-                    element.style.setProperty("--transform", "rotate(-90deg)");
-                });
-                carousels.forEach((element) => {
-                    element.style.setProperty("--duration", "8.32s");
-                });
-                children.forEach((element) => {
-                    element.style.setProperty("--transform", "rotate(90deg)");
-                });
-                marqueeContainer.forEach((element) => {
-                    element.style.setProperty("--transform", "rotate(-90deg)");
-                });
-                marquees.forEach((element) => {
-                    element.style.setProperty("--duration", "5.2s");
-                });
-            }
-        };
-
-        applyStyles();
-
-        window.addEventListener("resize", applyStyles);
-
-        return () => {
-            window.removeEventListener("resize", applyStyles);
-        };
     }, []);
 
     return (
@@ -87,7 +32,6 @@ const PartnersAnimation = () => {
                                     "--pause-on-hover": "running",
                                     "--pause-on-click": "running",
                                     "--width": "100vh",
-                                    "--transform": "rotate(-90deg)",
                                 }}
                             >
                                 <div
@@ -95,19 +39,13 @@ const PartnersAnimation = () => {
                                     style={{
                                         "--play": "running",
                                         "--direction": "reverse",
-                                        "--duration": "8.32s",
                                         "--delay": "0s",
                                         "--iteration-count": "infinite",
                                         "--min-width": "100%",
                                     }}
                                 >
                                     <div className="carousel-child-container vertical-one">
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="bYcBXK light-theme theme-change child-svg-container">
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -130,12 +68,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="cFQsTH light-theme theme-change child-svg-container">
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -161,12 +94,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change UzbBi">
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -190,12 +118,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change cWcfGd">
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -213,12 +136,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change VpIwQ">
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -250,12 +168,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change hYRNmJ">
                                                 <svg
                                                     viewBox="0 0 19 17"
@@ -273,12 +186,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change SSZbf">
                                                 <svg
                                                     viewBox="0 0 25 24"
@@ -307,12 +215,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change jBBscj">
                                                 <svg
                                                     viewBox="0 0 21 18"
@@ -337,18 +240,12 @@ const PartnersAnimation = () => {
                                     style={{
                                         "--play": "running",
                                         "--direction": "reverse",
-                                        "--duration": "8.32s",
                                         "--delay": "0s",
                                         "--iteration-count": "infinite",
                                         "--min-width": "100%",
                                     }}
                                 >
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container bYcBXK theme-change light-theme">
                                             <svg
                                                 viewBox="0 0 24 24"
@@ -370,12 +267,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change cFQsTH">
                                             <svg
                                                 viewBox="0 0 24 24"
@@ -400,12 +292,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change UzbBi">
                                             <svg
                                                 viewBox="0 0 24 24"
@@ -428,12 +315,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change cWcfGd">
                                             <svg
                                                 viewBox="0 0 24 24"
@@ -450,12 +332,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change VpIwQ">
                                             <svg
                                                 viewBox="0 0 24 24"
@@ -486,12 +363,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change hYRNmJ">
                                             <svg
                                                 viewBox="0 0 19 17"
@@ -508,12 +380,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change SSZbf">
                                             <svg
                                                 viewBox="0 0 25 24"
@@ -541,12 +408,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change jBBscj">
                                             <svg
                                                 viewBox="0 0 21 18"
@@ -591,7 +453,6 @@ const PartnersAnimation = () => {
                                     "--pause-on-hover": "running",
                                     "--pause-on-click": "running",
                                     "--width": "100vh",
-                                    "--transform": "rotate(-90deg)",
                                 }}
                             >
                                 <div
@@ -599,19 +460,13 @@ const PartnersAnimation = () => {
                                     style={{
                                         "--play": "running",
                                         "--direction": "reverse",
-                                        "--duration": "5.2s",
                                         "--delay": "0s",
                                         "--iteration-count": "infinite",
                                         "--min-width": "100%",
                                     }}
                                 >
                                     <div className="carousel-child-container">
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change hRpYnQ">
                                                 <svg
                                                     viewBox="0 0 21 20"
@@ -628,12 +483,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change jkNBxj">
                                                 <svg
                                                     viewBox="0 0 22 20"
@@ -881,12 +731,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change enBcKL">
                                                 <svg
                                                     viewBox="0 0 20 20"
@@ -924,12 +769,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change ieACox">
                                                 <svg
                                                     viewBox="0 0 20 24"
@@ -1023,12 +863,7 @@ const PartnersAnimation = () => {
                                             </div>
                                         </div>
 
-                                        <div
-                                            className="child"
-                                            style={{
-                                                "--transform": "rotate(90deg)",
-                                            }}
-                                        >
+                                        <div className="child" style={{}}>
                                             <div className="child-svg-container light-theme theme-change gDeGgY">
                                                 <svg
                                                     viewBox="0 0 20 20"
@@ -1072,18 +907,12 @@ const PartnersAnimation = () => {
                                     style={{
                                         "--play": "running",
                                         "--direction": "reverse",
-                                        "--duration": "5.2s",
                                         "--delay": "0s",
                                         "--iteration-count": "infinite",
                                         "--min-width": "100%",
                                     }}
                                 >
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change hRpYnQ">
                                             <svg
                                                 viewBox="0 0 21 20"
@@ -1100,12 +929,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change jkNBxj">
                                             <svg
                                                 viewBox="0 0 22 20"
@@ -1353,12 +1177,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change enBcKL">
                                             <svg
                                                 viewBox="0 0 20 20"
@@ -1396,12 +1215,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change ieACox">
                                             <svg
                                                 viewBox="0 0 20 24"
@@ -1495,12 +1309,7 @@ const PartnersAnimation = () => {
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="child"
-                                        style={{
-                                            "--transform": "rotate(90deg)",
-                                        }}
-                                    >
+                                    <div className="child" style={{}}>
                                         <div className="child-svg-container light-theme theme-change gDeGgY">
                                             <svg
                                                 viewBox="0 0 20 20"
