@@ -91,7 +91,6 @@
   
   .trade-cards-container,
   .gamenft-cards-container{
-      display: inline-flex;
       width: auto;
       justify-content: space-evenly;   
       display: grid;
@@ -102,8 +101,7 @@
   .earn-cards-container{
     display: grid;
     grid-template-columns: repeat(4, 200px);
-    gap: 20px;
-    
+    gap: 25px;    
   }
   
   
@@ -157,7 +155,8 @@
     font-weight: bold;
   }
   
-  .trade-card-container-all p{
+  .trade-card-container-all p,
+  .gamenft-card-container-all p{
     font-size: 14px
   }
   
@@ -226,6 +225,10 @@
     justify-content: space-between;
   }
 
+  .earn{
+    width: 180px;
+  }
+
   @media (min-width: 1080px) {
     .trade-card,
     .gamenft-card{
@@ -237,34 +240,28 @@
   @media (max-width: 1250px){
    .trade-cards-container,
   .gamenft-cards-container{
-      display: inline-flex;
-      width: auto;
-      justify-content: space-evenly;   
-      display: grid;
       grid-template-columns: repeat(5, 150px);
-      gap: 15px;
   }
   
   .earn-cards-container{
-    display: grid;
     grid-template-columns: repeat(4, 190px);
     gap: 2px;
     
   }
 }
   
-  @media (max-width: 1150px){
+  @media (max-width: 1160px){
     .trade-cards-container,
     .gamenft-cards-container {
       display: grid;
       grid-template-columns: repeat(3, 190px);    
-      gap: 15px;
+      gap: 15px; 
     }
   
     .earn-cards-container{
       display: grid;
-      grid-template-columns: repeat(2, 250px);
-      gap: 15px;
+      grid-template-columns: repeat(2, 240px);
+      gap: 20px;
     }
   
     .ecosystem-big-img{
@@ -430,6 +427,17 @@
     }
     
   }
+
+  @media (max-width: 760px){
+    .trade-cards-container a:last-of-type,
+    .trade-cards-container a:last-of-type p,    
+    .gamenft-cards-container a:last-of-type,
+    .gamenft-cards-container a:last-of-type p{
+      width: 450px;
+      background-color: green;
+    }
+  
+  }
   
   @media (max-width: 650px){
     .earn-cards-container {
@@ -437,6 +445,7 @@
       grid-template-columns: repeat(2, 240px);
       justify-items: center;
   }
+  
   }
 
   @media (max-width: 574px){
@@ -496,6 +505,16 @@
     .tarde-card{
       padding: 20px;
     }
+
+
+    .trade-cards-container a:last-of-type,
+    .trade-cards-container a:last-of-type p,
+    .gamenft-cards-container a:last-of-type,
+    .gamenft-cards-container a:last-of-type p{
+      width: 300px;
+      background-color: green;
+    }
+  
   }
 
 
@@ -543,3 +562,4 @@
 
   }
   
+ 
