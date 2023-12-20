@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import ConnectWalletList from "./ConnectWalletList copy";
 import Carousel from "./Carousel";
-import CWRightContent from './CWRightContent';
-import ParentComponent from './ParentComponent';
-
+// import CWRightContent from './CWRightContent';
+// import ParentComponent from './ParentComponent';
+import isDark from '../../../shared/sharedComponents/ThemeChange';
 const HiddenFooterBanner = () => {
   const [cwRightContent, setCwRightContent] = useState(null); // State to hold custom content
 
@@ -48,14 +48,36 @@ const HiddenFooterBanner = () => {
               <div className="fb-button theme-change light-theme" id="cw-right">
                 {/* Display custom content in this section */}
                   {cwRightContent && (
-                    <div id='cw-right-content'>
+                    <div id='cw-right-content' className='theme-change light-theme'>
                       <h3>{cwRightContent.title}</h3>
                       {cwRightContent.src && (
                         <img src={cwRightContent.src} alt={cwRightContent.title} className='cw-img'/>
                       )}
-                      {cwRightContent.text && <p className='cw-text'>{cwRightContent.text}</p>}
-                      {cwRightContent.button1 && <p>{cwRightContent.button1}</p>}
-                      {cwRightContent.button2 && <p>{cwRightContent.button2}</p>}
+                      {cwRightContent.text && <p className='cw-text theme-change light-theme' style={{
+                          backgroundColor: "unset",
+                          color: isDark === "dark-theme" ? "#000" : "#b8add2",
+                          textAlign: "center",
+                          boxShadow: "none"
+                        }}
+                        >{cwRightContent.text}</p>}
+                      {cwRightContent.button1 && <p style={{
+                          backgroundColor: isDark === "light-theme" ? "#7a3535" : "#b8add2",
+                          fontWeight: "bold",
+                          padding: "10px 12px",
+                          borderRadius: "10px",
+                          display: "flex",
+                          width: "fit-content",
+                        }}>{cwRightContent.button1}</p>}
+                      {cwRightContent.button2 && <p
+                      style={{
+                        backgroundColor: "#b8add2",
+                        color: isDark === "light-theme" ? "" : "#3d2a54",
+                        fontWeight: "bold",
+                        padding: "10px 12px",
+                        borderRadius: "10px",
+                        display: "flex",
+                        width: "fit-content",
+                      }}>{cwRightContent.button2}</p>}
                       
                     </div>
                   )}

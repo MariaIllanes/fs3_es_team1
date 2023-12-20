@@ -18,7 +18,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
     },
     {
       src: "https://assets.pancakeswap.finance/web/wallets/coinbase.png",
-      description: "Coinbase wallet",
+      description: "Coinbase Wallet",
     },
     {
       src: "https://assets.pancakeswap.finance/web/wallets/trust.png",
@@ -107,6 +107,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
         text: "Please confirm in Coinbase Wallet",
         src: 'https://assets.pancakeswap.finance/web/wallets/coinbase.png',
       };
+      break;
 
     case "Trust Wallet":
       walletContent = {
@@ -115,6 +116,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
         button2: "Install",
         src: trustImg,
       };
+      break;
 
       case "WalletConnect":
       walletContent = {
@@ -129,6 +131,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
         text: "Please install the Opera Wallet browser extension to connect the Opera Wallet wallet.",
         button1: "Install",
       };
+      break;
 
       case "Brave Wallet":
       walletContent = {
@@ -145,6 +148,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
         button1: "Setup Guide",
         button2: "Install",
       };
+      break;
 
       case "MathWallet":
       walletContent = {
@@ -152,6 +156,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
         src: mathImg,
       };
       break;
+
     case "TokenPocket":
       walletContent = {
         title: "TokenPocket is not installed",
@@ -180,7 +185,6 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
               title: "Opening Blocto",
               text: "Please confirm in Blocto",
             };
-
             break;
 
             case "Ledger":
@@ -298,10 +302,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
 
       {customContent && (
         <div>
-          <h3>{customContent.title}</h3>
-          {customContent.src && (
-            <img src={customContent.src} alt={customContent.title} />
-          )}
+          <h3>{customContent.title}</h3>         
           {customContent.button1 && <p>{customContent.button1}</p>}
           {customContent.button2 && <p>{customContent.button2}</p>}
           {customContent.optionalText && <p>{customContent.optionalText}</p>}

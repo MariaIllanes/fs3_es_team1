@@ -178,7 +178,7 @@
   
   .footer-tab-content.dark-theme {
     background-color: #3d2a54;
-    background-image: linear-gradient(139.73deg, #3d2a54, #313d5c);
+    background-image: linear-gradient(139.73deg, #313d5c, #3d2a54);
     padding: 20px;
     position: relative;
     z-index: 100;
@@ -255,27 +255,20 @@
 
 #cw-left.dark-theme {
     background-color: #3b4155;
+    color: #b8add2;
     margin: -20px 0 -20px -20px;
-    padding: 20px 10px 18px;
+    padding: 35px 30px;
     border-radius: 20px;
     height: 550px;
 }
 
-#cw-left-text {
-    padding: 10px 0 35px;
-    margin: 15px;
-}
 
-#cw-left-text.light-theme h3 {
+#cw-left h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
-    color: var(--purple);
     font-weight: bold;
   }
-  
-  /* #cw-left-text.dark-theme h3 {
-    color: var(--btn-dark-text);
-} */
+
 
 #cw-left-text.dark-theme h3 {
     font-size: 1.3rem;
@@ -294,6 +287,10 @@
     font-size: 1rem;
     color: #b8add2;
   }
+
+#cw-left-grid{
+    padding-top: 10px;
+}
 
 .cw-cards {
     display: grid;
@@ -406,7 +403,7 @@
     width: 220px !important;
     height: auto;
   }
-  
+/*   
   .fb-button.light-theme p {
     background-color: var(--purple);
     color: var(--cardwhite);
@@ -428,7 +425,7 @@
     display: flex;
     width: fit-content;
     box-shadow: 1px 1px 0 0 rgb(128, 0, 128);
-}
+} */
 
   .fb-button a{
     display: flex;
@@ -463,9 +460,6 @@
     padding: 25px 0 30px;
 }
 
-.cw-img{
-
-}
 /* web3 section */
 
 .footer-card-slide {
@@ -505,28 +499,16 @@
     max-width: 500px;
   }
   
-  /* .w3-content h3 {
+.w3-content.dark-theme h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
-    color: var(--purple);
-  } */
-  
-.w3-content h3 {
-    font-size: 1.3rem;
-    margin: 0 0 20px 0;
-    color: var(--purple);
+    color: var(--title-purple);
     font-weight: bold;
 }
 
-#cw-right p {
-    background-color: var(--purple);
-    color: var(--cardwhite);
-    font-weight: bold;
-    padding: 10px 12px;
-    border-radius: 10px;
-    display: flex;
-    width: fit-content;
-    box-shadow: var(--title-purple) 1px 1px 0px 0px;
+.w3-content.dark-theme p {
+    font-size: 0.9rem;
+    color: #b8add2;
 }
 
 #cw-right-content{
@@ -536,15 +518,42 @@
     gap: 15px;
 }
 
-#cw-right-content h3{
+
+#cw-right-content.light-theme h3{
     color: var(--purple);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+
+/* .fb-button.light-theme p {
+    background-color: var(--purple);
+    stroke: var(--cardwhite);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    box-shadow: 1px 1px 0 0 rgb(58, 46, 67);
+  } */
+
+  .fb-button p {
+    padding: 15px 20px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;    ;
+}
+
+
+#cw-right.dark-theme h3{
+    color: var(--title-purple);
     font-weight: bold;
     font-size: 1.4rem;
 }
 
 .w3-content {
     display: inline-flex;
-    gap: 10px;
+    gap: 10px; 
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
 }
 
 #footer-tab-content2 {
@@ -556,12 +565,6 @@
     height: 550px;
 }
 
-.w3-content {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 25px 0;
-}
 
 #footer-tab2 {
     display: flex;
@@ -603,6 +606,7 @@
   #w3-slide-button2.active {
     background-color: var(--activeButton);
   }
+
 /* dark/light mode */
 
 /* media queries */
@@ -903,7 +907,7 @@
     overflow: hidden;
   }
 
+
   /* falta: 
   bloquear fondo cuando HiddenFooterBanner visible; 
-  crear nuevas "cards" que sustituyan al conejo al clicar ciertas imgs
   checar dark theme (a veces hay q darle dos veces para q cambie) */
