@@ -4,11 +4,10 @@ import bfRock1 from "./FooterBannerAssets/bf-rock1.webp";
 import bfRock2 from "./FooterBannerAssets/bf-rock2.webp";
 import bfRock3 from "./FooterBannerAssets/bf-rock3.webp";
 import bfRock4 from "./FooterBannerAssets/bf-rock4.webp";
-import HiddenFooterBanner from './HiddenFooterBanner';
+import HiddenFooterBanner from './HiddenFooterBanner copy';
 
 const SectionFooterBanner = () => {
   const [isHidden, setIsHidden] = useState(true);
-  const [cwRightContent, setCwRightContent] = useState(''); // State for cw-right content
   const containerRef = useRef(null);
   // const buttonRef = useRef(null);
   const overlayRef = useRef(null);
@@ -33,12 +32,6 @@ const SectionFooterBanner = () => {
     }
   };
 
-  const handleCardClick = (newContent) => {
-    setCwRightContent(newContent); // Update cw-right content
-    setIsHidden(true); // Hide the HiddenFooterBanner when the button is clicked
-  };
-
-
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick);
 
@@ -46,6 +39,7 @@ const SectionFooterBanner = () => {
       document.removeEventListener('click', handleOutsideClick);
     };
   }, [isHidden]);
+  
 
   return (
     <div className="footer-banner theme-change light-theme" ref={containerRef}>
@@ -53,7 +47,7 @@ const SectionFooterBanner = () => {
         <img src={bfRock1} width="120" height="120" alt="animation" className="footer-banner-img" id="footer-banner1" />
         <img src={bfRock2} width="120" height="120" alt="animation" className="footer-banner-img" id="footer-banner3" />
         <div className="footer-banner-text">
-          <h2>Join Everyone's Favorite DEX lllllNow!</h2>
+          <h2>Join Everyone's Favorite DEX Now!</h2>
           <button className='btn-main-blue' id="button-s11" onClick={toggleHidden}>Connect Wallet</button>
         </div>
         <img src={bfRock3} width="120" height="94" alt="animation" className="footer-banner-img" id="footer-banner2" />
@@ -61,13 +55,9 @@ const SectionFooterBanner = () => {
       </div>
       <div className="footerbanner-hidden-section" id='footer-banner-hidden-section'>
         <div className="theme-change light-theme" style={{ display: isHidden ? 'none' : 'block' }}>
-          <HiddenFooterBanner onButtonClick={handleCardClick} />
+          <HiddenFooterBanner />
           <div className="overlay" ref={overlayRef} onClick={handleOverlayClick}></div>
         </div>
-      </div>
-      {/* cw-right section with dynamically changing content */}
-      <div className="cw-right">
-        {cwRightContent}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 import ConnectWalletList from './ConnectWalletList';
 import Carousel from './Carousel';
-// import FooterBannerCard from './FooterBannerCard'
-// import Card1Img from 'https://cdn.pancakeswap.com/wallets/wallet_intro.png'
-// import Card2Img from 'https://cdn.pancakeswap.com/wallets/world_lock.png'
+import customizedContent from './CWRightContent'
+
+
 const HiddenFooterBanner = () => {
     return (
         <div className="footer-tabs theme-change light-theme">
@@ -34,18 +34,8 @@ const HiddenFooterBanner = () => {
                           </div>
                         </div>
                         <div className="fb-button theme-change light-theme" id="cw-right"> 
-                          <h4>Haven't got a wallet yet?</h4>
-                          <img id="fb-cw-img" src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width="180" height="160" />
-                          <p className='theme-change light-theme'>
-                            <a href="https://docs.pancakeswap.finance/get-started/wallet-guide">Learn How to Connect
-                                <svg xmlns="http://www.w3.org/2000/svg" id="fb-icon-link" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#eee" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                  <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                                  <path d="M11 13l9 -9" />
-                                  <path d="M15 4h5v5" />
-                                </svg>
-                            </a>
-                          </p>
+                          <customizedContent/>
+                          {/* <ConnectWalletList /> */}
                         </div>
                       </div>
                     </div> 

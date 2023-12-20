@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import METAIMG from "./FooterBannerAssets/bf-rock1.webp"
 
 const ConnectWalletList = ({onWalletItemClick}) => {
   const footerBannerData = [
@@ -76,40 +75,14 @@ const ConnectWalletList = ({onWalletItemClick}) => {
     setShowSVG(!showSVG); // Toggle SVG visibility when showing additional data
   };
 
-  const handleWalletItemClick = (description, index) => {
-    onWalletItemClick(description, index);
-  };
-
   const ParentComponent = () => {
     const [customContent, setCustomContent] = useState(null);
+    
+  const handleWalletItemClick = (description) => {
+    // Call the onWalletItemClick function from props with the clicked wallet's description
+    onWalletItemClick(description);
+  };
 
-    const customContents = [
-      {
-        title: "MEta",
-        src: METAIMG,
-        button: "hola meta",
-      },
-
-      {
-        title: "MEta2",
-        src: METAIMG,
-        button: "hola meta2",
-      }
-    ]
-
-    const handleWalletItemClick = (description, index) => {
-      const content = customContents[index];
-      setCustomContent(content ? (
-        <div>
-          <h3>{content.title}</h3>
-          <img src={content.src} alt={content.title} />
-          <p>{content.button}</p>
-          {content.optionalText && <p>{content.optionalText}</p>}
-        </div>
-      ) : null);
-      onWalletItemClick(description); // Trigger the parent component action
-    };
-  
   }
   return (
     <div className="cw-cards">
