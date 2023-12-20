@@ -85,6 +85,7 @@ const ConnectWalletList = ({onWalletItemClick}) => {
 
   const [showMore, setShowMore] = useState(false);
   const [showSVG, setShowSVG] = useState(true);
+  const [customContent, setCustomContent] = useState(null);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
@@ -96,34 +97,53 @@ const ConnectWalletList = ({onWalletItemClick}) => {
     setShowSVG(!showSVG);
   };
 
-  const ParentComponent = () => {
-    const [customContent, setCustomContent] = useState(null);
+  // const handleWalletItemClick = (description, index) => {
+  //   const walletContent = {
+  //     title: 'Metamask is not installed',
+  //     button1: 'Install',
+  //     button2: 'holi',
+  //     src: 'e',
+  //   };
+  
+  //   setCustomContent(walletContent);
+  // };
 
-    const handleWalletItemClick = (description, index) => {
-      setCustomContent({
-        title: description,
-        src: footerBannerData[index].src,
-        button: 'Button Text', // Change this to your button text
-        optionalText: 'Optional Text', // Optional text
-      });
-    };
-
-    return (
-      <div>
-        <h3>{customContent && customContent.title}</h3>
-        {customContent && <img src={customContent.src} alt={customContent.title} />}
-        <p>{customContent && customContent.button}</p>
-        {customContent && customContent.optionalText && <p>{customContent.optionalText}</p>}
-      </div>
-    );
-  };
-
+  const handleWalletItemClick = (description, index) => {
+    let walletContent = {};
+  
+    switch (description) {
+      case 'Metamask':
+        walletContent = {
+          title: 'Metamask is not installed',
+          button1: 'Install Metamask',
+          src: 'https://assets.pancakeswap.finance/web/wallets/metamask.png',
+          // Add more properties as needed
+        };
+        break;
+      case 'Binance Wallet':
+        walletContent = {
+          title: 'Binance Wallet',
+          button1: 'Connect Binance Wallet',
+          src: 'https://assets.pancakeswap.finance/web/wallets/binance.png',
+          // Add more properties as needed
+        };
+        break;
+      // Handle other cases similarly for different wallets
+      default:
+        // Set default values if no match is found
+        walletContent = {
+          title: 'Default Title',
+          button1: 'Default Button',
+          // Add more default properties if needed
+        };
+        break;
+    }
 
   return (
     <div className="cw-cards">
       {footerBannerData.slice(0, showMore ? footerBannerData.length : 8).map((item, index) => (
         <div key={index} className="cw-card theme-change light-theme"
-        onClick={() => handleWalletItemClick(item.description)}>
+        onClick={() => handleWalletItemClick(item.description, index)}>
           <img src={item.src} alt={item.description} width="50" height="50" />
           <p>{item.description}</p>
         </div>
@@ -187,7 +207,24 @@ const ConnectWalletList = ({onWalletItemClick}) => {
           ))}
         </div>
       )}
+
+{customContent && (
+        <div>
+          <h3>{customContent.title}</h3>
+    {customContent.src && <img src={customContent.src} alt={customContent.title} />}
+    {customContent.button1 && <p>{customContent.button1}</p>}
+    {customContent.button2 && <p>{customContent.button2}</p>}
+    {customContent.optionalText && <p>{customContent.optionalText}</p>}
+
+
+
+
+
+        </div>
+      )}
+    
     </div>
+    
   );
   }
 

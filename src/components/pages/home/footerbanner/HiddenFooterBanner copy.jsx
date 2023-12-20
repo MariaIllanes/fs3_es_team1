@@ -31,7 +31,7 @@ const HiddenFooterBanner = () => {
           <div className="footer-tab-content theme-change light-theme">
             <div className="footer-tab-content-cw">
               <div className="theme-change light-theme" id="cw-left">
-                <h3>Connect Wajjjjjjjjllet</h3>
+                <h3>Connect Wallet</h3>
                 <p>
                   Start by connecting with one of the wallets below. Be sure to
                   store your private keys or seed phrase securely. Never share
