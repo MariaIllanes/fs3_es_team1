@@ -463,6 +463,9 @@
     padding: 25px 0 30px;
 }
 
+.cw-img{
+
+}
 /* web3 section */
 
 .footer-card-slide {
@@ -526,15 +529,18 @@
     box-shadow: var(--title-purple) 1px 1px 0px 0px;
 }
 
-/* .footer-slideshow-buttons button {
-    width: 70px;
-    height: 10px;
-    background-color: var(--purple);
-    border: none;
-    padding: 0 0 0 15px;
-    margin: 0 0 10px;
-  } */
+#cw-right-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 
+#cw-right-content h3{
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
 
 .w3-content {
     display: inline-flex;

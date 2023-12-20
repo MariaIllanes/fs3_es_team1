@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ConnectWalletList from "./ConnectWalletList copy";
 import Carousel from "./Carousel";
 import CWRightContent from './CWRightContent';
 import ParentComponent from './ParentComponent';
 
 const HiddenFooterBanner = () => {
-  const handleWalletItemClick = (content) => {
-     setCwRightContent(content);
+  const [cwRightContent, setCwRightContent] = useState(null); // State to hold custom content
+
+  const handleWalletItemClick = (contentFunction) => {
+    contentFunction(setCwRightContent);
   };
+
+  
 
   return (
     <div className="footer-tabs theme-change light-theme">
@@ -38,25 +42,30 @@ const HiddenFooterBanner = () => {
                   them with anyone.
                 </p>
                 <div id="cw-left-grid">
-                  {/* Pass handleWalletItemClick to ConnectWalletList */}
-                  <ConnectWalletList
-                    onWalletItemClick={handleWalletItemClick}
-                  />
+                  <ConnectWalletList onWalletItemClick={handleWalletItemClick} />
                 </div>
               </div>
               <div className="fb-button theme-change light-theme" id="cw-right">
-                {/* Display dynamic content based on wallet item click */}
-                {/* <ParentComponent /> */}
-
-                
+                {/* Display custom content in this section */}
+                  {cwRightContent && (
+                    <div id='cw-right-content'>
+                      <h3>{cwRightContent.title}</h3>
+                      {cwRightContent.src && (
+                        <img src={cwRightContent.src} alt={cwRightContent.title} className='cw-img'/>
+                      )}
+                      {cwRightContent.text && <p className='cw-text'>{cwRightContent.text}</p>}
+                      {cwRightContent.button1 && <p>{cwRightContent.button1}</p>}
+                      {cwRightContent.button2 && <p>{cwRightContent.button2}</p>}
+                      
+                    </div>
+                  )}
               </div>
-              
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}; 
 
 export default HiddenFooterBanner;

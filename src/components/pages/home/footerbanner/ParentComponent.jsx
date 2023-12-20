@@ -13,46 +13,11 @@ const ParentComponent = () => {
   }
   const [customContent, setCustomContent] = useState(defaultContent());
 
-  const customContentData = [
-    {
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },
-    {
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },{
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },{
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },{
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },{
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },{
-      title: 'Metamask is not installed',
-      src: metamaskImg,
-      button: 'Install',
-      description: 'Metamask', // Add a description field corresponding to wallet
-    },
-  ];
 
+
+
+
+  
   const customizedContent = (description) => {
     const index = customContentData.findIndex((content) => content.description === description);
     if (index !== -1) {
