@@ -61,29 +61,64 @@ const ConnectWalletList = ({onWalletItemClick}) => {
     },
   ];
   
-  const initialShowMore = false;
-  const [showMore, setShowMore] = useState(initialShowMore);
-  const [showSVG, setShowSVG] = useState(true); // New state to control SVG visibility
+  // const initialShowMore = false;
+  // const [showMore, setShowMore] = useState(initialShowMore);
+  // const [showSVG, setShowSVG] = useState(true); // New state to control SVG visibility
+
+  // const toggleShowMore = () => {
+  //   setShowMore(!showMore);
+  //   setShowSVG(true); // Ensure SVG is shown when toggling to initial state
+  // };
+
+  // const toggleAdditionalData = () => {
+  //   setShowMore(!showMore);
+  //   setShowSVG(!showSVG); // Toggle SVG visibility when showing additional data
+  // };
+
+  // const ParentComponent = () => {
+  //   const [customContent, setCustomContent] = useState(null);
+    
+  // const handleWalletItemClick = (description) => {
+  //   // Call the onWalletItemClick function from props with the clicked wallet's description
+  //   onWalletItemClick(description);
+  // };
+
+  const [showMore, setShowMore] = useState(false);
+  const [showSVG, setShowSVG] = useState(true);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
-    setShowSVG(true); // Ensure SVG is shown when toggling to initial state
+    setShowSVG(true);
   };
 
   const toggleAdditionalData = () => {
     setShowMore(!showMore);
-    setShowSVG(!showSVG); // Toggle SVG visibility when showing additional data
+    setShowSVG(!showSVG);
   };
 
   const ParentComponent = () => {
     const [customContent, setCustomContent] = useState(null);
-    
-  const handleWalletItemClick = (description) => {
-    // Call the onWalletItemClick function from props with the clicked wallet's description
-    onWalletItemClick(description);
+
+    const handleWalletItemClick = (description, index) => {
+      setCustomContent({
+        title: description,
+        src: footerBannerData[index].src,
+        button: 'Button Text', // Change this to your button text
+        optionalText: 'Optional Text', // Optional text
+      });
+    };
+
+    return (
+      <div>
+        <h3>{customContent && customContent.title}</h3>
+        {customContent && <img src={customContent.src} alt={customContent.title} />}
+        <p>{customContent && customContent.button}</p>
+        {customContent && customContent.optionalText && <p>{customContent.optionalText}</p>}
+      </div>
+    );
   };
 
-  }
+
   return (
     <div className="cw-cards">
       {footerBannerData.slice(0, showMore ? footerBannerData.length : 8).map((item, index) => (
@@ -145,7 +180,7 @@ const ConnectWalletList = ({onWalletItemClick}) => {
         <div className="cw-card theme-change light-theme">
           {footerBannerData.slice(8).map((item, index) => (
             <div key={index} className="cw-card theme-change light-theme"
-            onClick={() => handleWalletItemClick(item.description)}>
+            onClick={() => onWalletItemClick(item.description)}>
               <img src={item.src} alt={item.description} width="50" height="50" />
               <p>{item.description}</p>
             </div>
@@ -154,6 +189,6 @@ const ConnectWalletList = ({onWalletItemClick}) => {
       )}
     </div>
   );
-};
+  }
 
 export default ConnectWalletList;

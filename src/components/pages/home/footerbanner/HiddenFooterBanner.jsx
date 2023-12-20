@@ -1,7 +1,7 @@
 import React from 'react';
 import ConnectWalletList from './ConnectWalletList';
 import Carousel from './Carousel';
-import customizedContent from './CWRightContent'
+import CustomizedContent from './CWRightContent'
 
 
 const HiddenFooterBanner = () => {
@@ -34,8 +34,18 @@ const HiddenFooterBanner = () => {
                           </div>
                         </div>
                         <div className="fb-button theme-change light-theme" id="cw-right"> 
-                          <customizedContent/>
-                          {/* <ConnectWalletList /> */}
+                          <h4>Haven't got a Wallet yet?</h4>
+                          <img src='https://cdn.pancakeswap.com/wallets/wallet_intro.png' id='fb-cw-img'/>
+                          <p>
+                            <a href="https://docs.pancakeswap.finance/get-started/wallet-guide">Learn How to Connect
+                              <svg xmlns="http://www.w3.org/2000/svg" id="fb-icon-link" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                              </svg>
+                            </a>
+                          </p>
                         </div>
                       </div>
                     </div> 

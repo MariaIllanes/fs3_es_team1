@@ -11,8 +11,15 @@ const CWRightContent = () => {
       button: 'Install',
       description: 'Metamask', // Add a description field corresponding to wallet
     },
-    // Other custom content objects
+    // Other custom content objects for different wallets
   ];
+
+  const defaultContent = (
+    <div>
+      <h4>Haven't got a wallet yet?</h4>
+      {/* Your default content */}
+    </div>
+  );
 
   const customizedContent = (description) => {
     const index = customContentData.findIndex((content) => content.description === description);
@@ -29,25 +36,17 @@ const CWRightContent = () => {
     return null;
   };
 
-  const handleWalletItemClick = (description) => {
+  const handleWalletItemClick = (description, index) => {
     const content = customizedContent(description);
-    setCustomContent(content);
+    setCustomContent(content || defaultContent);
   };
 
   return (
     <div>
-      {customContent ? (
-        customContent // Show the custom content if available
-      ) : (
-        <div>
-          <h4>Haven't got a wallet yet?</h4>
-          {/* Your default content */}
-        </div>
-      )}
+      {customContent || defaultContent}
       <ConnectWalletList onWalletItemClick={handleWalletItemClick} />
     </div>
   );
 };
 
 export default CWRightContent;
-
