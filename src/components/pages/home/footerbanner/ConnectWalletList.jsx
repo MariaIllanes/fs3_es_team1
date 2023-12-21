@@ -69,7 +69,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
 
   const [showMore, setShowMore] = useState(false);
   const [showSVG, setShowSVG] = useState(true);
-  const [customContent, setCustomContent] = useState(null);
+  // const [customContent, setCustomContent] = useState(null);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
@@ -121,7 +121,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
       case "WalletConnect":
       walletContent = {
         title: "Opening WalletConnect",
-        button1: "Please confirm in WalletConnect",
+        text: "Please confirm in WalletConnect",
         src: "https://assets.pancakeswap.finance/web/wallets/walletconnect.png",
       };
       break;
@@ -223,7 +223,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
             <p>{item.description}</p>
           </div>
         ))}
-      {showMore && (
+      {/* {showMore && (
         <div
           className={`cw-card theme-change light-theme ${
             showSVG ? "button-disspear" : ""
@@ -252,7 +252,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
           </svg>
           <p>More!!!!!</p>
         </div>
-      )}
+      )} */}
 
       {!showMore && (
         <div
@@ -280,7 +280,7 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
         </div>
       )}
 
-      {showMore && !showSVG && (
+      {/* {showMore && !showSVG && (
         <div className="cw-card theme-change light-theme">
           {footerBannerData.slice(8).map((item, index) => (
             <div
@@ -298,16 +298,16 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
             </div>
           ))}
         </div>
-      )}
+      )} comprobar si es necesario*/}
 
-      {customContent && (
+      {/* {customContent && (
         <div>
-          <h3>{customContent.title}</h3>         
+          <h3>holaaaaaaaaaa</h3>         
           {customContent.button1 && <p>{customContent.button1}</p>}
           {customContent.button2 && <p>{customContent.button2}</p>}
           {customContent.optionalText && <p>{customContent.optionalText}</p>}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -55,7 +55,6 @@ const HiddenFooterBanner = () => {
                       )}
                       {cwRightContent.text && <p className='cw-text theme-change light-theme' style={{
                           backgroundColor: "unset",
-                          color: isDark === "dark-theme" ? "#000" : "#b8add2",
                           textAlign: "center",
                           boxShadow: "none"
                         }}

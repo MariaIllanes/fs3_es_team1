@@ -247,7 +247,7 @@
 #cw-left.light-theme {
     background-color: var(--cardwhite);
     margin: -20px 0 -20px -20px;
-    padding: 20px 10px 18px;
+    padding: 35px 30px;
     border-radius: 20px;
     height: 550px;
 
@@ -907,7 +907,13 @@
     overflow: hidden;
   }
 
+.cw-text.light-theme{
+    color: black;
+}
 
+.cw-text.dark-theme{
+    color: var(--greypurple);
+}
   /* falta: 
   bloquear fondo cuando HiddenFooterBanner visible; 
   checar dark theme (a veces hay q darle dos veces para q cambie) */
