@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import metamaskImg from './FooterBannerAssets/metamaskImg.png'
-import trustImg from './FooterBannerAssets/trustImg.png';
-import mathImg from './FooterBannerAssets/mathImg.png';
-import tokenImg from './FooterBannerAssets/tokenImg.png';
-import safeImg from './FooterBannerAssets/safeImg.png';
-import coin98Img from './FooterBannerAssets/coin98Img.png'
+import metamaskImg from "./FooterBannerAssets/metamaskImg.png";
+import trustImg from "./FooterBannerAssets/trustImg.png";
+import mathImg from "./FooterBannerAssets/mathImg.png";
+import tokenImg from "./FooterBannerAssets/tokenImg.png";
+import safeImg from "./FooterBannerAssets/safeImg.png";
+import coin98Img from "./FooterBannerAssets/coin98Img.png";
 
 const ConnectWalletList = ({ onWalletItemClick }) => {
   const footerBannerData = [
@@ -76,134 +76,124 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
     setShowSVG(true);
   };
 
-  const toggleAdditionalData = () => {
-    setShowMore(!showMore);
-    setShowSVG(!showSVG);
-  };
+  // const toggleAdditionalData = () => {
+  //   setShowMore(!showMore);
+  //   setShowSVG(!showSVG);
+  // };
 
   const handleWalletItemClick = (description) => {
     let walletContent = {};
 
     switch (description) {
       case "Metamask":
-      walletContent = {
-        title: "Metamask is not installed",
-        button1: "Install",
-        src: metamaskImg,
-      };
-      break;
-    case "Binance Wallet":
-      walletContent = {
-        title: "Binance Wallet is not installed",
-        text: "Please install the Binance Wallet browser extension to connect the Binance Wallet wallet.",
-        button1: "Setup Guide",
-        button2: "Install",
-      };
+        walletContent = {
+          title: "Metamask is not installed",
+          button1: "Install",
+          src: metamaskImg,
+        };
+        break;
+      case "Binance Wallet":
+        walletContent = {
+          title: "Binance Wallet is not installed",
+          text: "Please install the Binance Wallet browser extension to connect the Binance Wallet wallet.",
+          button1: "Setup Guide",
+          button2: "Install",
+        };
 
-      break;
-    case "Coinbase Wallet":
-      walletContent = {
-        title: "Opening Coinbase Wallet",
-        text: "Please confirm in Coinbase Wallet",
-        src: 'https://assets.pancakeswap.finance/web/wallets/coinbase.png',
-      };
-      break;
+        break;
+      case "Coinbase Wallet":
+        walletContent = {
+          title: "Opening Coinbase Wallet",
+          text: "Please confirm in Coinbase Wallet",
+          src: "https://assets.pancakeswap.finance/web/wallets/coinbase.png",
+        };
+        break;
 
-    case "Trust Wallet":
-      walletContent = {
-        title: "Trust Wallet is not installed",
-        button1: "Setup Guide",
-        button2: "Install",
-        src: trustImg,
-      };
-      break;
+      case "Trust Wallet":
+        walletContent = {
+          title: "Trust Wallet is not installed",
+          button1: "Setup Guide",
+          button2: "Install",
+          src: trustImg,
+        };
+        break;
 
       case "WalletConnect":
-      walletContent = {
-        title: "Opening WalletConnect",
-        text: "Please confirm in WalletConnect",
-        src: "https://assets.pancakeswap.finance/web/wallets/walletconnect.png",
-      };
-      break;
-    case "Opera Wallet":
-      walletContent = {
-        title: "Opera Wallet is not installed",
-        text: "Please install the Opera Wallet browser extension to connect the Opera Wallet wallet.",
-        button1: "Install",
-      };
-      break;
+        walletContent = {
+          title: "Opening WalletConnect",
+          text: "Please confirm in WalletConnect",
+          src: "https://assets.pancakeswap.finance/web/wallets/walletconnect.png",
+        };
+        break;
+      case "Opera Wallet":
+        walletContent = {
+          title: "Opera Wallet is not installed",
+          text: "Please install the Opera Wallet browser extension to connect the Opera Wallet wallet.",
+          button1: "Install",
+        };
+        break;
 
       case "Brave Wallet":
-      walletContent = {
-        title: "Brave Wallet is not installed",
-        text: "Please install the Brave Wallet browser extension to connect the Brave Wallet wallet.",
-        button1: "Install",
-      };
-      break;
+        walletContent = {
+          title: "Brave Wallet is not installed",
+          text: "Please install the Brave Wallet browser extension to connect the Brave Wallet wallet.",
+          button1: "Install",
+        };
+        break;
 
-    case "Rabby Wallet":
-      walletContent = {
-        title: "Rabby Wallet is not installed",
-        text: "Please install the Rabby Wallet browser extension to connect the Rabby Wallet wallet.",
-        button1: "Setup Guide",
-        button2: "Install",
-      };
-      break;
+      case "Rabby Wallet":
+        walletContent = {
+          title: "Rabby Wallet is not installed",
+          text: "Please install the Rabby Wallet browser extension to connect the Rabby Wallet wallet.",
+          button1: "Setup Guide",
+          button2: "Install",
+        };
+        break;
 
       case "MathWallet":
-      walletContent = {
-        title: "MathWallet is not installed",
-        src: mathImg,
-      };
-      break;
+        walletContent = {
+          title: "MathWallet is not installed",
+          src: mathImg,
+        };
+        break;
 
-    case "TokenPocket":
-      walletContent = {
-        title: "TokenPocket is not installed",
-        src: tokenImg,
-      };
-      break;
+      case "TokenPocket":
+        walletContent = {
+          title: "TokenPocket is not installed",
+          src: tokenImg,
+        };
+        break;
 
       case "SafePal":
         walletContent = {
           title: "SafePal is not installed",
           src: safeImg,
-          button1: "Install"
+          button1: "Install",
         };
         break;
 
-        case "Coin98":
-          walletContent = {
-            title: "Coin98 is not installed",
-            src: coin98Img,
-          };
-          break;
+      case "Coin98":
+        walletContent = {
+          title: "Coin98 is not installed",
+          src: coin98Img,
+        };
+        break;
 
-          case "Blocto":
-            walletContent = {
-              src: "https://assets.pancakeswap.finance/web/wallets/blocto.png",
-              title: "Opening Blocto",
-              text: "Please confirm in Blocto",
-            };
-            break;
+      case "Blocto":
+        walletContent = {
+          src: "https://assets.pancakeswap.finance/web/wallets/blocto.png",
+          title: "Opening Blocto",
+          text: "Please confirm in Blocto",
+        };
+        break;
 
-            case "Ledger":
-            walletContent = {
-              src:
-                "https://assets.pancakeswap.finance/web/wallets/ledger.png",
-              title: "Opening Ledger",
-              text: "Please confirm in Ledger",
-            };
-            break;
-            
-    default:
-      walletContent = {
-        title: "Haven't got a wallet yet?",
-        button1: "Default Button",
-      };
-      break;
-
-        
+      case "Ledger":
+        walletContent = {
+          src: "https://assets.pancakeswap.finance/web/wallets/ledger.png",
+          title: "Opening Ledger",
+          text: "Please confirm in Ledger",
+        };
+        break;
     }
 
     onWalletItemClick((setContent) => setContent(walletContent));
@@ -219,40 +209,18 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
             className="cw-card theme-change light-theme"
             onClick={() => handleWalletItemClick(item.description, index)}
           >
-            <img src={item.src} alt={item.description} width="50" height="50" />
+            <img
+              src={item.src}
+              alt={item.description}
+              width="50"
+              height="50"
+              style={{
+                borderRadius: "12px",
+              }}
+            />
             <p>{item.description}</p>
           </div>
         ))}
-      {/* {showMore && (
-        <div
-          className={`cw-card theme-change light-theme ${
-            showSVG ? "button-disspear" : ""
-          }`}
-          onClick={toggleAdditionalData}
-          style={{
-            display: "none",
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon-dots theme-change light-theme"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="#2c3e50"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-            <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-          </svg>
-          <p>More!!!!!</p>
-        </div>
-      )} */}
 
       {!showMore && (
         <div
@@ -279,35 +247,6 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
           <p>More</p>
         </div>
       )}
-
-      {/* {showMore && !showSVG && (
-        <div className="cw-card theme-change light-theme">
-          {footerBannerData.slice(8).map((item, index) => (
-            <div
-              key={index}
-              className="cw-card theme-change light-theme"
-              onClick={() => onWalletItemClick(item.description)}
-            >
-              <img
-                src={item.src}
-                alt={item.description}
-                width="50"
-                height="50"
-              />
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
-      )} comprobar si es necesario*/}
-
-      {/* {customContent && (
-        <div>
-          <h3>holaaaaaaaaaa</h3>         
-          {customContent.button1 && <p>{customContent.button1}</p>}
-          {customContent.button2 && <p>{customContent.button2}</p>}
-          {customContent.optionalText && <p>{customContent.optionalText}</p>}
-        </div>
-      )} */}
     </div>
   );
 };

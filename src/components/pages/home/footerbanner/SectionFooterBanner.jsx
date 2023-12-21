@@ -9,7 +9,6 @@ import HiddenFooterBanner from './HiddenFooterBanner';
 const SectionFooterBanner = () => {
   const [isHidden, setIsHidden] = useState(true);
   const containerRef = useRef(null);
-  // const buttonRef = useRef(null);
   const overlayRef = useRef(null);
 
   const toggleHidden = () => {
@@ -17,7 +16,7 @@ const SectionFooterBanner = () => {
   };
 
   const handleOverlayClick = () => {
-    setIsHidden(true); // Hide the HiddenFooterBanner when overlay is clicked
+    setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
   };
 
   const handleOutsideClick = (event) => {
@@ -25,7 +24,6 @@ const SectionFooterBanner = () => {
       containerRef.current &&
       overlayRef.current &&
       !containerRef.current.contains(event.target) &&
-      // event.target !== buttonRef.current &&
       event.target === overlayRef.current
     ) {
       handleOverlayClick();

@@ -1,3 +1,17 @@
+:root {
+    --purple: #7a6eaa;
+    --title-purple: #7645d9;
+    --lightPurple: #eeeaf4;
+    --cardwhite: #ffffff;
+    --lightgrey: lightgray;
+    --greypurple: #b6b3c3;
+    --tabs-width: 120px;
+    --tabs-height: 13px;
+    --inactiveButton: rgb(162, 145, 197);
+    --activeButton: rgb(118, 69, 217);
+    --inactivedarkButton: #262130;
+  }
+
 .footer-banner {
     background-image: url(./FooterBannerAssets/footer-banner-bg.png);
     height: 600px;
@@ -101,18 +115,7 @@
 }
 
 /* css tabs and container ----------------------------------------------------------------------------------*/
-:root {
-    --purple: #7a6eaa;
-    --title-purple: #7645d9;
-    --lightPurple: #eeeaf4;
-    --cardwhite: #ffffff;
-    --lightgrey: lightgray;
-    --greypurple: #b6b3c3;
-    --tabs-width: 120px;
-    --tabs-height: 13px;
-    --inactiveButton: rgba(179, 176, 187, 0.7);
-    --activeButton: rgb(118, 69, 217);
-  }
+
   
   .footer-banner body {
     font-family: sans-serif;
@@ -403,31 +406,8 @@
     width: 220px !important;
     height: auto;
   }
-/*   
-  .fb-button.light-theme p {
-    background-color: var(--purple);
-    color: var(--cardwhite);
-    stroke: var(--cardwhite);
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 10px;
-    display: flex;
-    width: fit-content;
-    box-shadow: 1px 1px 0 0 rgb(128, 0, 128);
-  }
 
-  .fb-button.dark-theme p {
-    background-color: var(--purple);
-    color: var(--cardwhite);
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 10px;
-    display: flex;
-    width: fit-content;
-    box-shadow: 1px 1px 0 0 rgb(128, 0, 128);
-} */
-
-  .fb-button a{
+.fb-button a{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -487,17 +467,15 @@
     color: var(--cardwhite);
 }
 
-/* .footer-card1 {
-    display: block;
-  } */
-
-/* Styling for the buttons */
-.footer-slideshow-container {
+.slideshow-container {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
     display: flex;
-    text-align: center;
-    align-content: center;
-    max-width: 500px;
-  }
+    flex-direction: column;
+}
+/* Styling for buttons */
+
   
 .w3-content.dark-theme h3 {
     font-size: 1.3rem;
@@ -526,21 +504,35 @@
 }
 
 
-/* .fb-button.light-theme p {
+.fb-button.light-theme p {
     background-color: var(--purple);
+    color: var(--cardwhite);
     stroke: var(--cardwhite);
     padding: 15px 20px;
     border-radius: 10px;
     display: flex;
     width: fit-content;
     box-shadow: 1px 1px 0 0 rgb(58, 46, 67);
-  } */
+  }
 
-  .fb-button p {
+  .fb-button.dark-theme p {
+    background-color: #b8add2;
+    color: black;
+    stroke: black;
     padding: 15px 20px;
-    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;    ;
-}
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    box-shadow: 1px 1px 0 0 rgb(58, 46, 67);
+  }
 
+  .fb-button.light-theme .cw-text{   
+    color: black !important;
+    }
+
+  .fb-button.dark-theme .cw-text{   
+    color: white !important;
+    }
 
 #cw-right.dark-theme h3{
     color: var(--title-purple);
@@ -570,29 +562,35 @@
     display: flex;
 }
 
-#w3-slide-button1.light-theme,
-#w3-slide-button2.light-theme {
-    background-color: var(--purple);
-}
-
-#w3-slide-button1.dark-theme,
-#w3-slide-button2.dark-theme {
-    background-color: var(--lightPurple);
-}
-
-.footer-slideshow-buttons button {
-    display: inline-flex;
+.footer-slideshow-buttons.light-theme button {
     border: none;
     background-color: var(--inactiveButton);
-    width: 35px;
+    width: 45px;
+    height: 8px;
+    bottom: 10px;
+}
+
+.footer-slideshow-buttons.dark-theme button {
+    border: none;
+    background-color: var(--inactivedarkButton);
+    width: 45px;
     height: 8px;
     bottom: 10px;
 }
 
 .footer-slideshow-buttons {
+    display: inline-flex;
     text-align: center;
+    justify-content: center;
     margin: 10px 0;
+    gap: 5px
 }
+
+
+  #w3-slide-button1.active, 
+  #w3-slide-button2.active {
+    background-color: var(--activeButton);
+  }
 
 #w3-slide-button1 {
     border-radius: 10px 0 0 10px;
@@ -602,12 +600,13 @@
     border-radius: 0 10px 10px 0;
 }
 
-  #w3-slide-button1.active, 
-  #w3-slide-button2.active {
-    background-color: var(--activeButton);
+  .footer-card-slide h3{
+    color: var(--title-purple);
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 
-/* dark/light mode */
+/* end of dark/light mode */
 
 /* media queries */
 
@@ -726,14 +725,6 @@
         width: 400px;
     }
 
-    /* .footer-tab:target .footer-tab-content,
-    .footer-tab:last-of-type .footer-tab-content {
-      display: flex;
-      width: 100vw;
-        box-sizing: border-box;
-        display: flex;
-        width: auto;
-    } */
 
     #cw-right {
         padding: 0 30px;
@@ -827,13 +818,7 @@
     }
 }
 
-/* @media screen and (max-width: 650px) {
-    .cw-cards {
-        overflow-y: hidden;
-    }
-  } */
-
-  @media (max-width: 540px){
+@media (max-width: 540px){
     #cw-right{
         display: none;
     }
@@ -857,32 +842,11 @@
 
   }
 
-  .fb-button.dark-theme p,
-  #cw-right.dark-theme p,
-  .fb-button.dark-theme svg{
-   color: black;
-   stroke: black;
-  }
-
-
   @media (max-width: 400px){
     .footer-card-slide{
         width: 300px;
     }
   }
- 
-
-
-
-
-
-
-
-
-
-
-
-  
 
   .footer-banner-wrapper {
     position: relative;
@@ -899,7 +863,6 @@
     animation: 350ms ease 0s 1 normal forwards running dHqLl;
   }
   
-
   #w3-container{
     width: 100%;
   }
@@ -911,9 +874,6 @@
     color: black;
 }
 
-.cw-text.dark-theme{
-    color: var(--greypurple);
+.cw-text.dark-theme p{
+    color: white;
 }
-  /* falta: 
-  bloquear fondo cuando HiddenFooterBanner visible; 
-  checar dark theme (a veces hay q darle dos veces para q cambie) */
