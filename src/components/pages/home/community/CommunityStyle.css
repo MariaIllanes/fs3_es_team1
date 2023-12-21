@@ -130,7 +130,6 @@
     border-radius: 32px;
     padding: 10px;
     box-sizing: border-box;
-    width: 340px;
 }
 
 #community-card2.light-theme {
@@ -141,7 +140,6 @@
     box-shadow: lightgray 0px 4px 0px 0px;
     padding: 10px;
     box-sizing: border-box;
-    width: 340px;
 }
 
 #community-card1 p:nth-child(even) {

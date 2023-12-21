@@ -428,9 +428,8 @@
     .trade-cards-container a:last-of-type p,    
     .gamenft-cards-container a:last-of-type,
     .gamenft-cards-container a:last-of-type p{
-      width: 450px;
-      background-color: green;
-    }
+      width: 450px; 
+     }
   
   }
   
