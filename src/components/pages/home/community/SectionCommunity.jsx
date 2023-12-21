@@ -9,7 +9,7 @@ import communityComment from "./CommunityAssets/community-comment.png";
 import communitySpeaker from "./CommunityAssets/community-speaker.png";
 import communityDots from "./CommunityAssets/community-dots.png";
 import StaticCard from './StaticCard';
-import Carousel from "../../../shared/sharedComponents/Carousel";
+import Carousel from "./Carousel";
 import CarouselCard1 from './CarouselCard1';
 import CarouselCard2 from './CarouselCard2';
 import CommunityIconList from './CommunityIconsList';
