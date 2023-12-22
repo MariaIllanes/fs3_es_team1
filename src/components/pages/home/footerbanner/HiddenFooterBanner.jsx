@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ConnectWalletList from "./ConnectWalletList";
 import Carousel from "./Carousel";
-import isDark from '../../../shared/sharedComponents/ThemeChange';
+
 const HiddenFooterBanner = () => {
   const [cwRightContent, setCwRightContent] = useState({
     title: "Haven't got a wallet yet?",
@@ -20,8 +20,8 @@ const HiddenFooterBanner = () => {
                 </a>
               </span>
     </div>
-  }); // for custom content placed on the right side of HiddenFooterBanner window + default content
-
+  }); 
+  
   const handleWalletItemClick = (contentFunction) => {
     contentFunction(setCwRightContent);
   };

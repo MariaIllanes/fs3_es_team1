@@ -230,7 +230,7 @@
     background-color: #372f47;
     z-index: 200;
 }
-/*  */
+
 .footer-tab:target ~ .footer-tab:last-of-type > a {
     background-color: var(--purple);
     color: var(--greypurple);
@@ -253,7 +253,6 @@
     padding: 35px 30px;
     border-radius: 20px;
     height: 550px;
-
 }
 
 #cw-left.dark-theme {
@@ -265,13 +264,11 @@
     height: 550px;
 }
 
-
 #cw-left h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
     font-weight: bold;
-  }
-
+}
 
 #cw-left-text.dark-theme h3 {
     font-size: 1.3rem;
@@ -369,16 +366,6 @@
     width: 50px;
   }
 
-  /* .icon-dots.dark-theme {
-    background-color: var(--gre);
-    border-radius: 10px;
-    height: 50px;
-    width: 50px;
-  }
-   */
-  /* connect wallet - rigth section ----------------------------------------------------------------*/
-
-
 /* connect wallet - rigth section ----------------------------------------------------------------*/
 .footer-tab-content-cw {
     display: grid;
@@ -389,7 +376,7 @@
 
 @media screen and (max-width: 650px) {
     .footer-tab-content-cw {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        grid-template-columns: 1fr; /* changes to 1 column */
     }
 }
 
@@ -440,8 +427,6 @@
     padding: 25px 0 30px;
 }
 
-/* web3 section */
-
 .footer-card-slide {
     display: flex;
     flex-direction: column;
@@ -474,9 +459,8 @@
     display: flex;
     flex-direction: column;
 }
-/* Styling for buttons */
 
-  
+/* Styling for buttons */ 
 .w3-content.dark-theme h3 {
     font-size: 1.3rem;
     margin: 0 0 20px 0;
@@ -496,13 +480,11 @@
     gap: 15px;
 }
 
-
 #cw-right-content.light-theme h3{
     color: var(--purple);
     font-weight: bold;
     font-size: 1.4rem;
 }
-
 
 .fb-button.light-theme p {
     background-color: var(--purple);
@@ -605,6 +587,38 @@
     font-weight: bold;
     font-size: 1.5rem;
   }
+
+  
+  .footer-banner-wrapper {
+    position: relative;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 7, 64, 0.5); 
+    z-index: 50; 
+    animation: 350ms ease 0s 1 normal forwards running dHqLl;
+  }
+  
+  #w3-container{
+    width: 100%;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+
+.cw-text.light-theme{
+    color: black;
+}
+
+.cw-text.dark-theme p{
+    color: white;
+}
+
 
 /* end of dark/light mode */
 
@@ -847,33 +861,3 @@
         width: 300px;
     }
   }
-
-  .footer-banner-wrapper {
-    position: relative;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(64, 7, 64, 0.5); 
-    z-index: 50; 
-    animation: 350ms ease 0s 1 normal forwards running dHqLl;
-  }
-  
-  #w3-container{
-    width: 100%;
-  }
-  .no-scroll {
-    overflow: hidden;
-  }
-
-.cw-text.light-theme{
-    color: black;
-}
-
-.cw-text.dark-theme p{
-    color: white;
-}
