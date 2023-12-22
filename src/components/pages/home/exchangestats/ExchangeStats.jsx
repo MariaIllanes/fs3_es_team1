@@ -53,7 +53,6 @@ export default function ExchangeStats() {
                                 {item.number}
                             </p>
                         </div>
-                        {/* <hr /> */}
                     </div>
                 ))}
             </div>

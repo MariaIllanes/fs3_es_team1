@@ -287,14 +287,10 @@
     border-radius: 0 10px 10px 0;
 }
 
-/* .community-slideshow-buttons button .active{
-    background-color: red;
-} */
-
 .community-slideshow-buttons button.active {
     background-color: var(
         --communityActiveButton
-    ); /* Set the active background color */
+    );
 }
 
 .community-card-slide h5 {
@@ -319,7 +315,7 @@
 .comunnity a:-webkit-any-link {
     text-decoration: none;
     color: initial;
-    /*eliminar en caso de interferir con otras secciones  */
+    /*delet if it affects other sections */
 }
 
 #community-bg-x {
