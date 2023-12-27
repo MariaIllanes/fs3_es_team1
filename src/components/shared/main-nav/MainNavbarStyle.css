@@ -31,6 +31,10 @@
     max-width: 100%;
 }
 
+.main-navbar.light-theme {
+    background-color: var(--btn-light-text);
+}
+
 .main-navbar.dark-theme {
     background-color: var(--bg-dark);
 }
