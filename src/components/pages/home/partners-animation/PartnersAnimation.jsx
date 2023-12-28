@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./partners-animation.css";
 
 const PartnersAnimation = () => {
+    const canvasRef = useRef(null);
+
     useEffect(() => {
-        const canvas = document.getElementById("miCanvas");
+        const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
 
         const img = new Image();
@@ -433,7 +435,8 @@ const PartnersAnimation = () => {
                     <div className="gvX">
                         <canvas
                             id="miCanvas"
-                            className="giC"
+                            ref={canvasRef}
+                            className="giC miCanvas"
                             width="900"
                             height="900"
                         ></canvas>

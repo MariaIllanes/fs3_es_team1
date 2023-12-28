@@ -21,9 +21,25 @@
 * {
     font-family: Kanit, sans-serif;
     -webkit-font-smoothing: antialiased;
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 div {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+canvas {
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -390,6 +406,9 @@ div {
 @media screen and (min-width: 968px) {
     .carousel {
         animation: scroll 8.32s linear var(--delay) var(--iteration-count);
+        animation-play-state: var(--play);
+        animation-delay: var(--delay);
+        animation-direction: var(--direction);
     }
 }
 
@@ -1270,8 +1289,8 @@ div {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 600px;
-    height: 600px;
+    width: 200px;
+    height: 200px;
     background-color: transparent;
 }
 
@@ -1652,6 +1671,9 @@ div {
 @media screen and (min-width: 968px) {
     .marquee {
         animation: scroll 5.2s linear var(--delay) var(--iteration-count);
+        animation-play-state: var(--play);
+        animation-delay: var(--delay);
+        animation-direction: var(--direction);
     }
 }
 

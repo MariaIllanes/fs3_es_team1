@@ -15,7 +15,6 @@ function App() {
         <div>
             <MainNav />
             <section
-                style={{ boxSizing: "border-box" }}
                 id="reactive-nav-bottom"
                 class="reactive-nav-bottom light-theme theme-change"
             >
