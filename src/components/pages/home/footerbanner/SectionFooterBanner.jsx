@@ -1,60 +1,110 @@
-import React, {useEffect, useState} from 'react';
-import './FooterBannerStyle.css'
-import bfRock1 from "./FooterBannerAssets/bf-rock1.webp"
-import bfRock2 from "./FooterBannerAssets/bf-rock2.webp"
-import bfRock3 from "./FooterBannerAssets/bf-rock3.webp"
-import bfRock4 from "./FooterBannerAssets/bf-rock4.webp"
-// import StandarButton from "../../../../components/pages/shared/StandardButton"
-import ConnectWalletList from './ConnectWalletList';
+import React, { useState, useRef, useEffect } from "react";
+import "./FooterBannerStyle.css";
+import bfRock1 from "./FooterBannerAssets/bf-rock1.webp";
+import bfRock2 from "./FooterBannerAssets/bf-rock2.webp";
+import bfRock3 from "./FooterBannerAssets/bf-rock3.webp";
+import bfRock4 from "./FooterBannerAssets/bf-rock4.webp";
+import HiddenFooterBanner from "./HiddenFooterBanner";
 
 const SectionFooterBanner = () => {
-  const [isHidden, setIsHidden] = useState(true);
+    const [isHidden, setIsHidden] = useState(true);
+    const containerRef = useRef(null);
+    const overlayRef = useRef(null);
 
-  const toggleHidden = () => {
-      setIsHidden(!isHidden);
-  };
+    const toggleHidden = () => {
+        setIsHidden(!isHidden);
+    };
 
-  const handleOutsideClick = (event) => {
-      const hiddenFooterBanner = document.querySelector("#footer-banner-hidden-section");
-      const footerBannerButton = document.getElementById("button-s11");
+    const handleOverlayClick = () => {
+        setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
+    };
 
-      if (
-          !hiddenFooterBanner.contains(event.target) &&
-          event.target !== footerBannerButton &&
-          !isHidden
-      ) {
-          setIsHidden(true);
-          console.log("Clicked outside. footerBannerisHidden:", isHidden);
-      }
-  };
+    const handleOutsideClick = (event) => {
+        if (
+            containerRef.current &&
+            overlayRef.current &&
+            !containerRef.current.contains(event.target) &&
+            event.target === overlayRef.current
+        ) {
+            handleOverlayClick();
+        }
+    };
 
-  useEffect(() => {
-      document.addEventListener("click", handleOutsideClick);
+    useEffect(() => {
+        document.addEventListener("click", handleOutsideClick);
 
-      return () => {
-          document.removeEventListener("click", handleOutsideClick);
-      };
-  }, [isHidden]);
-    
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, [isHidden]);
+
     return (
-        <div className='footer-banner theme-change light-theme'>
-            <div id='footerbanner-visible-section'>
-                <img src={bfRock1} width="120" height="120" alt="animation" class="footer-banner-img" id="footer-banner1" />
-                <img src={bfRock2} width="120" height="120" alt="animation" class="footer-banner-img" id="footer-banner3" />
-                <div class="footer-banner-text">
+        <div
+            className="footer-banner theme-change light-theme"
+            ref={containerRef}
+        >
+            <div id="footerbanner-visible-section">
+                <img
+                    src={bfRock1}
+                    width="120"
+                    height="120"
+                    alt="animation"
+                    className="footer-banner-img"
+                    id="footer-banner1"
+                />
+                <img
+                    src={bfRock2}
+                    width="120"
+                    height="120"
+                    alt="animation"
+                    className="footer-banner-img"
+                    id="footer-banner3"
+                />
+                <div className="footer-banner-text">
                     <h2>Join Everyone's Favorite DEX Now!</h2>
-                    <button id="button-s11"  />
+                    <button
+                        className="btn-main-blue"
+                        id="button-s11"
+                        onClick={toggleHidden}
+                    >
+                        Connect Wallet
+                    </button>
                 </div>
-                <img src={bfRock3} width="120" height="94" alt="animation" class="footer-banner-img" id="footer-banner2" />
-                <img src={bfRock4} width="160" height="160" alt="animation" class="foote r-banner-img" id="footer-banner4" />
-                <ConnectWalletList />
+                <img
+                    src={bfRock3}
+                    width="120"
+                    height="94"
+                    alt="animation"
+                    className="footer-banner-img"
+                    id="footer-banner2"
+                />
+                <img
+                    src={bfRock4}
+                    width="160"
+                    height="160"
+                    alt="animation"
+                    className="footer-banner-img"
+                    id="footer-banner4"
+                />
             </div>
-
-           
-        </div>  
-    
-    )
-}
+            <div
+                className="footerbanner-hidden-section"
+                id="footer-banner-hidden-section"
+            >
+                <div
+                    className="theme-change light-theme"
+                    style={{ display: isHidden ? "none" : "block" }}
+                >
+                    <HiddenFooterBanner />
+                    <div
+                        className="overlay"
+                        ref={overlayRef}
+                        onClick={handleOverlayClick}
+                    ></div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default SectionFooterBanner;
-
