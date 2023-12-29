@@ -118,7 +118,14 @@
     color: #9779e3;
 }
 
-.exchange-info-container::after {
+.exchange-info-container.dark-theme::after {
+    content: '';
+    border-left: 2px solid rgb(61, 57, 57);
+    height: 4em;
+    margin: 0 20px;
+}
+
+.exchange-info-container.light-theme::after {
     content: '';
     border-left: 2px solid lightgray;
     height: 4em;
