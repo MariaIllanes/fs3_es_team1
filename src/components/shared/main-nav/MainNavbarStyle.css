@@ -224,6 +224,10 @@
     padding-top: 0rem;
 }
 
+.menu-icon-list p{
+    margin: unset;
+}
+
 
 /* Responsive Design */
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import GamePred from './EcosystemAssets/game-prediction.png'
+import React, { useEffect, useState, useRef } from 'react';
+import GamePred  from './EcosystemAssets/game-prediction.png'
 import GamePredPurple from './EcosystemAssets/game-prediction-purple.png'
 import PancakeProtectorsPurple from './EcosystemAssets/game-pancake-protectors-purple.png'
 import PancakeProtectors from './EcosystemAssets/game-pancake-protectors.png'
@@ -60,41 +60,67 @@ const GamesCard = () => {
         },
     ];
 
-  const handleMouseOver = (event, hoverImage) => {
-    event.currentTarget.querySelector('img').src = hoverImage;
-    event.currentTarget.querySelector('.ecosystem-link').style.color = '#1fc7d4';
-  };
-
-  const handleMouseOut = (event, normalImage) => {
-    event.currentTarget.querySelector('img').src = normalImage;
-    event.currentTarget.querySelector('.ecosystem-link').style.color = 'initial';
-  };
+    const [linkColor, setLinkColor] = useState('initial'); // avoids cards links to change color after being hovered or clicked
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900); // shows "hovered" images in small screens
+    const normalImageRef = useRef(null); // avoids normal picture to be shown when hovering over the image set by useState
+  
+    const handleMouseOver = (event, hoverImage, theme) => {
+      event.currentTarget.querySelector('img').src = hoverImage;
+      setLinkColor(theme === 'light-theme' ? '#000' : '#fff');
+    };
+  
+    const handleMouseOut = (event, hoverImage) => {
+      if (!isSmallScreen) {
+        event.currentTarget.querySelector('img').src = hoverImage;
+      }
+      setLinkColor('initial');
+    };
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsSmallScreen(window.innerWidth < 900);
+        if (normalImageRef.current && isSmallScreen) {
+          normalImageRef.current.src = normalImageRef.current.dataset.hoverImage;
+        }
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, [isSmallScreen]);
+  
 
   return (
-    <div class="ecosystem-container">
-        <div class="ecosystem-card-container theme-change light-theme">
-            <img src={BigGamesImg} alt="" class="ecosystem-big-img" id="trade-img" />
-            <div class="gamenft-card-container-all theme-change light-theme">
-                <h3>Games & NFT</h3>
-                <div class="gamenft-cards-container theme-change light-theme">
-                {GamesData.map((data, index) => (
-                    <a key={index} href={data.gameURL} className="gamenft"
-                    onMouseOver={(e) => handleMouseOver(e, data.gamesNFTHoveredImage)}
-                    onMouseOut={(e) => handleMouseOut(e, data.gamesNFTimageSrc)}
-                    >
-                    <div className="gamenft-card">
-                        <div className="gamenft-img">
-                        <img src={data.gamesNFTimageSrc} data-hover-image={data.gamesNFTHoveredImage} alt="Trade" />
-                        </div>
-                        <h4>{data.gamesNFTTitle}</h4>
-                        <p className="ecosystem-description">{data.gamesNFTDescription}</p>
-                        <p className="ecosystem-link theme-change light-theme">{data.gamesNFTLink}</p>
-                    </div>
-                    </a>
-                ))}
+    <div className="ecosystem-container">
+      <div className="ecosystem-card-container theme-change light-theme">
+        <img src={BigGamesImg} alt="" className="ecosystem-big-img" id="gamenft-img" />
+        <div className="gamenft-card-container-all theme-change light-theme">
+          <h3>Games & NFT</h3>
+          <div className="gamenft-cards-container theme-change light-theme">
+            {GamesData.map((data, index) => (
+              <a key={index} href={data.gameURL} className="gamenft" 
+              onMouseOver={(e) => handleMouseOver(e, data.gamesNFTHoveredImage)}
+              onMouseOut={(e) => handleMouseOut(e, data.gamesNFTimageSrc)}
+              >
+                <div className="gamenft-card">
+                  <div className="gamenft-img">
+                    {isSmallScreen ? (
+                      <img src={data.gamesNFTHoveredImage} data-hover-image={data.gamesNFTHoveredImage} alt="Trade" />
+                    ) : (
+                      <img src={data.gamesNFTimageSrc} data-hover-image={data.gamesNFTImage} alt="Trade" />
+                    )}
+                  </div>
+                  <h4>{data.gamesNFTTitle}</h4>
+                  <p className="ecosystem-description">{data.gamesNFTDescription}</p>
+                  <p className="ecosystem-link theme-change light-theme">{data.gamesNFTLink}</p>
                 </div>
-            </div>
+              </a>
+            ))}
+          </div>
         </div>
+      </div>
     </div>
   );
 };
