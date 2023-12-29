@@ -9,12 +9,12 @@ import SectionEcosystem from "./components/pages/home/ecosystem/SectionEcosystem
 import SectionExchangeStats from "./components/pages/home/exchangestats/SectionExchangeStats.jsx";
 import News from "./components/pages/home/News/News.jsx";
 import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
-import MainNav from "./components/shared/main-nav/MainNav";
+// import MainNav from "./components/shared/main-nav/MainNav";
 
 function App() {
     return (
         <div>
-            <MainNav />
+            {/* <MainNav /> */}
             <section
                 style={{ boxSizing: "border-box" }}
                 id="reactive-nav-bottom"
