@@ -21,7 +21,7 @@
 * {
     font-family: Kanit, sans-serif;
     -webkit-font-smoothing: antialiased;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 body {

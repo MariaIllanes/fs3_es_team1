@@ -72,7 +72,6 @@ span {
     margin-right: auto;
 }
 
-
 @media screen and (min-width: 370px) {
     .gVCLyc {
         padding-left: 24px;
@@ -289,6 +288,7 @@ span {
     align-items: center;
     border-radius: 25px;
     margin-right: 8px;
+    box-sizing: content-box;
 }
 
 @media screen and (min-width: 576px) {
