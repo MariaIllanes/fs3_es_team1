@@ -232,6 +232,10 @@
     padding-top: 0rem;
 }
 
+.menu-icon-list p {
+    margin: unset;
+}
+
 /* Responsive Design */
 
 @media (max-width: 970px) {

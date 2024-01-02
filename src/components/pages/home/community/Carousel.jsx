@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CarouselCard1 from '../../pages/home/community/CarouselCard1';
-import CarouselCard2 from '../../pages/home/community/CarouselCard2';
+import CarouselCard1 from './CarouselCard1';
+import CarouselCard2 from './CarouselCard2';
 
 const Carousel = () => {
   const [slideCommunityIndex, setSlideCommunityIndex] = useState(1);

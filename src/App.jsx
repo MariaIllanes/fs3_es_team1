@@ -1,22 +1,24 @@
 import "./App.css";
+import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner";
 import SectionCommunity from "./components/pages/home/community/SectionCommunity.jsx";
 import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
 import SectionFooter from "./components/shared/footer/SectionFooter.jsx";
 import ExchangeStatsOne from "./components/pages/home/Exchange-stats-1/ExchangeStatsOne.jsx";
 import PartnersAnimation from "./components/pages/home/partners-animation/PartnersAnimation.jsx";
+import SectionEcosystem from "./components/pages/home/ecosystem/SectionEcosystem.jsx";
 import SectionExchangeStats from "./components/pages/home/exchangestats/SectionExchangeStats.jsx";
 import News from "./components/pages/home/News/News.jsx";
 import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
-import MainNav from "./components/shared/main-nav/MainNav";
+// import MainNav from "./components/shared/main-nav/MainNav";
 
 function App() {
     return (
         <div>
-            <MainNav />
+            {/* <MainNav /> */}
             <section
                 id="reactive-nav-bottom"
-                class="reactive-nav-bottom light-theme theme-change"
+                className="reactive-nav-bottom light-theme theme-change"
             >
                 <BottomNav />
             </section>
@@ -37,6 +39,7 @@ function App() {
                 <ExchangeStatsOne />
             </section>
             <BuyCakeComponent />
+            <SectionEcosystem />
             <SectionExchangeStats />
             <SectionCommunity />
             <section
@@ -46,6 +49,7 @@ function App() {
             >
                 <News />
             </section>
+            <SectionFooterBanner />
             <SectionFooter />
         </div>
     );
