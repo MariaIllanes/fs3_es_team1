@@ -21,7 +21,7 @@
 
 
 .main-banner .mbcontainer {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     display: flex;
     flex-direction: row;
@@ -103,7 +103,7 @@
 
 #main-banner-img{
     position: relative;
-    left: -50px;
+    left: -20px;
     top: 20px;
     animation-name: slidein;
     animation: main-banner-img 4s infinite linear;
