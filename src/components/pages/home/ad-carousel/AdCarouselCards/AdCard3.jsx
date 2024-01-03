@@ -11,7 +11,7 @@ const AdCard3 = () => {
         <div className="text-container">
           <div className="logoCont">
             <img
-              src="https://assets.pancakeswap.finance/web/banners/liquidStakingTitle.png"
+              src="/src/assets/Ad-caroussel/bunnylogo.png?t=1704290924897"
               alt="PancakeSwap"
               id="bunny-logo3"
             />
