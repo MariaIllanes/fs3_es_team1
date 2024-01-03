@@ -14,48 +14,23 @@ import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
 // import MainNav from "./components/shared/main-nav/MainNav";
 
 function App() {
-    return (
-        <div>
-            {/* <MainNav /> */}
-            <section
-                id="reactive-nav-bottom"
-                className="reactive-nav-bottom light-theme theme-change"
-            >
-                <BottomNav />
-            </section>
-            <section
-                id="other-element-container"
-                className="other-element-container"
-            >
-                <ArrowButton />
-            </section>
-            <MainBannerComponent />
-            <section id="sec4-container" className="sec4-container">
-                <ExchangeStatsOne />
-            </section>
-            <SectionEcosystem />
-
-            <BuyCakeComponent />
-            <section
-                id="partners-animation"
-                className="first-container-partners theme-change light-theme"
-                style={{ zIndex: 5 }}
-            >
-                <PartnersAnimation />
-            </section>
-            <SectionExchangeStats />
-            <SectionCommunity />
-            <section
-                id="news"
-                className="news-first-container theme-change light-theme"
-                style={{ boxSizing: "border-box" }}
-            >
-                <News />
-            </section>
-            <SectionFooterBanner />
-            <SectionFooter />
-        </div>
-    );
+  return (
+    <div>
+      {/* <MainNav /> */}
+      <BottomNav />
+      <ArrowButton />
+      <MainBannerComponent />
+      <ExchangeStatsOne />
+      <SectionEcosystem />
+      <BuyCakeComponent />
+      <PartnersAnimation />
+      <SectionExchangeStats />
+      <SectionCommunity />
+      <News />
+      <SectionFooterBanner />
+      <SectionFooter />
+    </div>
+  );
 }
 
 export default App;

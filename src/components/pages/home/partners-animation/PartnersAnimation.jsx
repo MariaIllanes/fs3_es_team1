@@ -18,6 +18,11 @@ const PartnersAnimation = () => {
     }, []);
 
     return (
+        <section
+        id="partners-animation"
+        className="first-container-partners theme-change light-theme"
+        style={{ zIndex: 5 }}
+      >
         <section className="partners-animation-container theme-change light-theme">
             <section className="partners-animation">
                 <div className="line-one theme-change light-theme show"></div>
@@ -1355,6 +1360,7 @@ const PartnersAnimation = () => {
                     </div>
                 </div>
             </section>
+        </section>
         </section>
     );
 };
