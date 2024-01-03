@@ -6,6 +6,7 @@ import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
 import SectionFooter from "./components/shared/footer/SectionFooter.jsx";
 import ExchangeStatsOne from "./components/pages/home/Exchange-stats-1/ExchangeStatsOne.jsx";
 import PartnersAnimation from "./components/pages/home/partners-animation/PartnersAnimation.jsx";
+import MainBannerComponent from "./components/pages/home/MainBanner/MainBanner";
 import SectionEcosystem from "./components/pages/home/ecosystem/SectionEcosystem.jsx";
 import SectionExchangeStats from "./components/pages/home/exchangestats/SectionExchangeStats.jsx";
 import News from "./components/pages/home/News/News.jsx";
@@ -28,6 +29,13 @@ function App() {
             >
                 <ArrowButton />
             </section>
+            <MainBannerComponent />
+            <section id="sec4-container" className="sec4-container">
+                <ExchangeStatsOne />
+            </section>
+            <SectionEcosystem />
+
+            <BuyCakeComponent />
             <section
                 id="partners-animation"
                 className="first-container-partners theme-change light-theme"
@@ -35,11 +43,6 @@ function App() {
             >
                 <PartnersAnimation />
             </section>
-            <section id="sec4-container" className="sec4-container">
-                <ExchangeStatsOne />
-            </section>
-            <BuyCakeComponent />
-            <SectionEcosystem />
             <SectionExchangeStats />
             <SectionCommunity />
             <section

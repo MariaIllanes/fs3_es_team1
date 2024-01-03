@@ -333,6 +333,10 @@
     }
 
     .main-footer {
-        width: 90vw;
+        width: 100vw;
+    }
+    .main-footer svg {
+        height: 30px;
+        width: 45px;
     }
 }
