@@ -224,6 +224,10 @@
     padding-top: 0rem;
 }
 
+.menu-icon-list p{
+    margin: unset;
+}
+
 
 /* Responsive Design */
 
@@ -239,7 +243,7 @@
     }
     .hidden-logo {
         display: block;
-        min-width: 2rem;
+        min-width: 3rem;
     }
 
     .logo.light {

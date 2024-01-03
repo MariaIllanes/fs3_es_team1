@@ -188,6 +188,7 @@
 .footer-left {
     display: inline-flex;
     gap: 20px;
+    align-items: center;
 }
 
 .dollar-link a {
@@ -216,6 +217,10 @@
 
 #footer-separator2 {
     display: none;
+}
+
+.footer-buttons p{
+    margin: unset;
 }
 
 @media (max-width: 1078px) and (min-width: 967px) {
@@ -323,6 +328,10 @@
     }
 
     .main-footer {
-        width: 90vw;
+        width: 100vw;
+    }
+    .main-footer svg {
+        height: 30px;
+        width: 45px;
     }
 }
