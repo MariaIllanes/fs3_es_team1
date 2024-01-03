@@ -43,6 +43,10 @@ const BottomNav = () => {
     };
 
     return (
+        <section
+                id="reactive-nav-bottom"
+                className="reactive-nav-bottom light-theme theme-change"
+            >
         <div className="bottom-nav-container light-theme theme-change">
             <div className="option-container">
                 <span className="option-one">
@@ -605,6 +609,7 @@ const BottomNav = () => {
                 )}
             </div>
         </div>
+        </section>
     );
 };
 

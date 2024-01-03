@@ -69,10 +69,11 @@
     height: 30px;
 }
 
+/*
 .main-footer svg {
     height: 30px;
     width: auto;
-}
+} */
 
 .footer-icons {
     display: flex;
@@ -253,6 +254,10 @@
     #footer-pancakeswap-logo {
         display: inline;
     }
+
+    /* .main-footer{
+        width: 100vw;
+    } */
 }
 
 @media (max-width: 820px) {
@@ -328,6 +333,10 @@
     }
 
     .main-footer {
-        width: 90vw;
+        width: 100vw;
+    }
+    .main-footer svg {
+        height: 30px;
+        width: 45px;
     }
 }
