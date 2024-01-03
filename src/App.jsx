@@ -5,6 +5,7 @@ import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
 import SectionFooter from "./components/shared/footer/SectionFooter.jsx";
 import ExchangeStatsOne from "./components/pages/home/Exchange-stats-1/ExchangeStatsOne.jsx";
+import PartnersAnimation from "./components/pages/home/partners-animation/PartnersAnimation.jsx";
 import MainBannerComponent from "./components/pages/home/MainBanner/MainBanner";
 import SectionEcosystem from "./components/pages/home/ecosystem/SectionEcosystem.jsx";
 import SectionExchangeStats from "./components/pages/home/exchangestats/SectionExchangeStats.jsx";
@@ -17,7 +18,6 @@ function App() {
         <div>
             {/* <MainNav /> */}
             <section
-                style={{ boxSizing: "border-box" }}
                 id="reactive-nav-bottom"
                 className="reactive-nav-bottom light-theme theme-change"
             >
@@ -30,11 +30,19 @@ function App() {
                 <ArrowButton />
             </section>
             <MainBannerComponent />
-            <BuyCakeComponent />
             <section id="sec4-container" className="sec4-container">
                 <ExchangeStatsOne />
             </section>
             <SectionEcosystem />
+
+            <BuyCakeComponent />
+            <section
+                id="partners-animation"
+                className="first-container-partners theme-change light-theme"
+                style={{ zIndex: 5 }}
+            >
+                <PartnersAnimation />
+            </section>
             <SectionExchangeStats />
             <SectionCommunity />
             <section
