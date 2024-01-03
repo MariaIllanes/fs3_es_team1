@@ -154,16 +154,17 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .mbimg img{
         width: 22rem;
     }
 
     .main-banner .mbcontainer {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        justify-items: center;
     }
 
     .main-banner .mbimg {
@@ -173,5 +174,18 @@
 
     .text-container{
         padding: 30px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ 
+
     }
+}
+
+@media (max-width: 500px) { 
+    .main-banner .mbcontainer {
+        width: 95%;
+    }
+
+
 }
