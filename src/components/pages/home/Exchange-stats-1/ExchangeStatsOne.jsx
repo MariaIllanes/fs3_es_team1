@@ -3,6 +3,7 @@ import "./exchange-stats-one.css";
 
 const ExchangeStatsOne = () => {
     return (
+        <section id="sec4-container" className="sec4-container">
         <div className="exchange-div-container">
             <div
                 id="home-2"
@@ -611,6 +612,7 @@ const ExchangeStatsOne = () => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 

@@ -81,6 +81,11 @@ const News = () => {
     };
 
     return (
+        <section
+        id="news"
+        className="news-first-container theme-change light-theme"
+        style={{ boxSizing: "border-box" }}
+      >
         <section className="news theme-change light-theme">
             <div className="news-title">
                 <div className="featured theme-change light-theme">
@@ -150,6 +155,7 @@ const News = () => {
                     </div>
                 </div>
             </div>
+        </section>
         </section>
     );
 };

@@ -7,7 +7,9 @@ function useCountAnimation(start, end, interval) {
     let timeout;
     if (count < end) {
       timeout = setTimeout(() => {
-        const increment = Math.ceil((end - start) / ((end - count) / (interval / 1)));
+        const increment = Math.ceil(
+          (end - start) / ((end - count) / (interval / 1))
+        );
         setCount((prevCount) => Math.min(prevCount + increment, end));
       }, 1);
     }
@@ -15,7 +17,7 @@ function useCountAnimation(start, end, interval) {
     return () => clearTimeout(timeout);
   }, [count, end, interval, start]);
 
-  return count.toLocaleString(); 
+  return count.toLocaleString();
 }
 
 export default function ExchangeStats() {
@@ -52,9 +54,15 @@ export default function ExchangeStats() {
   ];
 
   return (
-    <div className="exchange-statistics-container light-theme theme-change" id="exchange-counter">
+    <div
+      className="exchange-statistics-container light-theme theme-change"
+      id="exchange-counter"
+    >
       {list.map((item, index) => (
-        <div className="exchange-info-container light-theme theme-change" key={index}>
+        <div
+          className="exchange-info-container light-theme theme-change"
+          key={index}
+        >
           <div className="exsElementText">
             <h3 className="exchange-titles light-theme theme-change">
               {item.h3}

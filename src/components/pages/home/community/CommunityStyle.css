@@ -48,11 +48,17 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
     border-radius: 45px;
     position: absolute;
     top: 100px;
     opacity: 0.9;
+    box-sizing: border-box;
+}
+
+.community ::before,
+.community ::after {
+    box-sizing: content-box;
 }
 
 .community-container.light-theme {
@@ -65,11 +71,12 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
     border-radius: 45px;
     position: absolute;
     top: 100px;
     opacity: 0.9;
+    box-sizing: border-box;
 }
 
 .community-title {
@@ -125,7 +132,6 @@
     border-radius: 32px;
     padding: 10px;
     box-sizing: border-box;
-    width: 340px;
 }
 
 #community-card2.light-theme {
@@ -136,7 +142,6 @@
     box-shadow: lightgray 0px 4px 0px 0px;
     padding: 10px;
     box-sizing: border-box;
-    width: 340px;
 }
 
 #community-card1 p:nth-child(even) {
@@ -181,7 +186,7 @@
     display: flex;
     height: fit-content;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #community-tweet-user {
@@ -232,12 +237,15 @@
     height: 30px;
 }
 
-#community-tweet p {
+#community-tweet.dark-theme p {
     color: white;
     margin: 0;
 }
 
-
+#community-tweet.light-theme p {
+    color: black;
+    margin: 0;
+}
 
 #community-tweet-icons p {
     color: var(--purpleTweet);
@@ -265,7 +273,7 @@
     padding: 5px 0 0 0;
 }
 
-.community-card-slide p:first-child {
+#tweet-title {
     font-weight: bold;
 }
 
@@ -287,14 +295,8 @@
     border-radius: 0 10px 10px 0;
 }
 
-/* .community-slideshow-buttons button .active{
-    background-color: red;
-} */
-
 .community-slideshow-buttons button.active {
-    background-color: var(
-        --communityActiveButton
-    ); /* Set the active background color */
+    background-color: var(--communityActiveButton);
 }
 
 .community-card-slide h5 {
@@ -319,7 +321,7 @@
 .comunnity a:-webkit-any-link {
     text-decoration: none;
     color: initial;
-    /*eliminar en caso de interferir con otras secciones  */
+    /*delet if it affects other sections */
 }
 
 #community-bg-x {
@@ -389,17 +391,15 @@
 .social-media-svg.light-theme {
     background-color: white;
     border-radius: 40px;
-    padding: 10px;
-    width: 25px;
-    box-sizing: content-box;
+    padding: 8px;
+    width: 35px;
 }
 
 .social-media-svg.dark-theme {
     background-color: #27262b;
     border-radius: 40px;
-    padding: 13px;
-    width: 25px;
-    box-sizing: content-box;
+    padding: 8px;
+    width: 35px;
 }
 
 @media (max-width: 1300px) {
@@ -501,6 +501,11 @@
         left: 30px;
         top: 980px;
     }
+
+    .community-container.dark-theme,
+    .community-container.light-theme {
+        width: 98%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -518,6 +523,8 @@
 
     .community {
         padding: 0;
+        margin: 0;
+        width: 100vw;
     }
 
     .comunity-container {
@@ -525,34 +532,16 @@
     }
 }
 
-@media (max-width: 430px) {
-    .community-sm {
-        width: 35px;
-        height: 35px;
-    }
+.slideshow-container p {
+    margin-bottom: 0;
+}
 
-    .community-container h3 {
-        font-size: 1.2rem;
-        font-weight: lighter;
-    }
+.slideshow-container {
+    height: max-content;
+    justify-content: space-between;
+}
 
-    .community.light-theme,
-    .community.dark-theme {
-        height: 1300px;
-    }
-
-    #community-bg-bell {
-        top: 1060px;
-    }
-
-    .community {
-        padding: 0;
-    }
-
-    .community-icons svg {
-        background-color: white;
-        border-radius: 40px;
-        padding: 8px;
-        margin: 3px;
-    }
+#community-card-slide1,
+#community-card-slide2 {
+    height: 255px;
 }
