@@ -9,9 +9,14 @@
     --bg-lightest-blue: #99b8c8;
 }
 
-.color-change {
-    color: #7745d8;
+.color-change.dark-theme {
+    color: rgb(168, 129, 252);
 }
+
+.color-change.light-theme {
+    color: var(--communityActiveButton);
+}
+
 
 .community.dark-theme {
     background: linear-gradient(#0b4574, #081116);
@@ -33,13 +38,8 @@
     z-index: 1;
 }
 
-/* body{
-    margin: 0;
-    padding: 0;
-} */
-
 .community-container.dark-theme {
-    width: 850px;
+    width: 950px;
     height: auto;
     margin: auto;
     background-color: #030406;
@@ -47,9 +47,25 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 2rem 1.5rem;
-    border-radius: 45px;
+    padding: 40px;
+    border-radius: 72px;
+    position: absolute;
+    top: 100px;
+    opacity: 0.9;
+    box-sizing: border-box;
+}
+
+.community-container.light-theme {
+    width: 950px;
+    height: auto;
+    margin: auto;
+    background-color: #e7e3eb;
+    color: var(--btn-dark-text);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 72px;
     position: absolute;
     top: 100px;
     opacity: 0.9;
@@ -61,49 +77,26 @@
     box-sizing: content-box;
 }
 
-.community-container.light-theme {
-    width: 850px;
-    height: auto;
-    margin: auto;
-    background-color: #e7e3eb;
-    color: var(--btn-dark-text);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 2rem 1.5rem;
-    border-radius: 45px;
-    position: absolute;
-    top: 100px;
-    opacity: 0.9;
-    box-sizing: border-box;
-}
-
 .community-title {
     margin-bottom: 0;
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
-
-/* .community-title .light-theme h2{
-    color: #081116;
-}
-
-.community-title .dark-theme h2{
-    color: #b31818;
-} */
 
 .community-container.light-theme h3 {
     margin: 0;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 16px;
+    margin: 0 0 40px;
     color: #7a6eaa;
 }
 
 .community-container.dark-theme h3 {
     margin: 0;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 16px;
+    margin: 0 0 40px;
     color: var(--purpleTweet);
 }
 
@@ -138,26 +131,25 @@
     background-color: var(--bg-light);
     border: 1px solid var(--purpleTweet);
     border-radius: 32px;
-    background-color: white;
     box-shadow: lightgray 0px 4px 0px 0px;
     padding: 10px;
     box-sizing: border-box;
 }
 
 #community-card1 p:nth-child(even) {
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: bold;
     color: var(--mustardyellow);
-    margin: 0 0 0px;
+    margin: 0 0 10px;
 }
 
-#community-card1.light-theme p:nth-child(1),
-#community-card1.light-theme p:nth-child(3),
-#community-card1.light-theme p:nth-child(5) {
+#community-card1 p:nth-child(1),
+#community-card1 p:nth-child(3),
+#community-card1 p:nth-child(5) {
     color: white;
-    margin: 0;
+    margin: 0px;
     font-weight: bold;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 #community-card1 {
@@ -172,7 +164,7 @@
         --linear,
         linear-gradient(180deg, #7645d9 0%, #5121b1 100%)
     );
-    box-shadow: rgb(60, 23, 134) 0px 4px 0px 0px;
+    box-shadow: rgb(60, 23, 134) 0px 6px 0px 0px;
     padding: 24px;
     box-sizing: border-box;
 }
@@ -321,7 +313,6 @@
 .comunnity a:-webkit-any-link {
     text-decoration: none;
     color: initial;
-    /*delet if it affects other sections */
 }
 
 #community-bg-x {
@@ -385,22 +376,28 @@
 
 .community-icons {
     display: inline-flex;
-    gap: 8px;
+    gap: 10px;
+    padding-top: 35px;
 }
 
 .social-media-svg.light-theme {
     background-color: white;
-    border-radius: 40px;
-    padding: 8px;
-    width: 35px;
+    border-radius: 48px;
+    width: 18px;
+    height: 18px;
+    padding: 15px;
+    box-sizing: content-box;
 }
 
 .social-media-svg.dark-theme {
     background-color: #27262b;
-    border-radius: 40px;
-    padding: 8px;
-    width: 35px;
+    border-radius: 48px;
+    width: 18px;
+    height: 18px;
+    padding: 15px;
+    box-sizing: content-box;
 }
+
 
 @media (max-width: 1300px) {
     #community-bg-x {
