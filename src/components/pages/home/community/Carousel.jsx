@@ -29,7 +29,7 @@ const Carousel = () => {
   return (
     <div className="community-card theme-change light-theme" id="community-card2">
       <div id="community-slider-container">
-        <div className="slideshow-container">
+        <div className="slideshow-container-eco">
           <div className={`community-card-slide ${slideCommunityIndex === 1 ? 'active' : ''}`}>
             {slideCommunityIndex === 1 && <CarouselCard1 />}
           </div>

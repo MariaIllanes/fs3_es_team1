@@ -13,6 +13,43 @@
     --colors-dark-gradient: linear-gradient(139.73deg, #313d5c, #3d2a54);
 }
 
+
+.triangle-eco {
+    position: relative;
+    display: flex;
+    width: 100%;
+    top: 0px;
+}
+
+#triangle-eco.light-theme svg {
+    fill: #d7caec;
+}
+
+
+#triangle-eco.dark-theme svg {
+    fill: #201335;
+}
+
+.triangle-eco.light-theme svg {
+    fill: var(--colors-background);
+    width: 100%;
+    height: 100%;
+    max-height: 48px;
+}
+
+.triangle-eco.dark-theme svg {
+    width: 100%;
+    height: 100%;
+    max-height: 48px;
+}
+
+.triangle-ecosystem{
+    align-self: center;
+    fill: var(--colors-text);
+    color: var(--colors-text);
+    flex-shrink: 0;
+}
+
 #ecosystem-triangle.light-theme {
     width: 100%;
     height: 40px;
@@ -49,22 +86,37 @@
 }
 
 #ecosystem-section-logo {
-    margin: 80px 0 0 0;
+    margin: 80px 0 15px 0;
+    height: 60px;
+    width: 58px;
 }
 
 .ecosystem-container h3 {
     margin: 0 0 15px -30px;
 }
 
-.ecosystem h2 {
+.ecosystem.light-theme h2 {
     font-size: 2.5rem;
-    color: black;
+    color: #280d5f;
     padding-bottom: 40px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.ecosystem h2 span {
+.ecosystem.dark-theme h2 {
+    font-size: 2.5rem;
+    color: #f4eeff;
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+
+.ecosystem.light-theme h2 span {
     color: var(--title-purple);
+    font-weight: 600;
+}
+
+.ecosystem.dark-theme h2 span {
+    color: #a881fc;
+    font-weight: 600;
 }
 
 .ecosystem-card-container.light-theme {
@@ -82,6 +134,11 @@
 .ecosystem-link.light-theme {
     font-weight: bold;
     color: var(--purple);
+}
+
+.ecosystem-link.dark-theme {
+    font-weight: bold;
+    color: #b8add2;
 }
 
 .ecosystem-container {
@@ -140,16 +197,21 @@
     align-content: center;
 }
 
-/* .trade-card-container-all:nth-child(2){
-    margin: 0 0 0 50px;
-  } */
-
-.trade-card-container-all h3,
-.gamenft-card-container-all h3,
-.earn-card-container-all h3 {
+.trade-card-container-all.light-theme h3,
+.gamenft-card-container-all.light-theme h3,
+.earn-card-container-all.light-theme h3 {
     font-size: 2rem;
     color: var(--purple);
-    margin: 40px 0 20px 20px;
+    margin: 40px 0 20px 10px;
+    font-weight: bold;
+}
+
+.trade-card-container-all.dark-theme h3,
+.gamenft-card-container-all.dark-theme h3,
+.earn-card-container-all.dark-theme h3 {
+    font-size: 2rem;
+    color: #a881fc;
+    margin: 40px 0 20px 10px;
     font-weight: bold;
 }
 
@@ -163,12 +225,6 @@
     color: unset;
 }
 
-/* .ecosystem-card-container .dark-theme a:visited{
-    text-decoration: none;
-    color: white;
-  }
-   */
-
 /* dark mode */
 .ecosystem.dark-theme {
     width: 100%;
@@ -180,28 +236,24 @@
 }
 
 .ecosystem h4 {
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: bold;
     padding: 3px 0;
+    color: #280d5f;
 }
 
 .ecosystem.dark-theme h2,
 .trade-cards-container.dark-theme h4,
 .earn-cards-container.dark-theme h4,
 .gamenft-cards-container.dark-theme h4,
-.trade-cards-container.dark-theme p,
-.earn-cards-container.dark-theme p,
-.gamenft-cards-container.dark-theme p {
-    color: white;
+.trade-cards-container.dark-theme p:first-of-type,
+.earn-cards-container.dark-theme p:first-of-type,
+.gamenft-cards-container.dark-theme p:first-of-type {
+    color: #f4eeff;
 }
 
 .ecosystem-card-container.dark-theme {
-    background: rgb(4, 31, 69);
-    background: linear-gradient(
-        216deg,
-        rgb(0, 20, 47) 0%,
-        rgb(49, 25, 82) 100%
-    );
+    background: linear-gradient(139.73deg,#313d5c,#3d2a54);;
     border-radius: 30px;
     display: flex;
     flex-direction: row;
@@ -212,7 +264,7 @@
 
 .ecosystem-link.dark-theme {
     font-weight: bold;
-    color: var(--white);
+    color: #b8add2;
 }
 
 .earn-cards-container a {
@@ -418,6 +470,7 @@
         left: -160px;
     }
 }
+
 
 @media (max-width: 760px) {
     .trade-cards-container a:last-of-type,
