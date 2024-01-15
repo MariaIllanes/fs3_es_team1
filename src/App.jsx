@@ -13,18 +13,18 @@ import News from "./components/pages/home/News/News.jsx";
 import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
 import PurpleBanner from "./components/shared/purple-banner/PurpleBanner.jsx"
 import MainNav from "./components/shared/main-nav/MainNav";
-
+import AdCarouselComponent from "./components/pages/home/ad-carousel/AdCarouselComponent.jsx"
 
 function App() {
   return (
     <div>
-        <div className="stickySection">
-            <PurpleBanner/>
-            <MainNav />
-        </div>
-      
+      <div className="stickySection">
+          <PurpleBanner/>
+          <MainNav />
+      </div>
       <BottomNav />
       <ArrowButton />
+      <AdCarouselComponent />
       <MainBannerComponent />
       <ExchangeStatsOne />
       <SectionEcosystem />

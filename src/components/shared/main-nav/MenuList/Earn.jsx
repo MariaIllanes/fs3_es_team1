@@ -1,7 +1,7 @@
 const Earn = ({ title }) => {
   return (
     <>
-      <div className="earn theme-change light-theme">
+      <div className="earn-nav theme-change light-theme">
         <h2>
           <div className="dropdown">
             <a
