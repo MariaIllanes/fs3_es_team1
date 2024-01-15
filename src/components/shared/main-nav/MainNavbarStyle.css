@@ -27,6 +27,12 @@
     max-width: 100%;
 }
 
+
+.main-navbar.light-theme {
+    background-color: white;
+}
+
+
 .main-navbar.dark-theme {
     background-color: var(--bg-dark);
 }
@@ -571,4 +577,20 @@
     appearance: none;
     background: none;
     color: var(--light-text1h1);
+}
+
+.icon-language:hover{
+    opacity: 70%;
+}
+
+.language-options2 {
+    border-radius: 5px;
+    position: absolute;
+    right: 23rem;
+    /* bottom: 60px; */
+    top: 4rem;
+    background-color: var(--footer-dark-bg);
+    overflow-y: scroll;
+    z-index: 5;
+    height: 300px;
 }
