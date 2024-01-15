@@ -50,6 +50,10 @@ const ArrowButton = () => {
     }, []);
 
     return (
+        <section
+                id="other-element-container"
+                className="other-element-container"
+            >
         <div className="arrow-div-container">
             <button
                 className="other-element-button light-theme theme-change"
@@ -70,6 +74,7 @@ const ArrowButton = () => {
                 </svg>
             </button>
         </div>
+        </section>
     );
 };
 
