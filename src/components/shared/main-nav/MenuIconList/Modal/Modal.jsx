@@ -1,19 +1,49 @@
-const Modal = ({}) => {
+import { useState, useEffect } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import '../Modal/modal.css'
+
+const ModalNav = ({}) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+  const selectTransactionSpeed = (speedNumber) => {
+    document.querySelectorAll('.transaction-speed-btn').forEach((button) => {
+      button.classList.remove('selected');
+    });
+
+    const selectedButton = document.getElementById('speedBtn' + speedNumber);
+    if (selectedButton) {
+      selectedButton.classList.add('selected');
+    }
+  };
+
+  const handleButtonClick = (speedNumber) => {
+    return () => {
+      selectTransactionSpeed(speedNumber);
+    };
+  };
+
+  useEffect(() => {
+    selectTransactionSpeed(1);
+  }, []);
 
   
     return (
         <>
-        <div
-            className="modal fade"
-            id="exampleModal"
-            tabIndex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
+
+        <button onClick={handleShow}
+            className="settings-btn"
           >
-            <div className="modal-dialog">
-              <div className="modal-content theme-change light-theme">
-                <div className="modal-header theme-change light-theme">
-                  <h1 className="modal-title fs-5" id="exampleModalLabel">
+            <h2>
+              <i className="fa-solid fa-gear icon-list"></i>
+            </h2>
+          </button>
+
+          <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton className='modal-header theme-change light-theme'>
+          <h1 className="modal-title theme-change light-theme" id="exampleModalLabel">
                     Settings
                   </h1>
                   <button
@@ -35,11 +65,11 @@ const Modal = ({}) => {
                       ></path>
                     </svg>
                   </button>
-                </div>
-                <div className="modal-body">
-                  <h5 className="modal-subtitle">GLOBAL</h5>
-                  <div className="toggle-list">
-                    <div className="text-toggle">
+        </Modal.Header>
+        <Modal.Body className="theme-change light-theme">
+        <h5 className="modal-subtitle">GLOBAL</h5>
+        <div className="toggle-list">
+                    <div className="text-toggle theme-change light-theme">
                       Dark mode
                       <label className="switch">
                         <input type="checkbox" id="main" />
@@ -93,7 +123,7 @@ const Modal = ({}) => {
                         </span>
                       </label>
                     </div>
-                    <div className="text-toggle">
+                    <div className="text-toggle theme-change light-theme">
                       Subgraph Health Indicator{" "}
                       <span className="toggle-modal light-theme theme-change">
                         {" "}
@@ -103,7 +133,7 @@ const Modal = ({}) => {
                         </label>
                       </span>
                     </div>
-                    <div className="text-toggle">
+                    <div className="text-toggle theme-change light-theme">
                       <span>
                         Show username{" "}
                         <svg
@@ -127,7 +157,7 @@ const Modal = ({}) => {
                         </label>
                       </span>
                     </div>
-                    <div className="text-toggle">
+                    <div className="text-toggle theme-change light-theme">
                       <span>
                         Token Risk Scanning{" "}
                         <svg
@@ -150,7 +180,7 @@ const Modal = ({}) => {
                         </label>
                       </span>
                     </div>
-                    <div className="text-toggle">
+                    <div className="text-toggle theme-change light-theme">
                       <span>
                         Default Transaction Speed (GWEI){" "}
                         <svg
@@ -172,39 +202,38 @@ const Modal = ({}) => {
                     <button
                       id="speedBtn1"
                       className="transaction-speed-btn selected theme-change light-theme"
-                      onClick={selectTransactionSpeed(1)}
+                      onClick={handleButtonClick(1)}
                     >
                       Default
                     </button>
                     <button
                       id="speedBtn2"
                       className="transaction-speed-btn theme-change light-theme"
-                      onClick={selectTransactionSpeed(2)}
+                      onClick={handleButtonClick(2)}
                     >
                       Standard (3)
                     </button>
                     <button
                       id="speedBtn3"
                       className="transaction-speed-btn theme-change light-theme"
-                      onClick={selectTransactionSpeed(3)}
+                      onClick={handleButtonClick(3)}
                     >
                       Fast (4)
                     </button>
                     <button
                       id="speedBtn4"
                       className="transaction-speed-btn theme-change light-theme"
-                      onClick={selectTransactionSpeed(4)}
+                      onClick={handleButtonClick(4)}
                     >
                       Instant (5)
                     </button>
                   </div>
-                </div>
-                <div className="modal-footer"></div>
-              </div>
-            </div>
-          </div>
+        </Modal.Body>
+        <Modal.Footer>
+        </Modal.Footer>
+      </Modal>
       </>
     );
   };
   
-  export default Modal;
+  export default ModalNav;

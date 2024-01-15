@@ -1,12 +1,10 @@
-import Modal from "./Modal";
-import ModalBTN from "./ModalBTN";
+import ModalNav from "./Modal";
 
 const Settings = () => {
   return (
     <>
-      <div class="settings theme-change light-theme">
-        <ModalBTN />
-        <Modal />
+      <div className="settings theme-change light-theme">
+        <ModalNav />
       </div>
     </>
   );
