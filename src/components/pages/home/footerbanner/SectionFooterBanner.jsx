@@ -5,9 +5,39 @@ import bfRock2 from "./FooterBannerAssets/bf-rock2.webp";
 import bfRock3 from "./FooterBannerAssets/bf-rock3.webp";
 import bfRock4 from "./FooterBannerAssets/bf-rock4.webp";
 import HiddenFooterBanner from "./HiddenFooterBanner";
-import ConnectWalletBTN from "../../../shared/sharedComponents/ConnectWalletBTN";
 
 const SectionFooterBanner = () => {
+    const [isHidden, setIsHidden] = useState(true);
+    const containerRef = useRef(null);
+    const overlayRef = useRef(null);
+
+    const toggleHidden = () => {
+        setIsHidden(!isHidden);
+    };
+
+    const handleOverlayClick = () => {
+        setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
+    };
+
+    const handleOutsideClick = (event) => {
+        if (
+            containerRef.current &&
+            overlayRef.current &&
+            !containerRef.current.contains(event.target) &&
+            event.target === overlayRef.current
+        ) {
+            handleOverlayClick();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("click", handleOutsideClick);
+
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, [isHidden]);
+
     return (
         <div
             className="footer-banner theme-change light-theme"
@@ -32,7 +62,13 @@ const SectionFooterBanner = () => {
                 />
                 <div className="footer-banner-text">
                     <h2>Join Everyone's Favorite DEX Now!</h2>
-                    <ConnectWalletBTN />
+                    <button
+                        className="btn-main-blue"
+                        id="button-s11"
+                        onClick={toggleHidden}
+                    >
+                        Connect Wallet
+                    </button>
                 </div>
                 <img
                     src={bfRock3}

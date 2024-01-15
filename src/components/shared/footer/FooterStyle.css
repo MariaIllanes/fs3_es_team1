@@ -1,22 +1,19 @@
 :root {
     --footer-dark-bg: #27262c;
     --footer-text: #f4eeff;
-    --title: #a881fc;
+    --title-purple: #a881fc;
     --light-purple: #c7b2f4;
 }
 
-.main-footer{
-    display: flex;
-    justify-content: center;
-    background-color: var(--footer-dark-bg);
+.footer-all {
+    margin: 0 5%;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
+.main-footer {
+    background-color: var(--footer-dark-bg);
     color: var(--footer-text);
     margin: 0px;
-    padding: 56px 0 32px;
+    padding: 56px 5% 32px;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
@@ -24,31 +21,26 @@
 }
 
 .main-footer h2 {
-    color: var(--title);
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 8px;
-    font-size: 16px;
+    color: var(--title-purple);
+    font-size: 1.3rem;
+    margin: 0;
 }
 
 .footer-links-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
-    gap: 50px;
-    margin: 0 0 36px;
+    gap: 10px;
+    margin: 0 0 30px 0;
 }
 
 .footer-links-container li {
     list-style-type: none;
     white-space: wrap;
     padding-bottom: 5px;
-    font-weight: 600;
-    align-items: center;
-    width: fit-content;
 }
 
 .footer-links-container ul {
-    padding: 0px 0 0;
+    padding: 10px 0 0;
 }
 
 .footer-links-container a {
@@ -73,38 +65,32 @@
 }
 
 .social-media-logo {
-    height: 20px;
-    align-self: center;
-    fill: #b8add2;
-    color: #b8add2;
-    flex-shrink: 0;
+    padding-right: 20px;
+    height: 30px;
 }
 
-.language-icon{
-    align-self: center;
-    fill: #b8add2;
-    color: #b8add2;
-}
+/*
+.main-footer svg {
+    height: 30px;
+    width: auto;
+} */
 
 .footer-icons {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    line-height: 1.5;
-    margin-right: 24px;
+    padding-bottom: 20px;
 }
 
 .footer-socialmedia-container a {
     text-decoration: none;
     color: initial;
-    margin-right: 20px;
 }
 
 .main-footer hr {
     border-color: #69686a;
     display: block;
     width: 100%;
-    margin: 32px 0;
 }
 
 #footer-reduced-logo {
@@ -204,12 +190,6 @@
     display: inline-flex;
     gap: 20px;
     align-items: center;
-}
-
-.footer-left p,
-.dollar-link p{
-    color: #b8add2;
-    font-weight: 600;
 }
 
 .dollar-link a {

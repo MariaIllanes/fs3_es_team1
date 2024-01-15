@@ -27,7 +27,7 @@ function App() {
       <SectionExchangeStats />
       <SectionCommunity />
       <News />
-      {/* <SectionFooterBanner /> */}
+      <SectionFooterBanner />
       <SectionFooter />
     </div>
   );
