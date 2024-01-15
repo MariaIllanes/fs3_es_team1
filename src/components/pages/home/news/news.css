@@ -108,6 +108,7 @@
     margin-right: 34px;
     cursor: pointer;
     scroll-snap-align: start;
+    text-decoration: none;
 }
 
 .card.dark-theme {
@@ -122,6 +123,7 @@
     margin-right: 34px;
     cursor: pointer;
     scroll-snap-align: start;
+    text-decoration: none;
 }
 
 .card-img-container {
