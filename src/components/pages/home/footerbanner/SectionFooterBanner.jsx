@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import "./FooterBannerStyle.css";
 import bfRock1 from "./FooterBannerAssets/bf-rock1.webp";
 import bfRock2 from "./FooterBannerAssets/bf-rock2.webp";

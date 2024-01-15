@@ -27,3 +27,14 @@ body {
     padding: 0;
     width: 100vw;
 }
+
+/* 
+.stickySection{
+  position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: top 0.2s ease 0s;
+    height: 56px;
+    width: 100%;
+    z-index: 20;
+} */

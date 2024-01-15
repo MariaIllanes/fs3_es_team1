@@ -25,6 +25,12 @@
     height: 4rem;
     justify-content: space-between;
     max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.main-navbar.light-theme {
+    background-color: var(--btn-light-text);
 }
 
 .main-navbar.dark-theme {
