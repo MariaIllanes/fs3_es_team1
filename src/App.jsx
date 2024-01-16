@@ -1,5 +1,5 @@
 import "./App.css";
-import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner";
+// import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner";
 import SectionCommunity from "./components/pages/home/community/SectionCommunity.jsx";
 import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
@@ -11,13 +11,17 @@ import SectionEcosystem from "./components/pages/home/ecosystem/SectionEcosystem
 import SectionExchangeStats from "./components/pages/home/exchangestats/SectionExchangeStats.jsx";
 import News from "./components/pages/home/News/News.jsx";
 import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
+import PurpleBanner from "./components/shared/purple-banner/PurpleBanner.jsx"
+import MainNav from "./components/shared/main-nav/MainNav";
 import AdCarouselComponent from "./components/pages/home/ad-carousel/AdCarouselComponent.jsx"
- import MainNav from "./components/shared/main-nav/MainNav";
 
 function App() {
   return (
     <div>
-      <MainNav />
+      <div className="stickySection">
+          <PurpleBanner/>
+          <MainNav />
+      </div>
       <BottomNav />
       <ArrowButton />
       <AdCarouselComponent />
@@ -29,7 +33,7 @@ function App() {
       <SectionExchangeStats />
       <SectionCommunity />
       <News />
-      <SectionFooterBanner />
+      {/* <SectionFooterBanner /> */}
       <SectionFooter />
     </div>
   );
