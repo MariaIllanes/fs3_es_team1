@@ -430,3 +430,22 @@ span {
         left: 20px;
     }
 }
+
+.htUhZF {
+    position: absolute;
+    right: 0px;
+    top: 81px;
+}
+
+@media screen and (min-width: 1200px) {
+    .htUhZF {
+        right: 0px;
+        bottom: -30px;
+    }
+}
+
+.dOGPyt {
+    position: absolute;
+    top: 0px;
+    right: 98px;
+}
