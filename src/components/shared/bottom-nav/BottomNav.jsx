@@ -2,74 +2,44 @@ import React, { useState, useRef, useEffect } from "react";
 import "./bottom-nav.css";
 
 const BottomNav = () => {
-    const [menuVisible, setMenuVisible] = useState({
-        optionTwo: false,
-        optionThree: false,
-        optionFour: false,
-        optionFive: false,
-    });
+    const [menuVisibleTwo, setMenuVisibleTwo] = useState(false);
+    const [menuVisibleThree, setMenuVisibleThree] = useState(false);
+    const [menuVisibleFour, setMenuVisibleFour] = useState(false);
+    const [menuVisibleFive, setMenuVisibleFive] = useState(false);
 
-    const timeoutId = useRef(null);
+    const handleOptionClick = (menuSetter, closeOthers) => {
+        if (closeOthers) {
+            setMenuVisibleTwo(false);
+            setMenuVisibleThree(false);
+            setMenuVisibleFour(false);
+            setMenuVisibleFive(false);
+        }
 
-    useEffect(() => {
-        // Agrega un event listener para manejar el cambio de tamaño de la pantalla
-        const handleResize = () => {
-            // Puedes ajustar este valor según lo que consideres como el umbral de cambio
-            const isMobile = window.innerWidth <= 768;
-            if (isMobile) {
-                // Si es un dispositivo móvil, oculta todos los menús
-                hideAllMenus();
-            }
-        };
+        menuSetter((prevState) => !prevState);
+    };
 
-        // Agrega el event listener
-        window.addEventListener("resize", handleResize);
-
-        // Limpia el event listener cuando el componente se desmonta
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
-    const handleClick = (option) => {
-        // Si es un dispositivo móvil, toca para mostrar/ocultar el menú
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-            setMenuVisible((prevMenus) => ({
-                ...prevMenus,
-                [option]: !prevMenus[option],
-            }));
-        } else {
-            clearTimeout(timeoutId.current);
-            showMenu(option);
+    const handleClickOutside = (event) => {
+        if (
+            !event.target.closest(".option-container") &&
+            (menuVisibleTwo ||
+                menuVisibleThree ||
+                menuVisibleFour ||
+                menuVisibleFive)
+        ) {
+            setMenuVisibleTwo(false);
+            setMenuVisibleThree(false);
+            setMenuVisibleFour(false);
+            setMenuVisibleFive(false);
         }
     };
 
-    const handleMouseOut = () => {
-        timeoutId.current = setTimeout(() => hideAllMenus(), 21497284632000);
-    };
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside);
 
-    const keepMenuVisible = (option) => {
-        clearTimeout(timeoutId.current);
-        setMenuVisible((prevMenus) => ({ ...prevMenus, [option]: true }));
-    };
-
-    const showMenu = (option) => {
-        setMenuVisible((prevMenus) => ({ ...prevMenus, [option]: true }));
-    };
-
-    const hideMenu = (option) => {
-        setMenuVisible((prevMenus) => ({ ...prevMenus, [option]: false }));
-    };
-
-    const hideAllMenus = () => {
-        setMenuVisible({
-            optionTwo: false,
-            optionThree: false,
-            optionFour: false,
-            optionFive: false,
-        });
-    };
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, [menuVisibleTwo, menuVisibleThree, menuVisibleFour, menuVisibleFive]);
 
     return (
         <section
@@ -126,9 +96,9 @@ const BottomNav = () => {
                 <div className="option-container menu-container-two">
                     <div
                         className="option-two"
-                        onMouseOver={() => handleMouseOver("optionTwo")}
-                        onClick={() => handleClick("optionTwo")}
-                        onMouseOut={handleMouseOut}
+                        onClick={() =>
+                            handleOptionClick(setMenuVisibleTwo, true)
+                        }
                     >
                         <button
                             type="button"
@@ -178,73 +148,66 @@ const BottomNav = () => {
                         </button>
                     </div>
 
-                    {menuVisible.optionTwo && (
-                        <div
-                            className={`menu-two dropdown-menu-two theme-change light-theme ${
-                                menuVisible.optionTwo ? "visible" : ""
-                            }`}
-                            onMouseOver={() => keepMenuVisible("optionTwo")}
-                            onMouseOut={() => hideMenu("optionTwo")}
-                            style={{
-                                position: "absolute",
-                                inset: "auto auto 0px 0px",
-                                transform: "translate(0px, -50px)",
-                                display: menuVisible.optionTwo
-                                    ? "block"
-                                    : "none",
-                            }}
-                        >
-                            <div className="option-two-in radius-one theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Farms
-                                </a>
-                            </div>
-                            <div className="option-two-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Pools
-                                </a>
-                            </div>
-                            <div className="option-two-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Position Manager
-                                    <div className="link-new">New</div>
-                                </a>
-                            </div>
-                            <div className="option-two-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Liquid Staking
-                                </a>
-                            </div>
-                            <div className="option-two-in radius-final theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual option-in-link-visual-final theme-change light-theme"
-                                    href="#"
-                                >
-                                    Simple Staking
-                                </a>
-                            </div>
+                    <div
+                        className={`menu-two dropdown-menu-two theme-change light-theme ${
+                            menuVisibleTwo ? "visible" : ""
+                        }`}
+                        style={{
+                            position: "absolute",
+                            inset: "auto auto 0px 0px",
+                            transform: "translate(0px, -50px)",
+                        }}
+                    >
+                        <div className="option-two-in radius-one theme-change light-theme">
+                            <a
+                                className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Farms
+                            </a>
                         </div>
-                    )}
+                        <div className="option-two-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Pools
+                            </a>
+                        </div>
+                        <div className="option-two-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Position Manager
+                                <div className="link-new">New</div>
+                            </a>
+                        </div>
+                        <div className="option-two-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Liquid Staking
+                            </a>
+                        </div>
+                        <div className="option-two-in radius-final theme-change light-theme">
+                            <a
+                                className="option-in-link-visual option-in-link-visual-final theme-change light-theme"
+                                href="#"
+                            >
+                                Simple Staking
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="option-container menu-container-three">
                     <span
                         className="option-three"
-                        onMouseOver={() => handleMouseOver("optionThree")}
-                        onClick={() => handleClick("optionThree")}
-                        onMouseOut={handleMouseOut}
+                        onClick={() =>
+                            handleOptionClick(setMenuVisibleThree, true)
+                        }
                     >
                         <button
                             type="button"
@@ -362,73 +325,72 @@ const BottomNav = () => {
                         ></span>
                     </span>
 
-                    {menuVisible.optionThree && (
-                        <div
-                            className="menu-three dropdown-menu-three theme-change light-theme visible"
-                            onMouseOver={() => keepMenuVisible("optionThree")}
-                            onMouseOut={() => hideMenu("optionThree")}
-                            style={{
-                                position: "absolute",
-                                inset: "auto auto 0px 0px",
-                                transform: "translate(18px, -50px)",
-                            }}
-                            data-popper-reference-hidden="false"
-                            data-popper-escaped="false"
-                            data-popper-placement="top"
-                        >
-                            <div className="option-three-in radius-one theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Prediction (BETA)
-                                </a>
-                            </div>
-                            <div className="option-three-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Lottery
-                                </a>
-                            </div>
-                            <div className="option-three-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Pottery (BETA)
-                                </a>
-                            </div>
-                            <div className="option-three-in radius-final theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual-final option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    <div className="pre-svg theme-change light-theme">
-                                        Pancake Protectors
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            color="textSubtle"
-                                            width="20px"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="sc-bcPKhP Eouil"
-                                        >
-                                            <path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                    <div
+                        className={`menu-three dropdown-menu-three theme-change light-theme ${
+                            menuVisibleThree ? "visible" : ""
+                        }`}
+                        style={{
+                            position: "absolute",
+                            inset: "auto auto 0px 0px",
+                            transform: "translate(18px, -50px)",
+                            display: menuVisibleThree ? "block" : "none",
+                        }}
+                        data-popper-reference-hidden="false"
+                        data-popper-escaped="false"
+                        data-popper-placement="top"
+                    >
+                        <div className="option-three-in radius-one theme-change light-theme">
+                            <a
+                                className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Prediction (BETA)
+                            </a>
                         </div>
-                    )}
+                        <div className="option-three-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Lottery
+                            </a>
+                        </div>
+                        <div className="option-three-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Pottery (BETA)
+                            </a>
+                        </div>
+                        <div className="option-three-in radius-final theme-change light-theme">
+                            <a
+                                className="option-in-link-visual-final option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                <div className="pre-svg theme-change light-theme">
+                                    Pancake Protectors
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        color="textSubtle"
+                                        width="20px"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="sc-bcPKhP Eouil"
+                                    >
+                                        <path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="option-container menu-container-four">
                     <span
                         className="option-four"
-                        onMouseOver={() => handleMouseOver("optionFour")}
-                        onClick={() => handleClick("optionFour")}
-                        onMouseOut={handleMouseOut}
+                        onClick={() =>
+                            handleOptionClick(setMenuVisibleFour, true)
+                        }
                     >
                         <button
                             type="button"
@@ -467,54 +429,53 @@ const BottomNav = () => {
                             className="span-four theme-change light-theme"
                         ></span>
                     </span>
-                    {menuVisible.optionFour && (
-                        <div
-                            className="menu-four dropdown-menu-four theme-change light-theme visible"
-                            onMouseOver={() => keepMenuVisible("optionFour")}
-                            onMouseOut={() => hideMenu("optionFour")}
-                            style={{
-                                position: "absolute",
-                                inset: "auto auto 0px 0px",
-                                transform: "translate(32px, -50px)",
-                            }}
-                            data-popper-reference-hidden="false"
-                            data-popper-escaped="false"
-                            data-popper-placement="top"
-                        >
-                            <div className="option-four-in radius-one theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Overview
-                                </a>
-                            </div>
-                            <div className="option-four-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Collections
-                                </a>
-                            </div>
-                            <div className="option-four-in radius-final theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual-final option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Activity
-                                </a>
-                            </div>
+
+                    <div
+                        className={`menu-four dropdown-menu-four theme-change light-theme ${
+                            menuVisibleFour ? "visible" : ""
+                        }`}
+                        style={{
+                            position: "absolute",
+                            inset: "auto auto 0px 0px",
+                            transform: "translate(32px, -50px)",
+                        }}
+                        data-popper-reference-hidden="false"
+                        data-popper-escaped="false"
+                        data-popper-placement="top"
+                    >
+                        <div className="option-four-in radius-one theme-change light-theme">
+                            <a
+                                className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Overview
+                            </a>
                         </div>
-                    )}
+                        <div className="option-four-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Collections
+                            </a>
+                        </div>
+                        <div className="option-four-in radius-final theme-change light-theme">
+                            <a
+                                className="option-in-link-visual-final option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Activity
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="option-container menu-container-five">
                     <span
                         className="option-five"
-                        onMouseOver={() => handleMouseOver("optionFive")}
-                        onClick={() => handleClick("optionThree")}
-                        onMouseOut={handleMouseOut}
+                        onClick={() =>
+                            handleOptionClick(setMenuVisibleFive, true)
+                        }
                     >
                         <button
                             type="button"
@@ -542,106 +503,105 @@ const BottomNav = () => {
                             className="span-five theme-change light-theme"
                         ></span>
                     </span>
-                    {menuVisible.optionFive && (
-                        <div
-                            className="menu-five dropdown-menu-five theme-change light-theme visible"
-                            onMouseOver={() => keepMenuVisible("optionFive")}
-                            onMouseOut={() => hideMenu("optionFive")}
-                            style={{
-                                position: "absolute",
-                                inset: "auto auto 0px 0px",
-                                transform: "translate(32px, -50px)",
-                            }}
-                            data-popper-reference-hidden="false"
-                            data-popper-escaped="false"
-                            data-popper-placement="top"
-                        >
-                            <div className="option-five-in radius-one theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Info
-                                </a>
-                            </div>
-                            <div className="option-five-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    IFO
-                                </a>
-                            </div>
-                            <div className="option-five-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Affiliate Program
-                                </a>
-                            </div>
-                            <div className="option-five-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Voting
-                                </a>
-                            </div>
-                            <div>
-                                <hr className="option-in-line theme-change light-theme"></hr>
-                            </div>
-                            <div className="option-five-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    Leaderboard
-                                </a>
-                            </div>
-                            <div>
-                                <hr className="option-in-line theme-change light-theme"></hr>
-                            </div>
-                            <div className="option-five-in theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual theme-change light-theme"
-                                    href="#"
-                                >
-                                    <div className="pre-svg theme-change light-theme">
-                                        Blog
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            color="textSubtle"
-                                            width="20px"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="sc-bcPKhP Eouil"
-                                        >
-                                            <path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="option-five-in radius-final theme-change light-theme">
-                                <a
-                                    className="option-in-link-visual option-in-link-visual-final theme-change light-theme"
-                                    href="#"
-                                >
-                                    <div className="pre-svg theme-change light-theme">
-                                        Docs
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            color="textSubtle"
-                                            width="20px"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="sc-bcPKhP Eouil"
-                                        >
-                                            <path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+
+                    <div
+                        className={`menu-five dropdown-menu-five theme-change light-theme ${
+                            menuVisibleFive ? "visible" : ""
+                        }`}
+                        style={{
+                            position: "absolute",
+                            inset: "auto auto 0px 0px",
+                            transform: "translate(32px, -50px)",
+                        }}
+                        data-popper-reference-hidden="false"
+                        data-popper-escaped="false"
+                        data-popper-placement="top"
+                    >
+                        <div className="option-five-in radius-one theme-change light-theme">
+                            <a
+                                className="option-in-link-visual-one option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Info
+                            </a>
                         </div>
-                    )}
+                        <div className="option-five-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                IFO
+                            </a>
+                        </div>
+                        <div className="option-five-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Affiliate Program
+                            </a>
+                        </div>
+                        <div className="option-five-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Voting
+                            </a>
+                        </div>
+                        <div>
+                            <hr className="option-in-line theme-change light-theme"></hr>
+                        </div>
+                        <div className="option-five-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                Leaderboard
+                            </a>
+                        </div>
+                        <div>
+                            <hr className="option-in-line theme-change light-theme"></hr>
+                        </div>
+                        <div className="option-five-in theme-change light-theme">
+                            <a
+                                className="option-in-link-visual theme-change light-theme"
+                                href="#"
+                            >
+                                <div className="pre-svg theme-change light-theme">
+                                    Blog
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        color="textSubtle"
+                                        width="20px"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="sc-bcPKhP Eouil"
+                                    >
+                                        <path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="option-five-in radius-final theme-change light-theme">
+                            <a
+                                className="option-in-link-visual option-in-link-visual-final theme-change light-theme"
+                                href="#"
+                            >
+                                <div className="pre-svg theme-change light-theme">
+                                    Docs
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        color="textSubtle"
+                                        width="20px"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="sc-bcPKhP Eouil"
+                                    >
+                                        <path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
