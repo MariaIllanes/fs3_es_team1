@@ -1,10 +1,45 @@
+import React, { useState, useRef, useEffect } from "react"; 
 import Exchange from "./MenuIconList/Exchange";
 import Language from "./MenuIconList/Language";
 import Settings from "./MenuIconList/Modal/Settings";
 import Wallet from "./MenuIconList/Wallet";
 import Chain from "./MenuIconList/Chain";
+import HiddenFooterBanner from "../../pages/home/footerbanner/HiddenFooterBanner.jsx";
+
 
 const MenuIconList = () => {
+  const [isHidden, setIsHidden] = useState(true);
+    const containerRef = useRef(null);
+    const overlayRef = useRef(null);
+
+    const toggleHidden = () => {
+        setIsHidden(!isHidden);
+    };
+
+    const handleOverlayClick = () => {
+        setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
+    };
+
+    const handleOutsideClick = (event) => {
+        if (
+            containerRef.current &&
+            overlayRef.current &&
+            !containerRef.current.contains(event.target) &&
+            event.target === overlayRef.current
+        ) {
+            handleOverlayClick();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("click", handleOutsideClick);
+
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, [isHidden]);
+
+
   return (
     <>
       <div className="menu-icon-list">
@@ -12,8 +47,30 @@ const MenuIconList = () => {
         <Language />
         <Settings />
         <Chain />
-        <Wallet />
-      </div>
+        <button
+          className="btn-main-blue"
+          id="connectw1"
+          onClick={toggleHidden}
+        >
+            Connect Wallet
+        </button>
+        <div
+                className="footerbanner-hidden-section"
+                id="footer-banner-hidden-section1"
+            >
+                <div
+                    className="theme-change light-theme"
+                    style={{ display: isHidden ? "none" : "block" }}
+                >
+                    <HiddenFooterBanner svgId="svg1" tab1="tab1-1" tab2="tab2-1" w3container="w3container1" content2="content2-1"/>
+                    <div
+                        className="overlay"
+                        ref={overlayRef}
+                        onClick={handleOverlayClick}
+                    ></div>
+                </div>
+            </div>
+        </div>
     </>
   );
 };
