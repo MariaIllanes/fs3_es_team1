@@ -8,8 +8,10 @@ import MenuIconList from './MenuIconList'
 const MainNav = () => {
     return (
         <section className='main-navbar light-theme theme-change'>
+            <div className='logoMenuList'>
             <PancakeLogo/>
             <MenuList/>
+            </div>
             <MenuIconList />
         </section>  
     
