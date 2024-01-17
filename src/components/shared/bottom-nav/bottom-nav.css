@@ -119,7 +119,6 @@
 
 .option-link {
     opacity: 1;
-    /* En el original este está como style en el html */
     display: block;
     border: 0px;
     background: transparent;
@@ -259,7 +258,6 @@
 
 .option-button {
     opacity: 1;
-    /* En el original este está como style en el html */
     display: block;
     border: 0px;
     background: transparent;
@@ -499,8 +497,6 @@
     font-weight: 400;
     font-size: 10px;
 }
-
-/* Aquí empiezan las clases de los divs que se hacen visibles al hacer :hover */
 
 .menu-two.light-theme {
     background-color: #fff;
