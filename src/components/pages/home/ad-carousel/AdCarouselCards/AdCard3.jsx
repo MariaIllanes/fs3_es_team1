@@ -8,7 +8,7 @@ const AdCard3 = () => {
   return (
     <div className="carousel-item" id="carousel-item3">
       <div className="card3AC" id="card3">
-        <div className="text-container">
+        <div className="ad3text-container">
           <div className="logoCont">
             <img
               src="/src/assets/Ad-caroussel/bunnylogo.png?t=1704290924897"

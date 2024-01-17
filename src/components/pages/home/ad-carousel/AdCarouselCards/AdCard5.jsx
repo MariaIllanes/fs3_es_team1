@@ -7,18 +7,18 @@ const AdCard5 = () => {
   return (
     <div className="carousel-item" id="carousel-item6">
       <div className="card6AC" id="card6">
-        <div className="text-container">
+        <div className="ad6text-container">
           <div className="subtitleAC6">
             <h4>Trade to earn rewards</h4>
           </div>
           <div className="titleAC6">
-            <h3>10% trading rebates to be earned</h3>
+            <h3>10% Trading rebates <span className="respo-text">to be earned</span></h3>
           </div>
           <div className="CTA6">
             <button className="btn-main-blue theme-change light-theme" id="">
               Trade Now
             </button>
-            <button className="btn-main-white" id="">
+            <button className="btn-main-white" id="LMCTA6">
               Learn more
             </button>
           </div>
