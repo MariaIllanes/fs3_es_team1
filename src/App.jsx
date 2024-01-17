@@ -1,5 +1,5 @@
 import "./App.css";
-// import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner";
+import SectionFooterBanner from "./components/pages/home/footerbanner/SectionFooterBanner";
 import SectionCommunity from "./components/pages/home/community/SectionCommunity.jsx";
 import ArrowButton from "./components/shared/arrow-button/ArrowButton.jsx";
 import BuyCakeComponent from "./components/shared/buycake/BuyCake.jsx";
@@ -33,7 +33,7 @@ function App() {
       <SectionExchangeStats />
       <SectionCommunity />
       <News />
-      {/* <SectionFooterBanner /> */}
+      <SectionFooterBanner />
       <SectionFooter />
     </div>
   );

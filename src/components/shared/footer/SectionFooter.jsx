@@ -8,12 +8,14 @@ import SecondaryFooter from './SecondaryFooter.jsx'
 const SectionFooter = () => {
     return (
         <div className='main-footer'>
-            <div>
-                <FooterList className='footer-links-container' />
-                <FooterIconList />
-                <hr /> 
-            </div>
-                <SecondaryFooter />
+            <div className='footer-container'>
+                <div>
+                    <FooterList className='footer-links-container' />
+                    <FooterIconList />
+                    <hr /> 
+                </div>
+                    <SecondaryFooter />
+            </div>        
         </div>  
     
     )

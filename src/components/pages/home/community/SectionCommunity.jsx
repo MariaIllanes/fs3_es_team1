@@ -29,8 +29,7 @@ const SectionCommunity = () => {
             <img src={communityDots} alt="" width="150" height="150" className="community-bg-img right" id="community-bg-dots"/>
 
             <div className='community-container theme-change light-theme'>
-                <h2 className='community-title theme-change light-theme'>Join our <span className="color-change">Community</span></h2>
-                <h3>Together we can make the PancakeSwap community even stronger</h3>
+            <h2 className='community-title theme-change light-theme'>Join our <span className="color-change theme-change light-theme">Community</span></h2>                <h3>Together we can make the PancakeSwap community even stronger</h3>
                 <div className="community-cards theme-change light-theme"> 
                     <StaticCard />
                     <Carousel Card1={<CarouselCard1 />} Card2={<CarouselCard2 />} />

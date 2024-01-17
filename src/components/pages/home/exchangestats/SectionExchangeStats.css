@@ -106,6 +106,8 @@
     white-space: nowrap;
     color: #7745d8;
     text-align: center;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .exchange-counters.dark-theme {
@@ -114,6 +116,8 @@
     white-space: nowrap;
     color: #9779e3;
     text-align: center;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .exchange-cake.light-theme {
@@ -132,17 +136,24 @@
 
 .exchange-stats2.dark-theme h2 {
     color: white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .exchange-stats2.light-theme h2 {
     color: black;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .exchange-titles.light-theme {
     font-weight: bold;
     margin-bottom: 0;
     color: black;
-    text-align: center;
+    text-align: center;    
+    font-size: 16px;
 }
 
 .exchange-titles.dark-theme {
@@ -150,13 +161,15 @@
     margin-bottom: 0;
     color: white;
     text-align: center;
+    font-size: 16px;
 }
 
-.exchange-statistics-container.dark-theme h3 {
+/* .exchange-statistics-container.dark-theme h3 {
     font-weight: bold;
     margin-bottom: 0;
     color: azure;
-}
+    font-size: 16px;
+} */
 
 .exchange-stats2-title {
     display: flex;
@@ -225,7 +238,7 @@
     }
 
     .exchange-statistics-container {
-        grid-template-columns: repeat(2, 145px);
-        gap: 15px;
+        grid-template-columns: repeat(2, 155px);
+        gap: 20px;
     }
 }
