@@ -109,13 +109,60 @@
     }
 }
 
-#footer-banner-hidden-section1,
-#footer-banner-hidden-section2,
+#footer-banner-hidden-section1{
+    position: absolute;
+    top: 400px;
+    margin-left: -40vw;
+    display: flex;
+}
+
 #footer-banner-hidden-section3 {
     position: absolute;
     top: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
+}
+
+#footer-banner-hidden-section2{
+    position: absolute;
+    top: 200px;
+    margin: 0 12vw;
+    display: flex;
+    /* justify-content: center !important; */
+}
+
+@media (max-width: 1200px){
+    #footer-banner-hidden-section2{
+        margin: 8vw;
+    }
+    
+}
+
+@media (max-width: 1100px){
+    #footer-banner-hidden-section2{
+        margin: 5vw -5vw;
+    }
+
+    #footer-banner-hidden-section1{
+        position: absolute;
+        top: 50px;
+        margin-left: -55vw;
+        display: flex;
+    }
+}
+
+@media (max-width: 700px){
+    #footer-banner-hidden-section2{
+        position: static;
+        
+    }
+
+    #footer-banner-hidden-section1{
+        width: 100vw;
+        top: 0;
+        margin: 0;
+        position: relative
+    }
 }
 
 /* css tabs and container ----------------------------------------------------------------------------------*/
@@ -138,7 +185,7 @@
 
 .footer-tabs {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     align-content: center;
 }
 
@@ -248,7 +295,7 @@
 .footer-tab:target .footer-tab-content,
 .footer-tab:last-of-type .footer-tab-content {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 .footer-tab:target ~ .footer-tab:last-of-type .footer-tab-content {
@@ -307,7 +354,7 @@
     margin: 15px;
     height: 300px;
     overflow-y: auto;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 /* width */
@@ -339,7 +386,7 @@
 .cw-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center;
     padding-bottom: 10px;
 }
@@ -402,7 +449,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
     position: relative;
     right: -15px;
 }
@@ -425,7 +472,7 @@
 
 #fb-w3-button {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 .cw-right a {
@@ -555,7 +602,7 @@
 #w3container3 {
     flex-direction: column; 
     gap: 10px;
-    justify-content: center;
+    justify-content: center !important;
     z-index: 300;
     width: 850px;
     /* height: 550px; */
@@ -586,7 +633,7 @@
 .footer-slideshow-buttons {
     display: inline-flex;
     text-align: center;
-    justify-content: center;
+    justify-content: center !important;
     margin: 10px 0;
     gap: 5px;
 }

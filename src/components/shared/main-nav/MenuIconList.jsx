@@ -47,13 +47,16 @@ const MenuIconList = () => {
         <Language />
         <Settings />
         <Chain />
-        <button
-          className="btn-main-blue"
-          id="connectw1"
-          onClick={toggleHidden}
-        >
-            Connect Wallet
-        </button>
+
+        <div className="wallet">
+            <button className="btn-main-blue theme-change light-theme" id="connectw1"
+            onClick={toggleHidden}
+            >
+            Connect <span className="text-hidden">Wallet</span>
+            </button>
+        </div>
+        
+
         <div
                 className="footerbanner-hidden-section"
                 id="footer-banner-hidden-section1"
