@@ -113,7 +113,6 @@
     width: 100vw;
     position: absolute;
     top: 350px;
-    /* margin: 0 12vw; */
     display: flex;
     left: 0;
     justify-content: center !important;
@@ -130,28 +129,11 @@
     width: 100vw;
     position: absolute;
     top: 400px;
-    /* margin: 0 12vw; */
     display: flex;
     left: 0;
     justify-content: center !important;
 }
 
-
-
-
-/* @media (max-width: 700px){
-    #footer-banner-hidden-section2{
-        position: static;
-        
-    }
-
-    #footer-banner-hidden-section1{
-        width: 100vw;
-        top: 0;
-        margin: 0;
-        position: relative
-    }
-} */
 
 /* css tabs and container ----------------------------------------------------------------------------------*/
 
@@ -229,12 +211,6 @@
     height: 550px;
     border-radius: 20px 20px 20px 20px;
 }
-
-/* @media screen and (max-width: 650px) {
-    .footer-tab-content.dark-theme {
-        background-color: #27262b;
-    }
-} */
 
 .footer-tab.light-theme > a {
     color: var(--lightPurple);
@@ -420,13 +396,6 @@
     width: 50px;
 }
 
-/* .icon-dots.dark-theme {
-    background-color: var(--gre);
-    border-radius: 10px;
-    height: 50px;
-    width: 50px;
-  }
-   */
 /* connect wallet - rigth section ----------------------------------------------------------------*/
 
 /* connect wallet - rigth section ----------------------------------------------------------------*/
@@ -605,7 +574,6 @@
     justify-content: center !important;
     z-index: 300;
     width: 850px;
-    /* height: 550px; */
 }
 
 #tab2-1,
@@ -656,14 +624,6 @@
     font-weight: bold;
     font-size: 1.5rem;
 }
-/* 
-#content2-1{
-    display: flex;
-    justify-content: center;
-} */
-/* end of dark/light mode */
-
-/* media queries */
 
 @media (max-width: 1100px) {
     .footer-banner h2 {
@@ -734,7 +694,6 @@
 
 @media (max-width: 860px) {
     .footer-tab-content
-    /* #footer-tab-content2  */
     {
         width: 100vw;
     }
@@ -810,9 +769,6 @@
 }
 
 @media (max-width: 700px) {
-    /* .footer-banner h2{
-  
-    } */
     .cw-right h3 {
         font-size: 1.2rem;
     }
@@ -894,11 +850,6 @@
         height: 300px;
         overflow-y: scroll;
     }
-
-    /* .footer-tab-content.light-theme,
-    .footer-tab-content.dark-theme {
-        height: 0;
-    } */
     
 }
 

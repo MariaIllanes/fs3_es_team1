@@ -16,7 +16,7 @@ const SectionFooterBanner = () => {
     };
 
     const handleOverlayClick = () => {
-        setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
+        setIsHidden(true);
     };
 
     const handleOutsideClick = (event) => {

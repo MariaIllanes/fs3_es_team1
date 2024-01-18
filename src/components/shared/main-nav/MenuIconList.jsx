@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Exchange from "./MenuIconList/Exchange";
 import Language from "./MenuIconList/Language";
 import Settings from "./MenuIconList/Modal/Settings";
-import Wallet from "./MenuIconList/Wallet";
 import Chain from "./MenuIconList/Chain";
 import HiddenFooterBanner from "../../pages/home/footerbanner/HiddenFooterBanner.jsx";
 
@@ -17,7 +16,7 @@ const MenuIconList = () => {
     };
 
     const handleOverlayClick = () => {
-        setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
+        setIsHidden(true);
     };
 
     const handleOutsideClick = (event) => {

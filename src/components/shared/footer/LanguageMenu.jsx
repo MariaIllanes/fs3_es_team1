@@ -93,7 +93,7 @@ const LanguageMenu = () => {
 
     const handleLanguageSelect = (language) => {
         setSelectedLanguage(language.value);
-        setShownMenu(false); // to close the menu after selecting an option
+        setShownMenu(false);
     };
 
     return (

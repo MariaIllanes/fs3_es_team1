@@ -140,10 +140,6 @@
     align-content: center;
 }
 
-/* .trade-card-container-all:nth-child(2){
-    margin: 0 0 0 50px;
-  } */
-
 .trade-card-container-all h3,
 .gamenft-card-container-all h3,
 .earn-card-container-all h3 {
@@ -162,12 +158,6 @@
     text-decoration: none;
     color: unset;
 }
-
-/* .ecosystem-card-container .dark-theme a:visited{
-    text-decoration: none;
-    color: white;
-  }
-   */
 
 /* dark mode */
 .ecosystem.dark-theme {
@@ -467,11 +457,6 @@
         left: -120px;
     }
 
-    /* .ecosystem-gamenft-card{
-      height: 370px;
-      width: auto;
-    } */
-
     .data-hover-image {
         display: block;
     }
@@ -525,12 +510,6 @@
     .trade-img img {
         width: 100px;
     }
-
-    /* .gamenft-card,
-  .earn-card,
-  .trade-card{
-    width: 120px;
-  } */
 
     .earn-cards-container a {
         width: 120px;

@@ -88,7 +88,6 @@
 .news-cards-container {
     white-space: nowrap;
     overflow-x: hidden;
-    /* En el de arriba en la original estaba como "auto" y no como "hidden", pero dado el javascript que yo he hecho, la he puesto como hidden porque la barra de scroll se veía. */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border-radius: 24px;
@@ -198,7 +197,6 @@
 
 .text-description.light-theme {
     white-space: pre-wrap;
-    /* Este de arriba en la original estaba puesto como style directamente en el html. Como he hecho las cards con js lo he puesto aquí. */
     color: #280d5f;
     font-weight: 600;
     margin-top: 16px;
@@ -209,7 +207,6 @@
 
 .text-description.dark-theme {
     white-space: pre-wrap;
-    /* Este de arriba en la original estaba puesto como style directamente en el html. Como he hecho las cards con js lo he puesto aquí. */
     color: #f4eeff;
     font-weight: 600;
     margin-top: 16px;

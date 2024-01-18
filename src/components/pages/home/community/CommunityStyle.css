@@ -37,10 +37,6 @@
     z-index: 1;
 }
 
-/* body{
-    margin: 0;
-    padding: 0;
-} */
 
 .community-container.dark-theme {
     width: 950px;
@@ -88,13 +84,6 @@
     margin-bottom: 12px;
 }
 
-/* .community-title .light-theme h2{
-    color: #081116;
-}
-
-.community-title .dark-theme h2{
-    color: #b31818;
-} */
 
 .community-container.light-theme h3 {
     margin: 0;
@@ -326,7 +315,6 @@
 .comunnity a:-webkit-any-link {
     text-decoration: none;
     color: initial;
-    /*delet if it affects other sections */
 }
 
 #community-bg-x {
