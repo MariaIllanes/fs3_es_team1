@@ -16,7 +16,7 @@ const SectionFooterBanner = () => {
     };
 
     const handleOverlayClick = () => {
-        setIsHidden(true); // Hides HiddenFooterBanner when overlay is clicked
+        setIsHidden(true);
     };
 
     const handleOutsideClick = (event) => {
@@ -38,6 +38,7 @@ const SectionFooterBanner = () => {
         };
     }, [isHidden]);
 
+    
     return (
         <div
             className="footer-banner theme-change light-theme"
@@ -64,7 +65,7 @@ const SectionFooterBanner = () => {
                     <h2>Join Everyone's Favorite DEX Now!</h2>
                     <button
                         className="btn-main-blue"
-                        id="button-s11"
+                        id="connectw3"
                         onClick={toggleHidden}
                     >
                         Connect Wallet
@@ -89,13 +90,13 @@ const SectionFooterBanner = () => {
             </div>
             <div
                 className="footerbanner-hidden-section"
-                id="footer-banner-hidden-section"
+                id="footer-banner-hidden-section3"
             >
                 <div
                     className="theme-change light-theme"
                     style={{ display: isHidden ? "none" : "block" }}
                 >
-                    <HiddenFooterBanner />
+                    <HiddenFooterBanner svgId="svg3" tab1="tab1-3" tab2="tab2-3" w3container="w3container3" content2="content2-3"/>
                     <div
                         className="overlay"
                         ref={overlayRef}

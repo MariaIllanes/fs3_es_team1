@@ -11,14 +11,22 @@ import SectionEcosystem from "./components/pages/home/ecosystem/SectionEcosystem
 import SectionExchangeStats from "./components/pages/home/exchangestats/SectionExchangeStats.jsx";
 import News from "./components/pages/home/News/News.jsx";
 import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
-// import MainNav from "./components/shared/main-nav/MainNav";
+import PurpleBanner from "./components/shared/purple-banner/PurpleBanner.jsx"
+import MainNav from "./components/shared/main-nav/MainNav";
+import AdCarouselComponent from "./components/pages/home/ad-carousel/AdCarouselComponent.jsx"
+import "../src/components/shared/sharedComponents/sharedStyles/style.css"
+
 
 function App() {
   return (
     <div>
-      {/* <MainNav /> */}
+      <div className="stickySection">
+          <PurpleBanner/>
+          <MainNav />
+      </div>
       <BottomNav />
       <ArrowButton />
+      <AdCarouselComponent />
       <MainBannerComponent />
       <ExchangeStatsOne />
       <SectionEcosystem />

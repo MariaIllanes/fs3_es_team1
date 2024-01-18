@@ -60,9 +60,9 @@ const GamesCard = () => {
         },
     ];
 
-    const [linkColor, setLinkColor] = useState('initial'); // avoids cards links to change color after being hovered or clicked
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900); // shows "hovered" images in small screens
-    const normalImageRef = useRef(null); // avoids normal picture to be shown when hovering over the image set by useState
+    const [linkColor, setLinkColor] = useState('initial');
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900); 
+    const normalImageRef = useRef(null); 
   
     const handleMouseOver = (event, hoverImage, theme) => {
       event.currentTarget.querySelector('img').src = hoverImage;

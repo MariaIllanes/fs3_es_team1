@@ -1228,7 +1228,6 @@ canvas {
     z-index: 2;
     top: -2px;
     right: 0px;
-    /* width: 60%; */
     height: 110%;
     background: linear-gradient(
         90deg,
@@ -1245,7 +1244,6 @@ canvas {
     z-index: 2;
     top: -2px;
     right: 0px;
-    /* width: 60%; */
     height: 110%;
     background: linear-gradient(90deg, rgba(8, 6, 11, 0) 0%, rgb(8, 6, 11) 15%);
     transition: transform 0.45s ease-in-out 0.35s;
@@ -1570,7 +1568,6 @@ canvas {
     z-index: 2;
     top: -2px;
     right: 0px;
-    /* width: 60%; */
     height: 110%;
     background: linear-gradient(
         90deg,
@@ -1587,7 +1584,6 @@ canvas {
     z-index: 2;
     top: -2px;
     right: 0px;
-    /* width: 60%; */
     height: 110%;
     background: linear-gradient(90deg, rgba(8, 6, 11, 0) 0%, rgb(8, 6, 11) 15%);
     transition: transform 0.45s ease-in-out 0.35s;
@@ -1645,7 +1641,6 @@ canvas {
     flex-direction: row;
     position: relative;
     width: 100%;
-    /* He cambiado esto de 100vh a 100% para que se ajustara como en la original porque sino no salía, aunque en la original está como 100vh */
     transform: none;
 }
 

@@ -15,7 +15,7 @@
 
     /* All */
     --btn-bg: #1fc7d4;
-    --standar-size: 1rem;
+    --standar-size: 0.8rem;
 }
 
 .main-navbar {
@@ -25,7 +25,19 @@
     height: 4rem;
     justify-content: space-between;
     max-width: 100%;
+    position: relative;
+    /* z-index: 1; */
 }
+
+.main-navbar.light-theme {
+    background-color: var(--btn-light-text);
+}
+
+
+.main-navbar.light-theme {
+    background-color: white;
+}
+
 
 .main-navbar.dark-theme {
     background-color: var(--bg-dark);
@@ -48,18 +60,26 @@
     box-sizing: content-box;
 }
 
+.logoMenuList{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
 .logo h1 {
     font-size: 1.3rem;
 }
 
-.logo img {
-    height: 2.2rem;
+.logo.light {
+    min-width: 150px;
 }
-
+.logo.dark {
+    min-width: 150px;
+}
 .menu-list {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -238,19 +258,13 @@
 
 /* Responsive Design */
 
-@media (max-width: 970px) {
+@media (max-width: 1050px) {
     .exchange {
-        display: none;
-    }
-}
-
-@media (max-width: 850px) {
-    .menu-list {
         display: none;
     }
     .hidden-logo {
         display: block;
-        min-width: 3rem;
+        min-width: 2rem;
     }
 
     .logo.light {
@@ -262,32 +276,36 @@
     .text-hidden {
         display: none;
     }
+}
+
+@media (max-width: 850px) {
+    .menu-list {
+        display: none;
+    }
+   
     .main-navbar {
         max-width: 150vw;
     }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1050px) {
     .hidden-logo {
         display: none;
     }
 }
 
-@media (max-width: 1100px) {
-    .exchange h2 {
-        font-size: 0.8rem;
+@media (max-width: 1200px) {
+    /* .exchange h2 {
+        font-size: 0.6rem;
     }
 
-    .icon-list {
-        font-size: 1rem;
-    }
     .main-navbar .dark-theme h2 {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     .main-navbar .light-theme h2 {
-        font-size: 0.8rem;
-    }
+        font-size: 0.6rem;
+    } */
 
     .language,
     .settings i {
@@ -306,6 +324,11 @@
 }
 
 /* Trade Dropdown */
+
+.trade a{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 
 .trade-dropdown.btn-secondary {
     border: none !important;
@@ -358,6 +381,11 @@
 
 /* Earn Dropdown */
 
+.earn-nav a{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 .earn-dropdown.btn-secondary {
     border: none !important;
     background: none !important;
@@ -409,6 +437,11 @@
 
 /* NFT Dropdown */
 
+.nft a{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 .nft-dropdown.btn-secondary {
     border: none !important;
     background: none !important;
@@ -459,6 +492,11 @@
 }
 
 /* Game Dropdown */
+
+.game a{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 
 .game-dropdown.btn-secondary {
     border: none !important;
@@ -571,4 +609,38 @@
     appearance: none;
     background: none;
     color: var(--light-text1h1);
+    margin: 0;
+    vertical-align: baseline;
+    padding-top: 0;
+}
+
+.settings-btn i,h2{
+    padding: 0;
+    margin: 0;
+}
+
+.icon-language:hover{
+    opacity: 70%;
+}
+
+.language-options2 {
+    border-radius: 5px;
+    position: absolute;
+    right: 23rem;
+    /* bottom: 60px; */
+    top: 4rem;
+    background-color: var(--footer-dark-bg);
+    overflow-y: scroll;
+    z-index: 5;
+    height: 300px;
+}
+
+.dollar-link p{
+    color: #7a6cab;
+    font-size: 0.8rem;
+}
+
+.dollar-link img{
+    width: 35px;
+    height: 35px;
 }

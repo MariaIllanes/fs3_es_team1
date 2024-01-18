@@ -401,3 +401,51 @@ span {
 .bDutNz.dark-theme svg path {
     fill: #191326;
 }
+
+.cyBpOR {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+}
+
+@media screen and (min-width: 968px) {
+    .cyBpOR {
+        display: block;
+    }
+}
+
+.dgYKRw {
+    position: absolute;
+    left: -65px;
+}
+
+@media screen and (min-width: 1200px) {
+    .dgYKRw {
+        bottom: 151px;
+        left: 20px;
+    }
+}
+
+.htUhZF {
+    position: absolute;
+    right: 0px;
+    top: 81px;
+}
+
+@media screen and (min-width: 1200px) {
+    .htUhZF {
+        right: 0px;
+        bottom: -30px;
+    }
+}
+
+.dOGPyt {
+    position: absolute;
+    top: 0px;
+    right: 98px;
+}

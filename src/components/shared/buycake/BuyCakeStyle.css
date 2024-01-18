@@ -20,6 +20,7 @@ body .buy-cake{
     margin: 0 !important;
     padding-bottom: 3rem !important;
     gap: 0 !important;
+    padding-top: 3rem;
 }
 
 .buy-cake.light-theme{
@@ -31,7 +32,7 @@ body .buy-cake{
 }
 
 .buy-cake.dark-theme{
-    background-color: var(--bg-dark) !important;
+    background-color: #08060b !important;
 }
 
 .buy-cake.dark-theme h1{
