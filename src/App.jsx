@@ -14,6 +14,8 @@ import BottomNav from "./components/shared/bottom-nav/BottomNav.jsx";
 import PurpleBanner from "./components/shared/purple-banner/PurpleBanner.jsx"
 import MainNav from "./components/shared/main-nav/MainNav";
 import AdCarouselComponent from "./components/pages/home/ad-carousel/AdCarouselComponent.jsx"
+import "../src/components/shared/sharedComponents/sharedStyles/style.css"
+
 
 function App() {
   return (
