@@ -11,6 +11,8 @@ const SecondaryFooter = () => {
 
     return (
         <div className="secondary-footer">
+            <img src='src\components\shared\footer\FooterAssets\footer-logo.png'id="footer-logo-hidden" />
+            <hr id="footer-separator3"/>
             <div className="footer-buttons">
                 <div className="footer-left">
                     <ToggleSwitch/>
