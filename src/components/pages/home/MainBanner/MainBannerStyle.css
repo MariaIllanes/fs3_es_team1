@@ -197,3 +197,11 @@
 
 
 }
+
+#mainbanner-bg.light-theme svg#dark-svg {
+    display: none;
+}
+
+#mainbanner-bg.dark-theme svg#light-svg {
+    display: none;
+}
