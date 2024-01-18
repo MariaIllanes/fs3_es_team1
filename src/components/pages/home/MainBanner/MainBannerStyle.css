@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .main-banner .mbimg{
@@ -48,7 +49,7 @@
 }
 
 .text-container{
-    padding: 10%;
+    padding-left: 10%;
 }
 
 .main-banner .text-container h2{
