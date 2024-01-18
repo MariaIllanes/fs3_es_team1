@@ -13,8 +13,8 @@ const SecondaryFooter = () => {
         <div className="secondary-footer">
             <div className="footer-buttons">
                 <div className="footer-left">
-                    <LanguageMenu />
                     <ToggleSwitch/>
+                    <LanguageMenu />
                 </div>
                 <div className="footer-rigth">
                     <BunnyButton />

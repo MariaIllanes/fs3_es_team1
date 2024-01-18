@@ -44,6 +44,7 @@ section.dark-theme{
 
 .titleAC h3{
     margin: 0;
+    font-weight: bold;
 }
 
 .subtitleAC {
@@ -53,6 +54,7 @@ section.dark-theme{
 
 .subtitleAC h4{
     margin: 0;
+    font-weight: bold;
 }
 
 .CTA button{
@@ -215,7 +217,7 @@ section.dark-theme{
     left: 50%; 
     transform: translateX(-95%); 
     bottom: 0;
-    z-index: 4;
+    z-index: 1;
     overflow:visible;
 } 
 
@@ -319,7 +321,7 @@ section.dark-theme{
         max-height: 4.5rem;
         position: absolute;
         right: 100%; 
-        top: 0%; 
+        top: -3.3rem; 
         transform: translateY(-305%)translateX(-100%);
     }
     
@@ -332,9 +334,139 @@ section.dark-theme{
         border-radius: 20cm 20cm;
     }
 
+    .ad3text-container{
+        max-width: 70%;
+    }
+
+
+    #base-bunny5 {
+        max-height: 17.5rem;
+        position: absolute; 
+        left: 50%; 
+        transform: translateX(-95%); 
+        bottom: 0;
+        overflow:visible;
+    } 
+
+    .subtitleAC5, .subtitleAC6 h4{
+        font-size: 1rem;
+    }
+
+    .titleAC5,.titleAC6 h3{
+        font-size: 1.5rem !important;
+    }
+
+    #base-bunny6 {
+        max-height: 17.5rem;
+        position: absolute; 
+        left: 50%; 
+        transform: translateX(-95%); 
+        bottom: 0;
+        z-index: 4;
+        overflow:visible;
+    } 
 }
 
+@media (max-width: 830px) {
+        #bunny-bg3,#base-bunny5{
+            display: none;
+        }
 
+        .ad3text-container h2,h3,h4{
+            font-size: 1rem;
+        }
+
+        .ad3text-container h3{
+            padding-top: 1rem;
+        }
+
+        #base-bunny5 {
+            max-width: 17.5rem;
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-95%); 
+            bottom: 0;
+            overflow:visible;
+        } 
+
+        #base-bunny6 {
+            max-height: 13rem;
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-95%); 
+            bottom: 0;
+            z-index: 4;
+            overflow:visible;
+        } 
+
+        .respo-text {
+            display: none;
+        }
+
+        #LMCTA6{
+            display: none;
+        }
+}
+
+@media (max-width: 550px) {
+    #base-bunny3-alt{
+        display: none;
+    }
+
+    #base-bunny5{
+        display: none;
+    }
+
+    #base-bunny5-alt{
+        max-height: 10rem;
+        position: absolute;
+        bottom: 80%;
+        right: 60%;
+        transform: translateX(1.3rem)translateY(-3.8rem);
+    }
+    
+    .CTA5 button {
+        margin-bottom: 3rem !important;
+    }
+
+    #bunny-bg6, #bunny-bg6-2,#bunny-bg6-3,#bunny-bg1,#bunny-altbg1 {
+        display: none;
+    }
+
+    #base-bunny1{
+        max-height: 10rem;
+        transform: translateY(-3.5rem)translateX(-10rem);
+    }
+
+    #base-bunny6{
+        max-height: 10rem;
+        transform: translateY(-2rem)translateX(-7rem);
+    }
+
+    .ad1text-container{
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+    #base-bunny6,#base-bunny5{
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) and (min-width: 400px){
+    #base-bunny5-alt{
+        display:block;
+        max-height: 10rem;
+    }
+
+   
+} 
+
+#base-bunny5-alt{
+    display:none;
+}
 
 /* Card2 */
 
