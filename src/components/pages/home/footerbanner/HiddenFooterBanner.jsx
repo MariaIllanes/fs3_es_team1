@@ -37,8 +37,8 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                 </span>
             </div>
         ),
-    });
-    
+    }); // for custom content placed on the right side of HiddenFooterBanner window + default content
+
     const handleWalletItemClick = (contentFunction) => {
         contentFunction(setCwRightContent);
     };
@@ -104,7 +104,7 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                             />
                                         )}
                                         {cwRightContent.text && (
-                                            <span
+                                            <p
                                                 className="cw-text"
                                                 style={{
                                                     backgroundColor: "unset",
@@ -113,10 +113,10 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                                 }}
                                             >
                                                 {cwRightContent.text}
-                                            </span>
+                                            </p>
                                         )}
                                         {cwRightContent.button1 && (
-                                            <span
+                                            <p
                                                 style={{
                                                     fontWeight: "bold",
                                                     padding: "10px 12px",
@@ -126,10 +126,10 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                                 }}
                                             >
                                                 {cwRightContent.button1}
-                                            </span>
+                                            </p>
                                         )}
                                         {cwRightContent.button2 && (
-                                            <span
+                                            <p
                                                 style={{
                                                     fontWeight: "bold",
                                                     padding: "10px 12px",
@@ -139,7 +139,7 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                                 }}
                                             >
                                                 {cwRightContent.button2}
-                                            </span>
+                                            </p>
                                         )}
                                     </div>
                                 )}
