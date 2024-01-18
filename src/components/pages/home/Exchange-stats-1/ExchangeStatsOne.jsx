@@ -1,7 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./exchange-stats-one.css";
 
 const ExchangeStatsOne = () => {
+    const [imageSrc, setImageSrc] = useState(
+        "/img/exchange-stats-one-invisible-2.svg"
+    );
+    const [secondImageSrc, setSecondImageSrc] = useState(
+        "/img/exchange-stats-one-invisible-3.svg"
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 1080) {
+                setImageSrc("/img/exchange-stats-one-invisible-2-big.svg");
+            } else {
+                setImageSrc("/img/exchange-stats-one-invisible-2.svg");
+            }
+
+            if (window.innerWidth > 1080) {
+                setSecondImageSrc(
+                    "/img/exchange-stats-one-invisible-3-big.svg"
+                );
+            } else {
+                setSecondImageSrc("/img/exchange-stats-one-invisible-3.svg");
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <section id="sec4-container" className="sec4-container">
             <div className="exchange-div-container">
@@ -616,6 +649,227 @@ const ExchangeStatsOne = () => {
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+=======
+                            <div className="sc-kkczzW cyBpOR">
+                                <div className="sc-gZGhCx dgYKRw">
+                                    <span
+                                        style={{
+                                            boxSizing: "border-box",
+                                            display: "inline-block",
+                                            overflow: "hidden",
+                                            width: "initial",
+                                            height: "initial",
+                                            background: "none",
+                                            opacity: 1,
+                                            border: "0px",
+                                            margin: "0px",
+                                            padding: "0px",
+                                            position: "relative",
+                                            maxWidth: "100%",
+                                        }}
+                                    >
+                                        <span
+                                            style={{
+                                                boxSizing: "border-box",
+                                                display: "block",
+                                                width: "initial",
+                                                height: "initial",
+                                                background: "none",
+                                                opacity: 1,
+                                                border: "0px",
+                                                margin: "0px",
+                                                padding: "0px",
+                                                maxWidth: "100%",
+                                            }}
+                                        >
+                                            <img
+                                                alt=""
+                                                aria-hidden="true"
+                                                src="/img/exchange-stats-one-invisible-1.svg"
+                                                style={{
+                                                    display: "block",
+                                                    maxWidth: "100%",
+                                                    width: "initial",
+                                                    height: "initial",
+                                                    background: "none",
+                                                    opacity: 1,
+                                                    border: "0px",
+                                                    margin: "0px",
+                                                    padding: "0px",
+                                                }}
+                                            />
+                                        </span>
+                                        <img
+                                            alt="bnbBallRocket"
+                                            src="/img/exchange-stats-one-1.png"
+                                            decoding="async"
+                                            data-nimg="intrinsic"
+                                            style={{
+                                                position: "absolute",
+                                                inset: 0,
+                                                boxSizing: "border-box",
+                                                padding: 0,
+                                                border: "none",
+                                                margin: "auto",
+                                                display: "block",
+                                                width: 0,
+                                                height: 0,
+                                                minWidth: "100%",
+                                                maxWidth: "100%",
+                                                minHeight: "100%",
+                                                maxHeight: "100%",
+                                            }}
+                                        />
+                                        <noscript></noscript>
+                                    </span>
+                                </div>
+
+                                <div className="sc-dhiFBQ htUhZF">
+                                    <span
+                                        style={{
+                                            boxSizing: "border-box",
+                                            display: "inline-block",
+                                            overflow: "hidden",
+                                            width: "initial",
+                                            height: "initial",
+                                            background: "none",
+                                            opacity: 1,
+                                            border: "0px",
+                                            margin: "0px",
+                                            padding: "0px",
+                                            position: "relative",
+                                            maxWidth: "100%",
+                                        }}
+                                    >
+                                        <span
+                                            style={{
+                                                boxSizing: "border-box",
+                                                display: "block",
+                                                width: "initial",
+                                                height: "initial",
+                                                background: "none",
+                                                opacity: 1,
+                                                border: "0px",
+                                                margin: "0px",
+                                                padding: "0px",
+                                                maxWidth: "100%",
+                                            }}
+                                        >
+                                            <img
+                                                alt=""
+                                                aria-hidden="true"
+                                                src={imageSrc}
+                                                style={{
+                                                    display: "block",
+                                                    maxWidth: "100%",
+                                                    width: "initial",
+                                                    height: "initial",
+                                                    background: "none",
+                                                    opacity: 1,
+                                                    border: "0px",
+                                                    margin: "0px",
+                                                    padding: "0px",
+                                                }}
+                                            />
+                                        </span>
+                                        <img
+                                            alt="ethBallRocket"
+                                            src="/img/exchange-stats-one-2.png"
+                                            decoding="async"
+                                            data-nimg="intrinsic"
+                                            style={{
+                                                position: "absolute",
+                                                inset: 0,
+                                                boxSizing: "border-box",
+                                                padding: 0,
+                                                border: "none",
+                                                margin: "auto",
+                                                display: "block",
+                                                width: 0,
+                                                height: 0,
+                                                minWidth: "100%",
+                                                maxWidth: "100%",
+                                                minHeight: "100%",
+                                                maxHeight: "100%",
+                                            }}
+                                        />
+                                    </span>
+                                </div>
+
+                                <div className="sc-ECa-Dv dOGPyt">
+                                    <span
+                                        style={{
+                                            boxSizing: "border-box",
+                                            display: "inline-block",
+                                            overflow: "hidden",
+                                            width: "initial",
+                                            height: "initial",
+                                            background: "none",
+                                            opacity: 1,
+                                            border: "0px",
+                                            margin: "0px",
+                                            padding: "0px",
+                                            position: "relative",
+                                            maxWidth: "100%",
+                                        }}
+                                    >
+                                        <span
+                                            style={{
+                                                boxSizing: "border-box",
+                                                display: "block",
+                                                width: "initial",
+                                                height: "initial",
+                                                background: "none",
+                                                opacity: 1,
+                                                border: "0px",
+                                                margin: "0px",
+                                                padding: "0px",
+                                                maxWidth: "100%",
+                                            }}
+                                        >
+                                            <img
+                                                alt=""
+                                                aria-hidden="true"
+                                                src={secondImageSrc}
+                                                style={{
+                                                    display: "block",
+                                                    maxWidth: "100%",
+                                                    width: "initial",
+                                                    height: "initial",
+                                                    background: "none",
+                                                    opacity: 1,
+                                                    border: "0px",
+                                                    margin: "0px",
+                                                    padding: "0px",
+                                                }}
+                                            />
+                                        </span>
+                                        <img
+                                            alt="aptosBallRocket"
+                                            src="/img/exchange-stats-one-3.png"
+                                            decoding="async"
+                                            data-nimg="intrinsic"
+                                            style={{
+                                                position: "absolute",
+                                                inset: 0,
+                                                boxSizing: "border-box",
+                                                padding: 0,
+                                                border: "none",
+                                                margin: "auto",
+                                                display: "block",
+                                                width: 0,
+                                                height: 0,
+                                                minWidth: "100%",
+                                                maxWidth: "100%",
+                                                minHeight: "100%",
+                                                maxHeight: "100%",
+                                            }}
+                                        />
+                                    </span>
+                                </div>
+                            </div>
+>>>>>>> development
                         </div>
                     </div>
                 </div>

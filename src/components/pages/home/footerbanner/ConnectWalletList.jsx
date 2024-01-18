@@ -69,17 +69,11 @@ const ConnectWalletList = ({ onWalletItemClick }) => {
 
     const [showMore, setShowMore] = useState(false);
     const [showSVG, setShowSVG] = useState(true);
-    // const [customContent, setCustomContent] = useState(null);
 
     const toggleShowMore = () => {
         setShowMore(!showMore);
         setShowSVG(true);
     };
-
-    // const toggleAdditionalData = () => {
-    //   setShowMore(!showMore);
-    //   setShowSVG(!showSVG);
-    // };
 
     const handleWalletItemClick = (description) => {
         let walletContent = {};

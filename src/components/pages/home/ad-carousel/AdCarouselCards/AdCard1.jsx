@@ -10,7 +10,7 @@ const AdCard1 = () => {
   return (
     <div className="carousel-item active" id="carousel-item1">
       <div className="cardAC" id="card1">
-        <div className="text-container">
+        <div className="ad1text-container">
           <div className="logoCont">
             <img
               src={BunnyLogo}

@@ -39,7 +39,7 @@ const CarouselCard1 = () => {
                         <p>19.7k</p>
                     </div>
                 </div>
-                <p>🎂 3 years ago, we planted the seed on the BNB Chain, and today, it has grown into Everyone's Favorite DEX ....</p>
+                <p id='tweet-content'>🎂 3 years ago, we planted the seed on the BNB Chain, and today, it has grown into Everyone's Favorite DEX ...</p>
                 <p>
                     <a href="https://docs.pancakeswap.finance/get-started/wallet-guide" id="community-tweet-link">Web Link
                         <svg xmlns="http://www.w3.org/2000/svg" id="fb-icon-link" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#1fc7d4" fill="none" strokeLinecap="round" strokeLinejoin="round">

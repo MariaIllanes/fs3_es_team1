@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import ConnectWalletList from "./ConnectWalletList";
 import Carousel from "./Carousel";
 import isDark from "../../../shared/sharedComponents/ThemeChange";
-const HiddenFooterBanner = () => {
+
+
+const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
     const [cwRightContent, setCwRightContent] = useState({
         title: "Haven't got a wallet yet?",
         src: "https://cdn.pancakeswap.com/wallets/wallet_intro.png",
@@ -17,7 +19,7 @@ const HiddenFooterBanner = () => {
                         Learn How to Connect
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            id="fb-icon-link"
+                            id={svgId}
                             width="20"
                             height="20"
                             viewBox="0 0 24 24"
@@ -35,8 +37,8 @@ const HiddenFooterBanner = () => {
                 </span>
             </div>
         ),
-    }); // for custom content placed on the right side of HiddenFooterBanner window + default content
-
+    });
+    
     const handleWalletItemClick = (contentFunction) => {
         contentFunction(setCwRightContent);
     };
@@ -45,14 +47,14 @@ const HiddenFooterBanner = () => {
         <div className="footer-tabs theme-change light-theme">
             <div className="footer-tab-container theme-change light-theme">
                 <div
-                    id="footer-tab2"
+                    id={tab2}
                     className="footer-tab theme-change light-theme"
                 >
-                    <a href="#footer-tab2">What's a Web3 Wallet?</a>
-                    <div id="w3-container">
+                    <a href={`#${tab2}`}>What's a Web3 Wallet?</a>
+                    <div id={w3container}>
                         <div
                             className="footer-tab-content theme-change light-theme"
-                            id="footer-tab-content2"
+                            id={content2}
                         >
                             <div className="w3-content theme-change light-theme">
                                 <Carousel />
@@ -62,15 +64,14 @@ const HiddenFooterBanner = () => {
                 </div>
 
                 <div
-                    id="footer-tab1"
+                    id={tab1}
                     className="footer-tab theme-change light-theme"
                 >
-                    <a href="#footer-tab1">Connect Wallet</a>
+                    <a href={`#${tab1}`}>Connect Wallet</a>
                     <div className="footer-tab-content theme-change light-theme">
                         <div className="footer-tab-content-cw">
                             <div
-                                className="theme-change light-theme"
-                                id="cw-left"
+                                className="theme-change light-theme cw-left"
                             >
                                 <h3>Connect Wallet</h3>
                                 <p>
@@ -79,7 +80,7 @@ const HiddenFooterBanner = () => {
                                     seed phrase securely. Never share them with
                                     anyone.
                                 </p>
-                                <div id="cw-left-grid">
+                                <div className="cw-left-grid">
                                     <ConnectWalletList
                                         onWalletItemClick={
                                             handleWalletItemClick
@@ -88,13 +89,11 @@ const HiddenFooterBanner = () => {
                                 </div>
                             </div>
                             <div
-                                className="fb-button theme-change light-theme"
-                                id="cw-right"
+                                className="fb-button theme-change light-theme cw-right"
                             >
                                 {cwRightContent && (
                                     <div
-                                        id="cw-right-content"
-                                        className="fb-text theme-change light-theme"
+                                        className="fb-text theme-change light-theme cw-right-content"
                                     >
                                         <h3>{cwRightContent.title}</h3>
                                         {cwRightContent.src && (
