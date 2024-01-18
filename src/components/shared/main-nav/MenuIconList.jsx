@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"; 
 import Exchange from "./MenuIconList/Exchange";
 import Language from "./MenuIconList/Language";
-import Wallet from "./MenuIconList/Wallet";
+import Settings from "./MenuIconList/Modal/Settings";
 import Chain from "./MenuIconList/Chain";
 import HiddenFooterBanner from "../../pages/home/footerbanner/HiddenFooterBanner.jsx";
 

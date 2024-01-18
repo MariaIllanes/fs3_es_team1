@@ -104,7 +104,7 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                             />
                                         )}
                                         {cwRightContent.text && (
-                                            <p
+                                            <span
                                                 className="cw-text"
                                                 style={{
                                                     backgroundColor: "unset",
@@ -113,10 +113,10 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                                 }}
                                             >
                                                 {cwRightContent.text}
-                                            </p>
+                                            </span>
                                         )}
                                         {cwRightContent.button1 && (
-                                            <p
+                                            <span
                                                 style={{
                                                     fontWeight: "bold",
                                                     padding: "10px 12px",
@@ -126,10 +126,10 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                                 }}
                                             >
                                                 {cwRightContent.button1}
-                                            </p>
+                                            </span>
                                         )}
                                         {cwRightContent.button2 && (
-                                            <p
+                                            <span
                                                 style={{
                                                     fontWeight: "bold",
                                                     padding: "10px 12px",
@@ -139,7 +139,7 @@ const HiddenFooterBanner = ({ svgId, tab1, tab2, w3container, content2 }) => {
                                                 }}
                                             >
                                                 {cwRightContent.button2}
-                                            </p>
+                                            </span>
                                         )}
                                     </div>
                                 )}

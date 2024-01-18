@@ -649,8 +649,6 @@ const ExchangeStatsOne = () => {
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
-=======
                             <div className="sc-kkczzW cyBpOR">
                                 <div className="sc-gZGhCx dgYKRw">
                                     <span
@@ -869,7 +867,6 @@ const ExchangeStatsOne = () => {
                                     </span>
                                 </div>
                             </div>
->>>>>>> development
                         </div>
                     </div>
                 </div>
