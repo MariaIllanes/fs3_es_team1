@@ -21,11 +21,10 @@
 
 
 .main-banner .mbcontainer {
-    width: 90%;
-    margin-left: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .main-banner .mbimg{
@@ -47,6 +46,10 @@
 
 .main-banner.light-theme h2{
     color: black;
+}
+
+.text-container{
+    padding-left: 10%;
 }
 
 .main-banner .text-container h2{
@@ -184,7 +187,12 @@
 
 @media (max-width: 500px) { 
     .main-banner .mbcontainer {
-        width: 95%;
+        padding: 40px;
+    }
+
+    .text-container h2,
+    .text-container h4{
+        text-align: center;
     }
 
 
