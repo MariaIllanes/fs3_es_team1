@@ -11,13 +11,14 @@ const MainBannerComponent = () => {
         <MainBannerText />
         <MainBannerIMG />
       </div>
-      <div className="sc-hhYtLa dCXxbj">
+      <div className="sc-hhYtLa dCXxbj theme-change light-theme" id="mainbanner-bg">
         <svg
           viewBox="0 0 1660 339"
           className="sc-grXZZQ ktVOoD slide-svg-dark"
           width="100%"
           color="text"
           xmlns="http://www.w3.org/2000/svg"
+          id="dark-svg"
         >
           <path
             d="M804 166.523C520.5 166.523 267.5 290.022 0 304V338.5H1660V0C1358.83 0 1104 166.523 804 166.523Z"
@@ -42,12 +43,15 @@ const MainBannerComponent = () => {
             </linearGradient>
           </defs>
         </svg>
+
+        
         <svg
           viewBox="0 0 1660 339"
           className="sc-grXZZQ ktVOoD slide-svg-light"
           width="100%"
           color="text"
           xmlns="http://www.w3.org/2000/svg"
+          id="light-svg"
         >
           <path
             d="M804 167.023C520.5 167.023 267.5 290.522 0 304.5V339H1660V0.5C1358.83 0.5 1104 167.023 804 167.023Z"
