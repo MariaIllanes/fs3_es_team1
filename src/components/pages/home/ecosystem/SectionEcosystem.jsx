@@ -8,7 +8,7 @@ import "./EcosystemStyle.css";
 const SectionEcosystem = () => {
   return (
     <div className="ecosystem theme-change light-theme">
-      <div class="sc-bgCTdi xsvqY inner-wedge theme-change light-theme">
+      <div className="sc-bgCTdi xsvqY inner-wedge theme-change light-theme">
         <svg
           viewBox="0 0 1660 48"
           preserveAspectRatio="none"
