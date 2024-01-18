@@ -249,3 +249,11 @@
     height: 100%;
     max-height: 48px;
 }
+
+
+.ktVOoD {
+    align-self: center;
+    /* fill: #dec20d;
+    color: #280d5f; */
+    flex-shrink: 0;
+}
