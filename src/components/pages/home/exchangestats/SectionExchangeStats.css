@@ -14,9 +14,6 @@
     width: 100vw;
 }
 
-.exchange-stats2{
-    padding-bottom: 40px;
-}
 
 
 .exchange-stats2-title.light-theme {
@@ -228,4 +225,27 @@
         grid-template-columns: repeat(2, 145px);
         gap: 15px;
     }
+}
+
+
+
+.eLkFjc {
+    position: relative;
+    display: flex;
+    width: 100%;
+    bottom: 0px;
+}
+
+.eLkFjc.light-theme svg {
+    fill: #72b8f2;
+    width: 100%;
+    height: 100%;
+    max-height: 48px;
+}
+
+.eLkFjc.dark-theme svg {
+    fill: #0b4574;
+    width: 100%;
+    height: 100%;
+    max-height: 48px;
 }
