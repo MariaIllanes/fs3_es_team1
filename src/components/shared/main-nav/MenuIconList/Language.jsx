@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../MainNavbarStyle.css"
 
 const Language = () => {
     const [shownMenu, setShownMenu] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState('EN');
+    const [theme, setTheme] = useState('');
 
     const toggleMenu = () => {
         setShownMenu(!shownMenu);
@@ -94,12 +95,32 @@ const Language = () => {
 
     const handleLanguageSelect = (language) => {
         setSelectedLanguage(language.value);
-        setShownMenu(false); // to close the menu after selecting an option
+        setShownMenu(false);
     };
 
+    const updateTheme = () => {
+        const targetDiv = document.getElementById('main-nav-section');
+    
+        if (targetDiv) {
+          setTheme(targetDiv.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
+        }
+      };
+
+      useEffect(() => {
+        updateTheme();
+    
+        document.addEventListener('click', updateTheme);
+    
+        return () => {
+          document.removeEventListener('click', updateTheme);
+        };
+      }, []);
+    
+
+
     return (
-        <div className="language-menu">
-        <div className="language-selector" onMouseEnter={toggleMenu} onMouseLeave={toggleMenu}>
+        <div className={`language-menu theme-change ${theme}`} onClick={toggleMenu}>
+        <div className="language-selector" >
             <svg xmlns="http://www.w3.org/2000/svg" className="icon-language" id="icon-language" width="25" height="25" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#7a6bab" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ width: '25px', height: '25px'}}>
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -110,9 +131,9 @@ const Language = () => {
             </svg>
         </div>
         {shownMenu && (
-            <div className="language-options2">
+            <div className={`language-options2 theme-change ${theme}`}>
                 {languageMenu.map((language, index) => (
-                    <div key={index} onClick={() => handleLanguageSelect(language)}>
+                    <div key={index} onClick={() => handleLanguageSelect(language)} className='option-lang'>
                         {language.language}
                     </div>
                 ))}

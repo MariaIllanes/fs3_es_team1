@@ -247,11 +247,6 @@
     background-color: var(--bg-dark) !important;
 }
 
-.language,
-.settings i {
-    padding-top: 0rem;
-}
-
 .menu-icon-list p {
     margin: unset;
 }
@@ -612,6 +607,7 @@
     margin: 0;
     vertical-align: baseline;
     padding-top: 0;
+    padding-bottom: 0.3rem;
 }
 
 .settings-btn i,h2{
@@ -623,7 +619,24 @@
     opacity: 70%;
 }
 
-.language-options2 {
+.language-options2.light-theme {
+    border-radius: 5px;
+    position: absolute;
+    right: 23rem;
+    top: 4rem;
+    background-color:white;
+    color: #280d5f;
+    overflow-y: scroll;
+    z-index: 5;
+    height: 300px;
+}
+
+.option-lang:hover{
+    color: #b8acd2;
+    opacity: 70%;
+}
+
+.language-options2.dark-theme {
     border-radius: 5px;
     position: absolute;
     right: 23rem;
