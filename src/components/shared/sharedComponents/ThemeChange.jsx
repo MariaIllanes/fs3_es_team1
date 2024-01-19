@@ -29,7 +29,7 @@ const ThemeChange = ({ id }) => {
 
       setTimeout(() => {
         setIsClickable(true);
-      }, 400);
+      }, 300);
     };
 
     const button = document.getElementById(id);
