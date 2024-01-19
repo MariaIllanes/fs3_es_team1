@@ -1,34 +1,46 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const ThemeChange = ({ id }) => {
-    const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const [isClickable, setIsClickable] = useState(true);
 
-    useEffect(() => {
-        const themeChangeElements = document.querySelectorAll(".theme-change");
+  useEffect(() => {
+    const themeChangeElements = document.querySelectorAll('.theme-change');
 
-        const handleButtonClick = () => {
-            setIsDark(!isDark);
+    const handleButtonClick = () => {
+      if (!isClickable) {
+        return;
+      }
 
-            themeChangeElements.forEach((element) => {
-                setTimeout(() => {
-                    if (isDark) {
-                        element.classList.replace("dark-theme", "light-theme");
-                    } else {
-                        element.classList.replace("light-theme", "dark-theme");
-                    }
-                }, 500);
-            });
-        };
+      setIsClickable(false);
 
-        const button = document.getElementById(id);
-        button.addEventListener("click", handleButtonClick);
+      setIsDark(!isDark);
 
-        return () => {
-            button.removeEventListener("click", handleButtonClick);
-        };
-    }, [isDark]);
+      themeChangeElements.forEach((element) => {
+        setTimeout(() => {
+          if (isDark) {
+            element.classList.replace('dark-theme', 'light-theme');
+          } else {
+            element.classList.replace('light-theme', 'dark-theme');
+          }
+        }, 500);
+      });
 
-    return null;
+
+      setTimeout(() => {
+        setIsClickable(true);
+      }, 400);
+    };
+
+    const button = document.getElementById(id);
+    button.addEventListener('click', handleButtonClick);
+
+    return () => {
+      button.removeEventListener('click', handleButtonClick);
+    };
+  }, [isDark, isClickable, id]);
+
+  return null;
 };
 
 export default ThemeChange;

@@ -267,7 +267,7 @@ section.dark-theme{
 
 @media (max-width: 1005px) {
     
-    #bunny-bg1,#bunny-cloud1,#bunny-bg1-2 {
+    #bunny-bg1,#bunny-cloud1,#bunny-bg1-2,#bunny-bg6,#bunny-bg6-2,#bunny-bg6-3 {
         display: none;
     }
 
@@ -357,7 +357,7 @@ section.dark-theme{
     }
 
     #base-bunny6 {
-        max-height: 17.5rem;
+        max-height: 13rem;
         position: absolute; 
         left: 50%; 
         transform: translateX(-95%); 
@@ -434,8 +434,8 @@ section.dark-theme{
     }
 
     #base-bunny1{
-        max-height: 10rem;
-        transform: translateY(-3.5rem)translateX(-10rem);
+        max-height: 8rem;
+        transform: translateY(-5rem)translateX(-6rem);
     }
 
     #base-bunny6{

@@ -1,14 +1,25 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import '../../../sharedComponents/sharedStyles/modal.css';
 import ToggleSwitch from '../../../sharedComponents/ToggleSwitchNav';
 
 const ModalNav = ({}) => {
   const [show, setShow] = useState(false);
+  const [theme, setTheme] = useState('');
+  const [isChecked, setIsChecked] = useState(false)
+  
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
+  const updateTheme = () => {
+    const targetDiv = document.getElementById('main-nav-section');
+
+    if (targetDiv) {
+      setTheme(targetDiv.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
+      setIsChecked(targetDiv.classList.contains('dark-theme') ? true : false);
+    }
+  };
+
   const selectTransactionSpeed = (speedNumber) => {
     document.querySelectorAll('.transaction-speed-btn').forEach((button) => {
       button.classList.remove('selected');
@@ -27,10 +38,19 @@ const ModalNav = ({}) => {
   };
 
   useEffect(() => {
-    selectTransactionSpeed(1);
+    updateTheme();
+
+    document.addEventListener('click', updateTheme);
+
+    return () => {
+      document.removeEventListener('click', updateTheme);
+    };
   }, []);
 
-  
+  useEffect(() => {
+    selectTransactionSpeed(1);
+  }, [theme]);
+
     return (
         <>
 
@@ -43,8 +63,8 @@ const ModalNav = ({}) => {
           </button>
 
           <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton className='modal-header theme-change light-theme'>
-          <h1 className="modal-title theme-change light-theme" id="exampleModalLabel">
+        <Modal.Header closeButton className={`modal-header theme-change ${theme}`}>
+          <h1 className={`modal-title theme-change ${theme}`} id="exampleModalLabel">
                     Settings
                   </h1>
                   <button
@@ -67,24 +87,24 @@ const ModalNav = ({}) => {
                     </svg>
                   </button>
         </Modal.Header>
-        <Modal.Body className="theme-change light-theme">
+        <Modal.Body className={`theme-change ${theme}`}>
         <h5 className="modal-subtitle">GLOBAL</h5>
         <div className="toggle-list">
-                    <div className="text-toggle theme-change light-theme">
+                    <div className={`text-toggle theme-change ${theme}`}>
                       Dark mode
-                      <ToggleSwitch />
+                      <ToggleSwitch isCheck={isChecked}/>
                     </div>
-                    <div className="text-toggle theme-change light-theme">
+                    <div className={`text-toggle theme-change ${theme}`}>
                       Subgraph Health Indicator{" "}
-                      <span className="toggle-modal light-theme theme-change">
+                      <span className={`toggle-modal theme-change ${theme}`}>
                         {" "}
-                        <label className="switch-generic light-theme theme-change">
+                        <label className={`switch-generic theme-change ${theme}`}>
                           <input type="checkbox" checked readOnly/>
-                          <span className="slider-generic round light-theme theme-change"></span>
+                          <span className={`slider-generic round theme-change ${theme}`}></span>
                         </label>
                       </span>
                     </div>
-                    <div className="text-toggle theme-change light-theme">
+                    <div className={`text-toggle theme-change ${theme}`}>
                       <span>
                         Show username{" "}
                         <svg
@@ -100,15 +120,15 @@ const ModalNav = ({}) => {
                           ></path>
                         </svg>
                       </span>{" "}
-                      <span className="toggle-modal light-theme theme-change">
+                      <span className={`toggle-modal theme-change ${theme}`}>
                         {" "}
-                        <label className="switch-generic light-theme theme-change">
+                        <label className={`switch-generic theme-change ${theme}`}>
                           <input type="checkbox" checked readOnly/>
-                          <span className="slider-generic round light-theme theme-change"></span>
+                          <span className={`slider-generic round theme-change ${theme}`}></span>
                         </label>
                       </span>
                     </div>
-                    <div className="text-toggle theme-change light-theme">
+                    <div className={`text-toggle theme-change ${theme}`}>
                       <span>
                         Token Risk Scanning{" "}
                         <svg
@@ -123,15 +143,15 @@ const ModalNav = ({}) => {
                           ></path>
                         </svg>{" "}
                       </span>{" "}
-                      <span className="toggle-modal light-theme theme-change">
+                      <span className={`toggle-modal theme-change ${theme}`}>
                         {" "}
-                        <label className="switch-generic light-theme theme-change">
+                        <label className={`switch-generic theme-change ${theme}`}>
                           <input type="checkbox" checked readOnly/>
-                          <span className="slider-generic round light-theme theme-change"></span>
+                          <span className={`slider-generic round theme-change ${theme}`}></span>
                         </label>
                       </span>
                     </div>
-                    <div className="text-toggle theme-change light-theme">
+                    <div className={`text-toggle theme-change ${theme}`}>
                       <span>
                         Default Transaction Speed (GWEI){" "}
                         <svg
@@ -152,35 +172,35 @@ const ModalNav = ({}) => {
                   <div className="transaction-speed-container">
                     <button
                       id="speedBtn1"
-                      className="transaction-speed-btn selected theme-change light-theme"
+                      className={`transaction-speed-btn selected theme-change ${theme}`}
                       onClick={handleButtonClick(1)}
                     >
                       Default
                     </button>
                     <button
                       id="speedBtn2"
-                      className="transaction-speed-btn theme-change light-theme"
+                      className={`transaction-speed-btn theme-change ${theme}`}
                       onClick={handleButtonClick(2)}
                     >
                       Standard (3)
                     </button>
                     <button
                       id="speedBtn3"
-                      className="transaction-speed-btn theme-change light-theme"
+                      className={`transaction-speed-btn theme-change ${theme}`}
                       onClick={handleButtonClick(3)}
                     >
                       Fast (4)
                     </button>
                     <button
                       id="speedBtn4"
-                      className="transaction-speed-btn theme-change light-theme"
+                      className={`transaction-speed-btn theme-change ${theme}`}
                       onClick={handleButtonClick(4)}
                     >
                       Instant (5)
                     </button>
                   </div>
         </Modal.Body>
-        <Modal.Footer className='theme-change light-theme'>
+        <Modal.Footer className={`theme-change ${theme}`}>
         </Modal.Footer>
       </Modal>
       </>
